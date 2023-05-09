@@ -30,6 +30,7 @@ public class JavaFXMLApplication extends Application {
         stage.setScene(scene);
         stage.setTitle("start PROJECT - IPC:");
         stage.show();
+        
     }
 
     /**
