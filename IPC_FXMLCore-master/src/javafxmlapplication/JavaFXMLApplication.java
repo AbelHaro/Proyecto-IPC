@@ -80,7 +80,7 @@ public class JavaFXMLApplication extends Application {
     
         loader = new  FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
         root = loader.load();
-        roots.put("InciarSesian", root);
+        roots.put("InciarSesion", root);
     
     Utilizar la ruta de la vista y un nombre para utilizar de clave en el mapa
     IMMPORTANTE: La última vista en precargar será la que se muestre al iniciar el programa
@@ -88,6 +88,6 @@ public class JavaFXMLApplication extends Application {
     private void inicializarVistas() throws IOException{
         loader = new  FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
         root = loader.load();
-        roots.put("InciarSesian", root);
+        roots.put("InciarSesion", root);
     }
 }
