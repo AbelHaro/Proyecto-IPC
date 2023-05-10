@@ -88,6 +88,10 @@ public class JavaFXMLApplication extends Application {
     private void inicializarVistas() throws IOException{
         loader = new  FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
         root = loader.load();
-        roots.put("InciarSesion", root);
+        roots.put("IniciarSesion", root);
+        
+        loader = new  FXMLLoader(getClass().getResource("Principal.fxml"));
+        root = loader.load();
+        roots.put("Principal", root);
     }
 }

@@ -1,0 +1,12 @@
+
+/* 
+    Created on : 10 may 2023, 19:03:19
+    Author     : Usuario
+*/
+
+.button-cambiar-color-raton-encima{
+    
+}
+.button-cambiar-color-raton-encima:hover{
+    -fx-background-color:blue
+}
