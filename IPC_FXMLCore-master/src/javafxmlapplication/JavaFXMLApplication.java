@@ -70,7 +70,7 @@ public class JavaFXMLApplication extends Application {
     /*
     Método privado auxiliar para cambiar la vista
     */
-    private static void setRoot(Parent root){
+    public static void setRoot(Parent root){
         scene.setRoot(root);
     }
     
@@ -89,6 +89,16 @@ public class JavaFXMLApplication extends Application {
         loader = new  FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
         root = loader.load();
         roots.put("IniciarSesion", root);
+        
+        loader = new  FXMLLoader(getClass().getResource("verPistasDisponibles.fxml"));
+        root = loader.load();
+        roots.put("verPistasDisponibles", root);
+        
+        /*
+        loader = new  FXMLLoader(getClass().getResource("verPistasDisponiblesSeleccionada.fxml"));
+        root = loader.load();
+        roots.put("verPistasDisponiblesSeleccionada", root);
+        */
         
         loader = new  FXMLLoader(getClass().getResource("Principal.fxml"));
         root = loader.load();
