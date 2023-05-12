@@ -6,28 +6,34 @@ package javafxmlapplication;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
+iimport javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+mport javafx.fxml.Initializable;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-
 /**
  * FXML Controller class
  *
- * @author Usuario
+ * @author Nabil
  */
-public class IniciarSesionNeutroController implements Initializable {
+public class RegistrarseController implements Initializable {
+
 
     @FXML
-    private Button bAcceder;
+    private Label errorTelNoValido;
+    @FXML
+    private Label errorNickNoValido;
+    @FXML
+    private Label errorPasswordNoValido;
+    @FXML
+    private Label errorNumdeTarjetaNoValido;
+    @FXML
+    private Label errorSVCNoValido;
+    @FXML
+    private Button bCancelarRegistro;
     @FXML
     private Button bRegistrarse;
-    @FXML
-    private Button bVerDisponibilidad;
-    @FXML
-    private Label errorAcceder;
-
     /**
      * Initializes the controller class.
      */
@@ -35,17 +41,13 @@ public class IniciarSesionNeutroController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
+    
     @FXML
-    private void handlebAccederOnAction(ActionEvent event) {
+    private void handlebCancelarRegistroOnAction(ActionEvent event) {
     }
 
     @FXML
     private void handlebRegistrarseOnAction(ActionEvent event) {
     }
 
-    @FXML
-    private void handlebVerDisponibilidadOnAction(ActionEvent event) {
-    }
-    
 }
