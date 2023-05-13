@@ -26,9 +26,7 @@ public class JavaFXMLApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         //======================================================================
-        loader = new  FXMLLoader(getClass().getResource("RegistrarseV2.fxml"));
-        root = loader.load();
-        roots.put("RegistrarseV2", root);
+        
         
         
         loader = new  FXMLLoader(getClass().getResource("Principal.fxml"));
