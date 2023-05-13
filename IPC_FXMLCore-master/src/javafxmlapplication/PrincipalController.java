@@ -30,23 +30,42 @@ public class PrincipalController implements Initializable {
 
     @FXML
     private void iniciarSesion(ActionEvent event) throws IOException {
-        FXMLLoader miCargador = new FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
-        Parent root = miCargador.load();
-        JavaFXMLApplication.setRoot(root);
+        try {
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
+            Parent root;
+            root = miCargador.load();
+            JavaFXMLApplication.setRoot(root);
+        } catch (IOException ex) {
+            System.out.println("Escena no Encontrada");
+        }
     }
 
     @FXML
     private void registrarse(ActionEvent event) throws IOException {
-        FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Registrarse.fxml"));
-        Parent root = miCargador.load();
-        JavaFXMLApplication.setRoot(root);
+        
+        JavaFXMLApplication.setRoot("RegistrarseV2");
+        /*
+        try {
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("RegistrarseV2.fxml"));
+            Parent root;
+            root = miCargador.load();
+            JavaFXMLApplication.setRoot(root);
+        } catch (IOException ex) {
+            System.out.println("Escena no Encontrada");
+        }
+*/
     }
 
     @FXML
     private void verPistasDisponibles(ActionEvent event) throws IOException {
-        FXMLLoader miCargador = new FXMLLoader(getClass().getResource("VerPistasDisponibles.fxml"));
-        Parent root = miCargador.load();
-        JavaFXMLApplication.setRoot(root);
+        try {
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("VerPistasDisponibles.fxml"));
+            Parent root;
+            root = miCargador.load();
+            JavaFXMLApplication.setRoot(root);
+        } catch (IOException ex) {
+            System.out.println("Escena no Encontrada");
+        }
     }
     
 }

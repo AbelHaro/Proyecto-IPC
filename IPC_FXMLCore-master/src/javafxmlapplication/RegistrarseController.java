@@ -47,9 +47,14 @@ public class RegistrarseController implements Initializable {
     
     @FXML
     private void handlebCancelarRegistroOnAction(ActionEvent event) throws IOException {
-        FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Principal.fxml"));
-        Parent root = miCargador.load();
-        JavaFXMLApplication.setRoot(root);
+        try {
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Principal.fxml"));
+            Parent root;
+            root = miCargador.load();
+            JavaFXMLApplication.setRoot(root);
+        } catch (IOException ex) {
+            System.out.println("Escena no Encontrada");
+        }
     }
 
     @FXML

@@ -12,9 +12,14 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.text.Text;
 import model.Booking;
 import model.Club;
@@ -55,33 +60,26 @@ public class VerPistasDisponiblesController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        inicializarGeneral();
+        menu.textProperty().addListener((obs, oldValue, newValue) -> {inicializarGeneral();});
+    }    
+    
+    public void inicializarGeneral(){
         try {
-            // TODO
-            club = Club.getInstance();
+            club = Club.getInstance(); 
            
-            LocalDate dia = LocalDate.now();
-            System.out.println("Dia del mes: " + dia.getDayOfMonth());
-           
-            reservas = club.getForDayBookings(dia);
-            
+            reservas = club.getForDayBookings(LocalDate.now());
             
             inicializarPistas();
-            
-            
-            
 
         } catch (IOException | ClubDAOException ex) {
             System.out.println("Error en instanciar el club");
         } 
         
-        
-    }    
-    
+    }
     
     public void inicializarPistas(){
         String horaInicio = menu.getText();
-        System.out.println(horaInicio.length());
         if(horaInicio.length() == 12){ // String con hora 9
             horaInicio = horaInicio.substring(0,1);
         } else {
@@ -95,8 +93,6 @@ public class VerPistasDisponiblesController implements Initializable {
             Booking reserva = reservas.get(i);
             if(reserva != null && horaInicioReserva == reserva.getFromTime().getHour()){
                 rellenarTextos(reserva);
-                System.out.println("hora de la reserva desde el objeto: " + reserva.getFromTime().getHour());
-                System.out.println("pista de la reserva desde el objeto: " + reserva.getCourt().getName());
             }
             
         }
@@ -105,7 +101,12 @@ public class VerPistasDisponiblesController implements Initializable {
     
     public void rellenarTextos(Booking reserva){
         int horaInicio = reserva.getFromTime().getHour();
-        String aux = (horaInicio + ":00 - " + (horaInicio + 1) +":00           ");
+        String aux;
+        if(horaInicio == 9){
+            aux = ("  " + horaInicio + ":00 - " + (horaInicio + 1) +":00           ");
+        } else {
+            aux = (horaInicio + ":00 - " + (horaInicio + 1) +":00           ");
+        }
         String pista = reserva.getCourt().getName();
         if(pista.equals("Pista 1")){
             t1.setText(aux + "PISTA 1        RESERVADO POR " + reserva.getMember().getNickName());
@@ -129,12 +130,41 @@ public class VerPistasDisponiblesController implements Initializable {
     }
     
     public void inicializarVacio(int horaInicio){
-        t1.setText(horaInicio + ":00 - " + (horaInicio + 1) + ":00           PISTA 1        NO RESERVADA");
-        t2.setText(horaInicio + ":00 - " + (horaInicio + 1) + ":00           PISTA 2        NO RESERVADA");
-        t3.setText(horaInicio + ":00 - " + (horaInicio + 1) + ":00           PISTA 3        NO RESERVADA");
-        t4.setText(horaInicio + ":00 - " + (horaInicio + 1) + ":00           PISTA 4        NO RESERVADA");
-        t5.setText(horaInicio + ":00 - " + (horaInicio + 1) + ":00           PISTA 5        NO RESERVADA");
-        t6.setText(horaInicio + ":00 - " + (horaInicio + 1) + ":00           PISTA 6        NO RESERVADA");
+        
+        String aux;
+        if(horaInicio == 9){
+            aux = ("  " + horaInicio + ":00 - " + (horaInicio + 1) +":00           ");
+        } else {
+            aux = (horaInicio + ":00 - " + (horaInicio + 1) +":00           ");
+        }
+        
+        t1.setText(aux + "PISTA 1        NO RESERVADA");
+        t2.setText(aux + "PISTA 2        NO RESERVADA");
+        t3.setText(aux + "PISTA 3        NO RESERVADA");
+        t4.setText(aux + "PISTA 4        NO RESERVADA");
+        t5.setText(aux + "PISTA 5        NO RESERVADA");
+        t6.setText(aux + "PISTA 6        NO RESERVADA");
+        }
+    
+
+    @FXML
+    private void cambiarHorarioDesplegable(ActionEvent event) {
+        MenuItem m = (MenuItem) event.getSource();
+        this.menu.setText(m.getText()); 
+        
+    }
+
+    @FXML
+    private void cancelar(ActionEvent event) {
+        try {
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Principal.fxml"));
+            Parent root;
+            root = miCargador.load();
+            JavaFXMLApplication.setRoot(root);
+        } catch (IOException ex) {
+            System.out.println("Escena no Encontrada");
+        }
+        
     }
     
     

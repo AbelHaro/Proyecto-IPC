@@ -26,7 +26,7 @@
       </HBox>
    </top>
    <center>
-      <VBox prefHeight="200.0" prefWidth="430.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="430.0" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -44,14 +44,31 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="94.0" prefWidth="143.0">
                      <children>
-                        <MenuButton fx:id="menu" mnemonicParsing="false" prefHeight="30.0" prefWidth="126.0" text="9:00 - 10:00">
+                        <MenuButton fx:id="menu" mnemonicParsing="false" prefHeight="30.0" prefWidth="132.0" text="9:00 - 10:00">
                           <items>
-                            <MenuItem mnemonicParsing="false" text="Action 1" />
-                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                            <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="9:00 - 10:00" />
+                              <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="10:00 - 11:00" />
+                              <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="11:00 - 12:00" />
+                            <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="12:00 - 13:00" />
+                              <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="13:00 - 14:00" />
+                              <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="14:00 - 15:00" />
+                              <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="15:00 - 16:00" />
+                              <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="16:00 - 17:00" />
+                              <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="17:00 - 18:00" />
+                              <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="18:00 - 19:00" />
+                              <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="19:00 - 20:00" />
+                              <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="20:00 - 21:00" />
+                              <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="21:00 - 22:00" />
                           </items>
                            <font>
                               <Font size="14.0" />
                            </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="13.0" />
+                           </padding>
                         </MenuButton>
                      </children>
                   </VBox>
@@ -59,19 +76,25 @@
             </HBox>
             <HBox prefHeight="294.0" prefWidth="430.0">
                <children>
-                  <VBox prefHeight="272.0" prefWidth="430.0">
+                  <VBox alignment="CENTER" prefHeight="272.0" prefWidth="430.0">
                      <children>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Text fx:id="t1" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
+                              <Text fx:id="t1" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="470.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                                  <HBox.margin>
-                                    <Insets left="40.0" />
+                                    <Insets />
                                  </HBox.margin>
                               </Text>
                            </children>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                            <children>
@@ -80,22 +103,28 @@
                                     <Font size="14.0" />
                                  </font>
                                  <HBox.margin>
-                                    <Insets left="40.0" />
+                                    <Insets />
                                  </HBox.margin>
                               </Text>
                            </children>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="440.0">
                            <children>
-                              <Text fx:id="t3" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
+                              <Text fx:id="t3" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="390.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                                  <HBox.margin>
-                                    <Insets left="40.0" />
+                                    <Insets />
                                  </HBox.margin>
                               </Text>
                            </children>
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                            <children>
@@ -104,10 +133,13 @@
                                     <Font size="14.0" />
                                  </font>
                                  <HBox.margin>
-                                    <Insets left="40.0" />
+                                    <Insets />
                                  </HBox.margin>
                               </Text>
                            </children>
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                            <children>
@@ -116,10 +148,13 @@
                                     <Font size="14.0" />
                                  </font>
                                  <HBox.margin>
-                                    <Insets left="40.0" />
+                                    <Insets />
                                  </HBox.margin>
                               </Text>
                            </children>
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                            <children>
@@ -128,12 +163,18 @@
                                     <Font size="14.0" />
                                  </font>
                                  <HBox.margin>
-                                    <Insets left="40.0" />
+                                    <Insets />
                                  </HBox.margin>
                               </Text>
                            </children>
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin>
                         </HBox>
                      </children>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
                   </VBox>
                </children>
             </HBox>
@@ -143,18 +184,9 @@
    <bottom>
       <HBox alignment="BOTTOM_RIGHT" prefHeight="58.0" prefWidth="430.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="100.0">
+            <VBox alignment="BOTTOM_RIGHT" prefHeight="58.0" prefWidth="162.0">
                <children>
-                  <Button mnemonicParsing="false" text="Button">
-                     <VBox.margin>
-                        <Insets bottom="15.0" right="15.0" />
-                     </VBox.margin>
-                  </Button>
-               </children>
-            </VBox>
-            <VBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="69.0">
-               <children>
-                  <Button mnemonicParsing="false" text="Button">
+                  <Button mnemonicParsing="false" onAction="#cancelar" prefHeight="26.0" prefWidth="81.0" text="Cancelar">
                      <VBox.margin>
                         <Insets bottom="15.0" right="15.0" />
                      </VBox.margin>

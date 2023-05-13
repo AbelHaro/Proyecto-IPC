@@ -26,6 +26,10 @@ public class JavaFXMLApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         //======================================================================
+        loader = new  FXMLLoader(getClass().getResource("RegistrarseV2.fxml"));
+        root = loader.load();
+        roots.put("RegistrarseV2", root);
+        
         
         loader = new  FXMLLoader(getClass().getResource("Principal.fxml"));
         root = loader.load();
@@ -41,7 +45,8 @@ public class JavaFXMLApplication extends Application {
         
         scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("start PROJECT - IPC:");
+        stage.sizeToScene();
+        stage.setTitle("GREENBALL");
         stage.show();
         
     }
