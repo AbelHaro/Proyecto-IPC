@@ -27,7 +27,9 @@ public class JavaFXMLApplication extends Application {
     public void start(Stage stage) throws Exception {
         //======================================================================
         
-        inicializarVistas();
+        loader = new  FXMLLoader(getClass().getResource("Principal.fxml"));
+        root = loader.load();
+        roots.put("Principal", root);
         
         //======================================================================
         
@@ -85,6 +87,8 @@ public class JavaFXMLApplication extends Application {
     Utilizar la ruta de la vista y un nombre para utilizar de clave en el mapa
     IMMPORTANTE: La última vista en precargar será la que se muestre al iniciar el programa
     */
+    //NO UTILIZAR POR AHORA ABEL 12-05 22:46
+    /*
     private void inicializarVistas() throws IOException{
         loader = new  FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
         root = loader.load();
@@ -94,14 +98,11 @@ public class JavaFXMLApplication extends Application {
         root = loader.load();
         roots.put("verPistasDisponibles", root);
         
-        /*
-        loader = new  FXMLLoader(getClass().getResource("verPistasDisponiblesSeleccionada.fxml"));
-        root = loader.load();
-        roots.put("verPistasDisponiblesSeleccionada", root);
-        */
+        
         
         loader = new  FXMLLoader(getClass().getResource("Principal.fxml"));
         root = loader.load();
         roots.put("Principal", root);
     }
+        */
 }

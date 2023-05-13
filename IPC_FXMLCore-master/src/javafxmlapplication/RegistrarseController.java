@@ -4,11 +4,14 @@
  */
 package javafxmlapplication;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-iimport javafx.event.ActionEvent;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-mport javafx.fxml.Initializable;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -43,7 +46,10 @@ public class RegistrarseController implements Initializable {
     }    
     
     @FXML
-    private void handlebCancelarRegistroOnAction(ActionEvent event) {
+    private void handlebCancelarRegistroOnAction(ActionEvent event) throws IOException {
+        FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Principal.fxml"));
+        Parent root = miCargador.load();
+        JavaFXMLApplication.setRoot(root);
     }
 
     @FXML

@@ -4,11 +4,14 @@
  */
 package javafxmlapplication;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 
 /**
  * FXML Controller class
@@ -26,17 +29,24 @@ public class PrincipalController implements Initializable {
     }    
 
     @FXML
-    private void iniciarSesion(ActionEvent event) {
-        JavaFXMLApplication.setRoot("IniciarSesion");
+    private void iniciarSesion(ActionEvent event) throws IOException {
+        FXMLLoader miCargador = new FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
+        Parent root = miCargador.load();
+        JavaFXMLApplication.setRoot(root);
     }
 
     @FXML
-    private void registrarse(ActionEvent event) {
+    private void registrarse(ActionEvent event) throws IOException {
+        FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Registrarse.fxml"));
+        Parent root = miCargador.load();
+        JavaFXMLApplication.setRoot(root);
     }
 
     @FXML
-    private void verPistasDisponibles(ActionEvent event) {
-        JavaFXMLApplication.setRoot("verPistasDisponibles");
+    private void verPistasDisponibles(ActionEvent event) throws IOException {
+        FXMLLoader miCargador = new FXMLLoader(getClass().getResource("VerPistasDisponibles.fxml"));
+        Parent root = miCargador.load();
+        JavaFXMLApplication.setRoot(root);
     }
     
 }
