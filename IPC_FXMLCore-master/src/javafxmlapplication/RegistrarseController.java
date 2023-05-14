@@ -12,9 +12,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-
+import javafx.beans.property.BooleanProperty;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.beans.property.SimpleBooleanProperty;
 /**
  * FXML Controller class
  *
@@ -37,13 +40,38 @@ public class RegistrarseController implements Initializable {
     private Button bCancelarRegistro;
     @FXML
     private Button bRegistrarse;
+    private BooleanProperty validTelefono;
+    @FXML
+    private TextField TTelefono;
+    @FXML
+    private TextField TNickname;
+    @FXML
+    private PasswordField TPassword;
+    @FXML
+    private TextField TNumTrajetaCredito;
+    @FXML
+    private TextField TSVC;
     /**
      * Initializes the controller class.
      */
-    @Override
+    int lengthTTelefono = TTelefono.getText().length();
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    validTelefono = new SimpleBooleanProperty();
+    validTelefono.setValue(Boolean.FALSE); 
+    //Check values when user leaves edits
+    TTelefono.focusedProperty().addListener((observable, oldValue, newValue)->{
+    if(!newValue){ //focus lost.
+        checkEditTelefono();
+    }
+        });
+            }    
+    private void checkEditTelefono(){
+    if(lengthTTelefono>10 || lengthTTelefono<10){errorTelNoValido.setVisible(true);} 
+    }
+
+
+
     
     @FXML
     private void handlebCancelarRegistroOnAction(ActionEvent event) throws IOException {
@@ -62,3 +90,7 @@ public class RegistrarseController implements Initializable {
     }
 
 }
+
+    
+
+    

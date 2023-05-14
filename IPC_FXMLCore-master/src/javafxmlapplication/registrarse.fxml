@@ -110,7 +110,7 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="56.0" prefWidth="118.0">
                <children>
-                  <TextField prefHeight="26.0" prefWidth="122.0" promptText="Escribe tu teléfono" />
+                  <TextField fx:id="TTelefono" prefHeight="26.0" prefWidth="122.0" promptText="Escribe tu teléfono" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="56.0" prefWidth="128.0">
@@ -140,7 +140,7 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="64.0" prefWidth="138.0">
                <children>
-                  <TextField promptText="Escribe tu Nickname" />
+                  <TextField fx:id="TNickname" promptText="Escribe tu Nickname" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="62.0" prefWidth="132.0">
@@ -170,7 +170,7 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="62.0" prefWidth="182.0">
                <children>
-                  <PasswordField prefHeight="26.0" prefWidth="182.0" promptText="Escribe tu contraseña" />
+                  <PasswordField fx:id="TPassword" prefHeight="26.0" prefWidth="182.0" promptText="Escribe tu contraseña" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="62.0" prefWidth="123.0">
@@ -200,7 +200,7 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="62.0" prefWidth="178.0">
                <children>
-                  <TextField promptText="Escribe el numero de la tarjeta" />
+                  <TextField fx:id="TNumTrajetaCredito" promptText="Escribe el numero de la tarjeta" />
                </children>
                <opaqueInsets>
                   <Insets />
@@ -236,7 +236,7 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="62.0" prefWidth="47.0">
                <children>
-                  <TextField />
+                  <TextField fx:id="TSVC" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
