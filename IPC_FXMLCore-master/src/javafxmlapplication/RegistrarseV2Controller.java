@@ -320,9 +320,13 @@ public class RegistrarseV2Controller implements Initializable {
         }
         
         try {
-            club.registerMember(name, apellido, telefono, nick, password, tarjeta, svc, img);
+            Member m = club.registerMember(name, apellido, telefono, nick, password, tarjeta, svc, img);
             avisoRegistroCorrecto(name);
-            
+            if(m.checkHasCreditInfo()){
+                System.out.println("Tiene tarjeta");
+            } else {
+                System.out.println("No tiene tarjeta");
+            }
             FXMLLoader miCargador = new FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
             Parent root;
             root = miCargador.load();
@@ -418,8 +422,6 @@ public class RegistrarseV2Controller implements Initializable {
         alert.showAndWait();
     }
 
-    
-    
     
     
 }
