@@ -157,7 +157,7 @@ public class VerPistasDisponiblesController implements Initializable {
     @FXML
     private void cancelar(ActionEvent event) {
         try {
-            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Principal.fxml"));
             Parent root;
             root = miCargador.load();
             JavaFXMLApplication.setRoot(root);
