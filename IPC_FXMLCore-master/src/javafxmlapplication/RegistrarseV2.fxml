@@ -100,7 +100,7 @@
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono">
                                        <VBox.margin>
-                                          <Insets right="10.0" />
+                                          <Insets left="5.0" right="10.0" />
                                        </VBox.margin>
                                        <font>
                                           <Font size="11.0" />
@@ -111,20 +111,20 @@
                                     <Insets left="25.0" />
                                  </HBox.margin>
                               </VBox>
-                              <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="74.0">
+                              <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="118.0">
                                  <children>
-                                    <TextField fx:id="campoTelefono" minWidth="-Infinity" prefHeight="24.0" prefWidth="70.0">
+                                    <TextField fx:id="campoTelefono" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="70.0">
                                        <font>
                                           <Font size="11.0" />
                                        </font></TextField>
-                                    <Text fx:id="errorTelefono" fill="#fc0000" strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono no válido" visible="false">
+                                    <Text fx:id="errorTelefono" fill="#fc0000" strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono no válido" visible="false" wrappingWidth="144.70416259765625">
                                        <font>
                                           <Font size="11.0" />
                                        </font>
                                     </Text>
                                  </children>
                                  <HBox.margin>
-                                    <Insets right="50.0" top="20.0" />
+                                    <Insets top="20.0" />
                                  </HBox.margin>
                               </VBox>
                            </children>
@@ -166,7 +166,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </TextField>
-                                    <Text fx:id="errorNick" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="NickName en uso">
+                                    <Text fx:id="errorNick" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="NickName en uso" visible="false">
                                        <font>
                                           <Font size="11.0" />
                                        </font>
@@ -195,7 +195,7 @@
                               <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="138.0">
                                  <children>
                                     <PasswordField fx:id="campoPassword" />
-                                    <Text fx:id="errorPassword" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Sólo caracteres y números">
+                                    <Text fx:id="errorPassword" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Sólo caracteres y números" visible="false">
                                        <VBox.margin>
                                           <Insets />
                                        </VBox.margin>
@@ -226,13 +226,16 @@
                               </VBox>
                               <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <HBox prefHeight="110.0" prefWidth="137.0">
+                                    <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="95.0">
                                        <children>
-                                          <ImageView fx:id="image" fitHeight="71.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fx:id="image" fitHeight="70.0" fitWidth="106.0" pickOnBounds="true">
                                              <HBox.margin>
-                                                <Insets bottom="4.0" top="20.0" />
+                                                <Insets bottom="4.0" top="10.0" />
                                              </HBox.margin></ImageView>
                                        </children>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
                                     </HBox>
                                     <HBox prefHeight="38.0" prefWidth="104.0">
                                        <children>
@@ -240,7 +243,7 @@
                                              <children>
                                                 <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#izq" prefHeight="24.0" prefWidth="40.0">
                                                    <VBox.margin>
-                                                      <Insets right="5.0" />
+                                                      <Insets right="5.0" top="15.0" />
                                                    </VBox.margin>
                                                    <font>
                                                       <Font size="11.0" />
@@ -257,7 +260,7 @@
                                              <children>
                                                 <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#der" prefHeight="24.0" prefWidth="40.0">
                                                    <VBox.margin>
-                                                      <Insets left="5.0" />
+                                                      <Insets left="5.0" top="15.0" />
                                                    </VBox.margin>
                                                    <font>
                                                       <Font size="11.0" />
@@ -355,7 +358,7 @@
                                           </TextField>
                                        </children>
                                     </HBox>
-                                    <Text fx:id="errorTarjeta" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de tarjeta no válido">
+                                    <Text fx:id="errorTarjeta" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de tarjeta no válido" visible="false">
                                        <font>
                                           <Font size="11.0" />
                                        </font>
@@ -387,7 +390,7 @@
                                           <Font size="11.0" />
                                        </font>
                                     </TextField>
-                                    <Text fx:id="errorSVC" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="SVC no válido">
+                                    <Text fx:id="errorSVC" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="SVC no válido" visible="false">
                                        <font>
                                           <Font size="11.0" />
                                        </font>

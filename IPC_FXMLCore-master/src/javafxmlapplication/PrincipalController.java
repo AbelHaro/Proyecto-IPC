@@ -44,8 +44,7 @@ public class PrincipalController implements Initializable {
     private void registrarse(ActionEvent event) throws IOException {
         try {
             FXMLLoader miCargador = new FXMLLoader(getClass().getResource("RegistrarseV2.fxml"));
-            Parent root;
-            root = miCargador.load();
+            Parent root = miCargador.load();
             JavaFXMLApplication.setRoot(root);
         } catch (IOException ex) {
             System.out.println("Escena no Encontrada");

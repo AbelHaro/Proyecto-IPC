@@ -12,10 +12,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import tenisclubtest.TCDataGenerator;
 
 //ihbkygvb
 //grgrgr
 public class JavaFXMLApplication extends Application {
+    
     
     FXMLLoader loader;
     Parent root;
@@ -26,9 +28,12 @@ public class JavaFXMLApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         //======================================================================
+        // Ejecuta el programa para llenar la base de datos con ejemplos
+        TCDataGenerator tcd = new TCDataGenerator();
+        tcd.main(null);
         
         
-        
+        // Carga la vista principal
         loader = new  FXMLLoader(getClass().getResource("Principal.fxml"));
         root = loader.load();
         roots.put("Principal", root);
