@@ -6,7 +6,11 @@ package javafxmlapplication;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
 /**
  * FXML Controller class
@@ -15,6 +19,15 @@ import javafx.fxml.Initializable;
  */
 public class IniciarSesionNeutroController implements Initializable {
 
+    @FXML
+    private Button bAcceder;
+    @FXML
+    private Button bRegistrarse;
+    @FXML
+    private Button bVerDisponibilidad;
+    @FXML
+    private Label errorAcceder;
+
     /**
      * Initializes the controller class.
      */
@@ -22,5 +35,17 @@ public class IniciarSesionNeutroController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void handlebAccederOnAction(ActionEvent event) {
+    }
+
+    @FXML
+    private void handlebRegistrarseOnAction(ActionEvent event) {
+    }
+
+    @FXML
+    private void handlebVerDisponibilidadOnAction(ActionEvent event) {
+    }
     
 }

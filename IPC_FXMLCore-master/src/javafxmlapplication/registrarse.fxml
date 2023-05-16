@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="846.0" prefWidth="650.0" style="-fx-background-color: #00E277;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.RegistrarseController">
+  <columnConstraints>
+    <ColumnConstraints />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="232.00000915527343" minHeight="10.0" prefHeight="144.19998016357422" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="172.2" minHeight="10.0" prefHeight="60.400000000000006" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="160.7999816894531" minHeight="3.3999877929687443" prefHeight="51.599999999999994" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="242.40000610351564" minHeight="10.0" prefHeight="51.59998779296876" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="268.4" minHeight="7.600012207031227" prefHeight="49.79998779296875" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="279.79999389648435" minHeight="7.800012207031273" prefHeight="51.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="288.1999572753906" minHeight="7.800000000000011" prefHeight="47.199981689453125" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="304.60001220703117" minHeight="1.2000183105468523" prefHeight="48.60000000000002" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="304.60001220703117" minHeight="1.3999999999999773" prefHeight="33.600024414062545" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="292.79998779296875" minHeight="0.0" prefHeight="36.99996337890627" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="287.99999999999994" minHeight="0.0" prefHeight="97.00003662109373" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox alignment="CENTER" prefHeight="180.0" prefWidth="650.0" GridPane.columnIndex="1">
+         <children>
+            <VBox alignment="CENTER" prefHeight="118.0" prefWidth="244.0">
+               <children>
+                  <Label prefHeight="34.0" prefWidth="177.0" text="GreenBall" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Label alignment="CENTER" text="Registrarse " textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="44.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="77.0" prefWidth="650.0" style="-fx-background-color: #FFFFF6;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <VBox alignment="CENTER" prefHeight="54.0" prefWidth="70.0">
+               <children>
+                  <Label alignment="CENTER" text="Nombre *" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="54.0" prefWidth="149.0">
+               <children>
+                  <TextField promptText="Escribe tu nombre" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FFFFF6;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <VBox alignment="CENTER" prefHeight="64.0" prefWidth="79.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="22.0" prefWidth="79.0" text="Apellidos *" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="54.0" prefWidth="149.0">
+               <children>
+                  <TextField promptText="Escribe tus apellidos">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FFFFF6;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <VBox alignment="CENTER" prefHeight="64.0" prefWidth="70.0">
+               <children>
+                  <Label alignment="CENTER" text="Teléfono *" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="56.0" prefWidth="118.0">
+               <children>
+                  <TextField fx:id="TTelefono" prefHeight="26.0" prefWidth="122.0" promptText="Escribe tu teléfono" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="56.0" prefWidth="128.0">
+               <children>
+                  <Label fx:id="errorTelNoValido" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="128.0" text="Teléfono no valido " textFill="#ff3535" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FFFFF6;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <children>
+            <VBox alignment="CENTER" prefHeight="64.0" prefWidth="84.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="85.0" text="Nickname *" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="64.0" prefWidth="138.0">
+               <children>
+                  <TextField fx:id="TNickname" promptText="Escribe tu Nickname" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="62.0" prefWidth="132.0">
+               <children>
+                  <Label fx:id="errorNickNoValido" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="130.0" text="Nickname no valido " textFill="#ff3535" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FFFFF6;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <children>
+            <VBox alignment="CENTER" prefHeight="64.0" prefWidth="94.0">
+               <children>
+                  <Label text="Password *">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="62.0" prefWidth="182.0">
+               <children>
+                  <PasswordField fx:id="TPassword" prefHeight="26.0" prefWidth="182.0" promptText="Escribe tu contraseña" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="62.0" prefWidth="123.0">
+               <children>
+                  <Label fx:id="errorPasswordNoValido" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="128.0" text="Password no valido " textAlignment="CENTER" textFill="#ff3535" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FFFFF6;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <children>
+            <VBox alignment="CENTER" prefHeight="64.0" prefWidth="214.0">
+               <children>
+                  <Label text="Numero de la tarjeta de credito">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="62.0" prefWidth="178.0">
+               <children>
+                  <TextField fx:id="TNumTrajetaCredito" promptText="Escribe el numero de la tarjeta" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="62.0" prefWidth="119.0">
+               <children>
+                  <Label fx:id="errorNumdeTarjetaNoValido" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="128.0" text="Numero no valido " textFill="#ff3535" visible="false" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FFFFF6;" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <children>
+            <VBox alignment="CENTER" prefHeight="64.0" prefWidth="40.0">
+               <children>
+                  <Label alignment="CENTER" text="SVC" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="62.0" prefWidth="47.0">
+               <children>
+                  <TextField fx:id="TSVC" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="errorSVCNoValido" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="128.0" text="SVC no valido " textFill="#ff3535" visible="false" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FFFFF6;" GridPane.columnIndex="1" GridPane.rowIndex="9">
+         <children>
+            <VBox alignment="CENTER" prefHeight="64.0" prefWidth="176.0">
+               <HBox.margin>
+                  <Insets left="-480.0" />
+               </HBox.margin>
+               <children>
+                  <Label text="* Campos obligatorios">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FFFFF6;" GridPane.columnIndex="1" GridPane.rowIndex="10">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="bCancelarRegistro" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlebCancelarRegistroOnAction" prefHeight="37.0" prefWidth="118.0" text="Cancelar ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="bRegistrarse" mnemonicParsing="false" onAction="#handlebRegistrarseOnAction" text="Registrarse">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets right="-390.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FFFFF6;" GridPane.columnIndex="1" GridPane.rowIndex="8">
+         <children>
+            <VBox alignment="CENTER" prefHeight="50.0" prefWidth="199.0">
+               <children>
+                  <Label alignment="CENTER" text="Elige un imagen de perfil:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <MenuButton mnemonicParsing="false" text="MenuButton">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </MenuItem>
+                      <MenuItem mnemonicParsing="false" text="Action 2">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Action 2">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Action 2">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Action 2">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Action 2">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Action 2">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                  </MenuButton>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</GridPane>

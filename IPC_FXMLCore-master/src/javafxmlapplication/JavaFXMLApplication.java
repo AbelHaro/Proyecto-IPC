@@ -12,10 +12,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import tenisclubtest.TCDataGenerator;
 
 //ihbkygvb
 //grgrgr
 public class JavaFXMLApplication extends Application {
+    
     
     FXMLLoader loader;
     Parent root;
@@ -26,8 +28,15 @@ public class JavaFXMLApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         //======================================================================
+        // Ejecuta el programa para llenar la base de datos con ejemplos
+        TCDataGenerator tcd = new TCDataGenerator();
+        tcd.main(null);
         
-        inicializarVistas();
+        
+        // Carga la vista principal
+        loader = new  FXMLLoader(getClass().getResource("Principal.fxml"));
+        root = loader.load();
+        roots.put("Principal", root);
         
         //======================================================================
         
@@ -39,7 +48,8 @@ public class JavaFXMLApplication extends Application {
         
         scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("start PROJECT - IPC:");
+        stage.sizeToScene();
+        stage.setTitle("GREENBALL");
         stage.show();
         
     }
@@ -70,7 +80,7 @@ public class JavaFXMLApplication extends Application {
     /*
     Método privado auxiliar para cambiar la vista
     */
-    private static void setRoot(Parent root){
+    public static void setRoot(Parent root){
         scene.setRoot(root);
     }
     
@@ -85,13 +95,22 @@ public class JavaFXMLApplication extends Application {
     Utilizar la ruta de la vista y un nombre para utilizar de clave en el mapa
     IMMPORTANTE: La última vista en precargar será la que se muestre al iniciar el programa
     */
+    //NO UTILIZAR POR AHORA ABEL 12-05 22:46
+    /*
     private void inicializarVistas() throws IOException{
         loader = new  FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
         root = loader.load();
         roots.put("IniciarSesion", root);
         
+        loader = new  FXMLLoader(getClass().getResource("verPistasDisponibles.fxml"));
+        root = loader.load();
+        roots.put("verPistasDisponibles", root);
+        
+        
+        
         loader = new  FXMLLoader(getClass().getResource("Principal.fxml"));
         root = loader.load();
         roots.put("Principal", root);
     }
+        */
 }
