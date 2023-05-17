@@ -7,17 +7,15 @@ package javafxmlapplication;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.text.Text;
@@ -30,46 +28,65 @@ import model.ClubDAOException;
  *
  * @author Usuario
  */
-public class VerPistasDisponiblesController implements Initializable {
+public class ReservarController implements Initializable {
+
+    @FXML
+    private DatePicker datePicker;
+    @FXML
+    private MenuButton menu;
+    @FXML
+    private Text t1;
+    @FXML
+    private Button b1;
+    @FXML
+    private Text t2;
+    @FXML
+    private Button b2;
+    @FXML
+    private Text t3;
+    @FXML
+    private Button b3;
+    @FXML
+    private Text t4;
+    @FXML
+    private Button b4;
+    @FXML
+    private Text t5;
+    @FXML
+    private Button b5;
+    @FXML
+    private Text t6;
+    @FXML
+    private Button b6;
+    
+    
+    
+    Button[] bReservar =  new Button[6];
+    Text[] tInfo = new Text[6];
+    
+    Club club;
+    List<Booking> reservas;
 
     /**
      * Initializes the controller class.
      */
-    
-    @FXML
-    private Text t1;
-    @FXML
-    private Text t2;
-    @FXML
-    private Text t3;
-    @FXML
-    private Text t4;
-    @FXML
-    private Text t5;
-    @FXML
-    private Text t6;
-    
-    Club club;
-    List<Booking> reservas;
-    @FXML
-    private MenuButton menu;
-    Text[] tInfo = new Text[6];
-   
-    
-    //public ArrayList<Booking> getForDayBookings(LocalDate forDay)
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        bReservar[0] = b1;bReservar[1] = b2;bReservar[2] = b3;bReservar[3] = b4;bReservar[4] = b5;bReservar[5] = b6;
         tInfo[0] = t1;tInfo[1] = t2;tInfo[2] = t3;tInfo[3] = t4;tInfo[4] = t5;tInfo[5] = t6;
+        datePicker.setValue(LocalDate.now());
         inicializarGeneral();
         menu.textProperty().addListener((obs, oldValue, newValue) -> {inicializarGeneral();});
+        datePicker.valueProperty().addListener((obs, oldValue, newValue) -> {inicializarGeneral();});
     }    
-    
+
     public void inicializarGeneral(){
         try {
             club = Club.getInstance(); 
            
-            reservas = club.getForDayBookings(LocalDate.now());
+            
+            LocalDate dia = datePicker.getValue();
+            reservas = club.getForDayBookings(dia);
             
             inicializarPistas();
 
@@ -111,6 +128,9 @@ public class VerPistasDisponiblesController implements Initializable {
         String pista = reserva.getCourt().getName();
         int numeroPista = Integer.parseInt(pista.substring(pista.length()-1));
         tInfo[numeroPista-1].setText(aux + pista.toUpperCase() + "        RESERVADO POR " + reserva.getMember().getNickName());
+        bReservar[numeroPista-1].setVisible(false);
+        
+        
     }
     
     public void inicializarVacio(int horaInicio){
@@ -124,17 +144,14 @@ public class VerPistasDisponiblesController implements Initializable {
         
         for(int i = 0; i < tInfo.length; i++){
             tInfo[i].setText(aux + "PISTA " + i + "        NO RESERVADA");
+            bReservar[i].setVisible(true);
             }
+        
         }
     
-
-    @FXML
-    private void cambiarHorarioDesplegable(ActionEvent event) {
-        MenuItem m = (MenuItem) event.getSource();
-        this.menu.setText(m.getText()); 
-        
-    }
-
+    
+    
+    
     @FXML
     private void cancelar(ActionEvent event) {
         try {
@@ -145,12 +162,16 @@ public class VerPistasDisponiblesController implements Initializable {
         } catch (IOException ex) {
             System.out.println("Escena no Encontrada");
         }
-        
     }
-    
-    
-    
-    
-    
+
+    @FXML
+    private void cambiarHorarioDesplegable(ActionEvent event) {
+        MenuItem m = (MenuItem) event.getSource();
+        this.menu.setText(m.getText()); 
+    }
+
+    @FXML
+    private void reservar(ActionEvent event) {
+    }
     
 }

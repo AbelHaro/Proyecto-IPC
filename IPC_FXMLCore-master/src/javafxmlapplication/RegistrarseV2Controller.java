@@ -227,22 +227,22 @@ public class RegistrarseV2Controller implements Initializable {
         
         
         campoTarjeta1.textProperty().addListener((obs, oldValue, newValue) -> {
-            if(campoTarjeta1.getText().length() > 4){campoTarjeta1.setText(campoTarjeta1.getText().substring(1));}
+            if(campoTarjeta1.getText().length() > 4){campoTarjeta1.setText(campoTarjeta1.getText().substring(0, campoTarjeta1.getText().length()-1));}
         });
         campoTarjeta2.textProperty().addListener((obs, oldValue, newValue) -> {
-            if(campoTarjeta2.getText().length() > 4){campoTarjeta2.setText(campoTarjeta2.getText().substring(1));}
+            if(campoTarjeta2.getText().length() > 4){campoTarjeta2.setText(campoTarjeta2.getText().substring(0, campoTarjeta2.getText().length()-1));}
         });
         campoTarjeta3.textProperty().addListener((obs, oldValue, newValue) -> {
-            if(campoTarjeta3.getText().length() > 4){campoTarjeta3.setText(campoTarjeta3.getText().substring(1));}
+            if(campoTarjeta3.getText().length() > 4){campoTarjeta3.setText(campoTarjeta3.getText().substring(0, campoTarjeta3.getText().length()-1));}
         });
         campoTarjeta4.textProperty().addListener((obs, oldValue, newValue) -> {
-            if(campoTarjeta4.getText().length() > 4){campoTarjeta4.setText(campoTarjeta4.getText().substring(1));}
+            if(campoTarjeta4.getText().length() > 4){campoTarjeta4.setText(campoTarjeta4.getText().substring(0,campoTarjeta4.getText().length()-1));}
         });
         campoSVC.textProperty().addListener((obs, oldValue, newValue) -> {
-            if(campoSVC.getText().length() > 3){campoSVC.setText(campoSVC.getText().substring(1));}
+            if(campoSVC.getText().length() > 3){campoSVC.setText(campoSVC.getText().substring(0, campoSVC.getText().length()-1));}
         });
         campoTelefono.textProperty().addListener((obs, oldValue, newValue) -> {
-            if(campoTelefono.getText().length() > 9){campoTelefono.setText(campoTelefono.getText().substring(1));}
+            if(campoTelefono.getText().length() > 9){campoTelefono.setText(campoTelefono.getText().substring(0, campoTelefono.getText().length()-1));}
         });
         
     

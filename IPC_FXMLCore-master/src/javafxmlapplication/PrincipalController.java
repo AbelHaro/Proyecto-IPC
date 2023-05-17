@@ -63,5 +63,19 @@ public class PrincipalController implements Initializable {
             System.out.println("Escena no Encontrada");
         }
     }
+
+    @FXML
+    private void reservar(ActionEvent event) {
+        try {
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Reservar.fxml"));
+            Parent root;
+            root = miCargador.load();
+            JavaFXMLApplication.setRoot(root);
+        } catch (IOException ex) {
+            System.out.println("Escena no Encontrada");
+        } catch (Exception e){
+            e.toString();
+        }
+    }
     
 }

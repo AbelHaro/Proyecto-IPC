@@ -36,6 +36,7 @@
                         <Font size="24.0" />
                      </font>
                   </Button>
+                  <Button mnemonicParsing="false" onAction="#reservar" prefHeight="50.0" prefWidth="59.0" text="R" />
                </children>
             </HBox>
          </children>

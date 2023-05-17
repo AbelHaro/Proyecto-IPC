@@ -64,39 +64,39 @@ public class RegistrarseController implements Initializable {
     int lengthTNumTrajetaCredito = TNumTrajetaCredito.getText().length();
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    validTelefono = new SimpleBooleanProperty();
-    validNickname = new SimpleBooleanProperty();
-    validNumCredito = new SimpleBooleanProperty();
-    validSVC = new SimpleBooleanProperty();
-    validTelefono.setValue(Boolean.FALSE); 
-    validNickname.setValue(Boolean.FALSE);
-    validNumCredito.setValue(Boolean.FALSE);
-    validSVC.setValue(Boolean.FALSE);
-    //Check values when user leaves edits
-    TTelefono.focusedProperty().addListener((observable, oldValue, newValue)->{
-    if(!newValue){ //focus lost.
-        checkEditTelefono();
-    }
-        });
-    
-        
-    TPassword.focusedProperty().addListener((observable, oldValue, newValue)->{
-    if(!newValue){ //focus lost.
-        checkEditPassword();
-    }
-        });
-    TNumTrajetaCredito.focusedProperty().addListener((observable, oldValue, newValue)->{
-    if(!newValue){ //focus lost.
-        checkEditTarjetCredito();
-    }
-        });
-    TSVC.focusedProperty().addListener((observable, oldValue, newValue)->{
-    if(!newValue){ //focus lost.
-        checkEditSVC();
-    }
-        });
-    
-            }    
+        validTelefono = new SimpleBooleanProperty();
+        validNickname = new SimpleBooleanProperty();
+        validNumCredito = new SimpleBooleanProperty();
+        validSVC = new SimpleBooleanProperty();
+        validTelefono.setValue(Boolean.FALSE); 
+        validNickname.setValue(Boolean.FALSE);
+        validNumCredito.setValue(Boolean.FALSE);
+        validSVC.setValue(Boolean.FALSE);
+        //Check values when user leaves edits
+        TTelefono.focusedProperty().addListener((observable, oldValue, newValue)->{
+        if(!newValue){ //focus lost.
+            checkEditTelefono();
+        }
+            });
+
+
+        TPassword.focusedProperty().addListener((observable, oldValue, newValue)->{
+        if(!newValue){ //focus lost.
+            checkEditPassword();
+        }
+            });
+        TNumTrajetaCredito.focusedProperty().addListener((observable, oldValue, newValue)->{
+        if(!newValue){ //focus lost.
+            checkEditTarjetCredito();
+        }
+            });
+        TSVC.focusedProperty().addListener((observable, oldValue, newValue)->{
+        if(!newValue){ //focus lost.
+            checkEditSVC();
+        }
+            });
+
+    }    
     private void checkEditTelefono(){
     if(lengthTTelefono!=10){errorTelNoValido.setVisible(true);} 
     }
