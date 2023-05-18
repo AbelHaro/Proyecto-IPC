@@ -70,7 +70,7 @@
                   <Insets />
                </HBox.margin>
                <children>
-                  <PasswordField promptText="Escribe tu Contraseña">
+                  <PasswordField fx:id="password" promptText="Escribe tu Contraseña">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
@@ -141,6 +141,7 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
+                  <Label fx:id="error" disable="true" textFill="RED" />
                </children>
             </VBox>
          </children>
@@ -161,7 +162,7 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="86.0" prefWidth="178.0">
                <children>
-                  <TextField prefHeight="26.0" prefWidth="198.0" promptText="Escribe tu Nickname" />
+                  <TextField fx:id="nick" prefHeight="26.0" prefWidth="198.0" promptText="Escribe tu Nickname" />
                </children>
             </VBox>
          </children>

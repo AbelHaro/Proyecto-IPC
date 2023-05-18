@@ -4,6 +4,7 @@
  */
 package javafxmlapplication;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -11,6 +12,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.input.ZoomEvent;
+import model.Club.*;
+import model.ClubDAOException;
 
 /**
  * FXML Controller class
@@ -27,6 +33,12 @@ public class IniciarSesionNeutroController implements Initializable {
     private Button bVerDisponibilidad;
     @FXML
     private Label errorAcceder;
+    @FXML
+    private PasswordField password;
+    @FXML
+    private TextField nick;
+    @FXML
+    private Label error;
 
     /**
      * Initializes the controller class.
@@ -37,7 +49,17 @@ public class IniciarSesionNeutroController implements Initializable {
     }    
 
     @FXML
-    private void handlebAccederOnAction(ActionEvent event) {
+    private void handlebAccederOnAction(ActionEvent event) throws ClubDAOException, IOException {
+        
+        if (!model.Club.getInstance().existsLogin(nick.getText())) {
+            error.setText("El usuario no existe");
+            error.setVisible(true);
+        }
+        
+        if (model.Club.getInstance().getMemberByCredentials(nick.getText(),password.getText())==null) {
+            error.setText("Usuario o contraseña incorrecta");
+            error.setVisible(true);
+        }
     }
 
     @FXML
@@ -47,5 +69,6 @@ public class IniciarSesionNeutroController implements Initializable {
     @FXML
     private void handlebVerDisponibilidadOnAction(ActionEvent event) {
     }
+
     
 }

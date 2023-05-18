@@ -33,6 +33,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
+import javafxmlapplication.JavaFXMLApplication;
 import model.Club;
 import model.ClubDAOException;
 import model.Member;
@@ -91,7 +92,7 @@ public class RegistrarseV2Controller implements Initializable {
     @FXML
     private Text errorSVC;
     
-    
+ 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         inicializarImagenes();

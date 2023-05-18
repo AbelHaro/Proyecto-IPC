@@ -13,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import tenisclubtest.TCDataGenerator;
+import model.Club.*;
 
 //ihbkygvb
 //grgrgr
@@ -31,7 +32,7 @@ public class JavaFXMLApplication extends Application {
         // Ejecuta el programa para llenar la base de datos con ejemplos
         TCDataGenerator tcd = new TCDataGenerator();
         tcd.main(null);
-        
+        model.Club.getInstance();
         
         // Carga la vista principal
         loader = new  FXMLLoader(getClass().getResource("Principal.fxml"));
