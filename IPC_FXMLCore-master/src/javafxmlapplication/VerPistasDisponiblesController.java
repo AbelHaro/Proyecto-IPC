@@ -123,7 +123,7 @@ public class VerPistasDisponiblesController implements Initializable {
         }
         
         for(int i = 0; i < tInfo.length; i++){
-            tInfo[i].setText(aux + "PISTA " + i + "        NO RESERVADA");
+            tInfo[i].setText(aux + "PISTA " + (i+1) + "        NO RESERVADA");
             }
         }
     

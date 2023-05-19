@@ -348,10 +348,10 @@ public class RegistrarseV2Controller implements Initializable {
     }
 
     @FXML
-    private void izq(ActionEvent event) {image.imageProperty().setValue(avatares[Math.abs((--pos) % avatares.length)]);}
+    private void izq(ActionEvent event) {image.imageProperty().setValue(avatares[Math.abs(--pos) % avatares.length]);}
 
     @FXML
-    private void der(ActionEvent event) {image.imageProperty().setValue(avatares[Math.abs((++pos) % avatares.length)]);}
+    private void der(ActionEvent event) {image.imageProperty().setValue(avatares[Math.abs(++pos) % avatares.length]);}
     
     
     public static boolean isFullName(String str) {

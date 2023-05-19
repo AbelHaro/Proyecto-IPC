@@ -112,9 +112,9 @@
                   <Insets bottom="40.0" />
                </padding>
             </HBox>
-            <HBox prefHeight="294.0" prefWidth="430.0">
+            <HBox alignment="CENTER" prefHeight="294.0" prefWidth="430.0">
                <children>
-                  <VBox alignment="CENTER_LEFT" prefHeight="272.0" prefWidth="600.0">
+                  <VBox alignment="CENTER" prefHeight="272.0" prefWidth="600.0">
                      <children>
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                            <children>
