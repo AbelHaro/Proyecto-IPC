@@ -273,7 +273,7 @@ public class RegistrarseV2Controller implements Initializable {
             root = miCargador.load();
             JavaFXMLApplication.setRoot(root);
         } catch (IOException ex) {
-            System.out.println("Escena no Encontrada");
+            System.out.println("Error al cargar la escena");
         }
     }
 
@@ -337,7 +337,7 @@ public class RegistrarseV2Controller implements Initializable {
         } catch (ClubDAOException ex) {
             System.out.println("Error al registrar el miembro");
         } catch (Exception ex) {
-            System.out.println("Error al cargar escena");
+            System.out.println("Error al cargar la escena");
         }
     }
 

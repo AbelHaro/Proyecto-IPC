@@ -22,6 +22,7 @@ import javafx.scene.text.Text;
 import model.Booking;
 import model.Club;
 import model.ClubDAOException;
+import model.Member;
 
 /**
  * FXML Controller class
@@ -66,6 +67,7 @@ public class ReservarController implements Initializable {
     
     Club club;
     List<Booking> reservas;
+    Member m;
 
     /**
      * Initializes the controller class.
@@ -75,6 +77,8 @@ public class ReservarController implements Initializable {
         bReservar[0] = b1;bReservar[1] = b2;bReservar[2] = b3;bReservar[3] = b4;bReservar[4] = b5;bReservar[5] = b6;
         tInfo[0] = t1;tInfo[1] = t2;tInfo[2] = t3;tInfo[3] = t4;tInfo[4] = t5;tInfo[5] = t6;
         datePicker.setValue(LocalDate.now());
+        //m = InterfazUsuarioController.getMember();
+        //fotoPerfil.setValue(m.getImage());
         inicializarGeneral();
         menu.textProperty().addListener((obs, oldValue, newValue) -> {inicializarGeneral();});
         datePicker.valueProperty().addListener((obs, oldValue, newValue) -> {inicializarGeneral();});
@@ -160,7 +164,7 @@ public class ReservarController implements Initializable {
             root = miCargador.load();
             JavaFXMLApplication.setRoot(root);
         } catch (IOException ex) {
-            System.out.println("Escena no Encontrada");
+            System.out.println("Error al cargar la escena");
         }
     }
 
