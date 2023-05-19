@@ -7,13 +7,19 @@ package javafxmlapplication;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.MenuButton;
@@ -22,6 +28,7 @@ import javafx.scene.text.Text;
 import model.Booking;
 import model.Club;
 import model.ClubDAOException;
+import model.Court;
 import model.Member;
 
 /**
@@ -74,10 +81,10 @@ public class ReservarController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
         bReservar[0] = b1;bReservar[1] = b2;bReservar[2] = b3;bReservar[3] = b4;bReservar[4] = b5;bReservar[5] = b6;
         tInfo[0] = t1;tInfo[1] = t2;tInfo[2] = t3;tInfo[3] = t4;tInfo[4] = t5;tInfo[5] = t6;
         datePicker.setValue(LocalDate.now());
-        //m = InterfazUsuarioController.getMember();
         //fotoPerfil.setValue(m.getImage());
         inicializarGeneral();
         menu.textProperty().addListener((obs, oldValue, newValue) -> {inicializarGeneral();});
@@ -147,7 +154,7 @@ public class ReservarController implements Initializable {
         }
         
         for(int i = 0; i < tInfo.length; i++){
-            tInfo[i].setText(aux + "PISTA " + i + "        NO RESERVADA");
+            tInfo[i].setText(aux + "PISTA " +( i + 1 )+ "        NO RESERVADA");
             bReservar[i].setVisible(true);
             }
         
@@ -176,6 +183,97 @@ public class ReservarController implements Initializable {
 
     @FXML
     private void reservar(ActionEvent event) {
+        
+        try {
+            Button b = (Button) event.getSource();
+            String pista = "Pista " + b.getId().substring(1);
+            
+            System.out.println("Pista elegida" + pista);
+            
+            LocalDate dia = datePicker.getValue();
+            List<Booking> reservasPista = club.getCourtBookings(pista, dia);
+            
+            String horaInicio = menu.getText();
+            if(horaInicio.length() == 12){ // String con hora 9
+                horaInicio = horaInicio.substring(0,1);
+            } else {
+                horaInicio = horaInicio.substring(0,2);
+            }
+            int horaInicioReserva = Integer.parseInt(horaInicio);
+            
+            
+            System.out.println("Hora inicio reserva" + horaInicioReserva);
+            
+            int[] horas = new int[22];
+            horas[horaInicioReserva]= 1;
+            
+            for(int i = 0; i < reservasPista.size(); i++){
+                if(reservasPista.get(i).getMember().equals(m)){
+                    horas[reservasPista.get(i).getFromTime().getHour()]= 1;
+                }
+            }
+            
+            
+            int cont = 0;
+            for(int i = 0; i < horas.length; i++){
+                if(horas[i]== 0){cont = 0;}
+                else {cont++;}
+                System.out.println("Valor de horas " + horas[i] + " iteración " + i + " valor de cont " + cont);
+                if(cont >= 3){errorReservar();return;}
+                
+            }
+            
+            
+            LocalDateTime bookingDate = LocalDateTime.now();
+            LocalTime fromTime = LocalTime.of(horaInicioReserva,0);
+            Court pistaC = new Court(pista);
+            boolean paid = true;
+            if(m.getCreditCard().equals("")){paid = false;}
+            Booking reserva = club.registerBooking(bookingDate, dia,fromTime,paid,pistaC,m );
+            System.out.println(reserva.getBookingDate().toString() + "AQUI");
+            inicializarGeneral();
+            completadaReserva(reserva);
+        } catch (ClubDAOException ex) {
+            System.out.println("error en la reserva");
+        }
+        
+        
+        
     }
+    
+    
+    public void setMember(Member m){this.m = m;}
+    
+    
+    public void errorReservar(){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Reserva de pista");
+        alert.setHeaderText("Reserva no completada");
+        alert.setContentText("La reserva no se pudo confirmar ya que el usuario " + m.getNickName() + 
+                " ya posee dos reservas seguidas en la misma pista");
+        
+        alert.showAndWait();
+    }
+    
+    
+    public void completadaReserva(Booking reserva){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Confirmación de reserva");
+        alert.setHeaderText("Reserva creada");
+        String res = "La reserva se ha creado correctamente.\n"
+                + "Dia " + reserva.getMadeForDay().toString() + " Hora " + reserva.getFromTime().toString() +
+                " en la pista " + reserva.getCourt().getName()+ "\n";
+        if(m.checkHasCreditInfo()){res += "Reserva pagada de forma online";}
+        else {res += "La reserva deberá ser abonada antes de jugar";}
+        alert.setContentText(res);
+        alert.showAndWait();
+    }
+    
+    
+    
+    
+    
+    
+    
     
 }

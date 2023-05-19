@@ -19,6 +19,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.ZoomEvent;
 import model.Club.*;
 import model.ClubDAOException;
+import model.Member;
 
 /**
  * FXML Controller class
@@ -41,6 +42,8 @@ public class IniciarSesionNeutroController implements Initializable {
     private TextField nick;
     @FXML
     private Label error;
+    
+    public Member m;
 
     /**
      * Initializes the controller class.
@@ -56,12 +59,30 @@ public class IniciarSesionNeutroController implements Initializable {
         if (!model.Club.getInstance().existsLogin(nick.getText())) {
             error.setText("El usuario no existe");
             error.setVisible(true);
+            return;
         }
-        
-        if (model.Club.getInstance().getMemberByCredentials(nick.getText(),password.getText())==null) {
+        m = model.Club.getInstance().getMemberByCredentials(nick.getText(),password.getText());
+        if (m ==null) {
             error.setText("Usuario o contraseña incorrecta");
             error.setVisible(true);
+            return;
         }
+        
+        
+        try {
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Reservar.fxml"));
+            Parent root = miCargador.load();
+            // Pasar parámetros entres escenas--------------------------------------------
+            ReservarController controladorReservar = miCargador.getController();
+            controladorReservar.setMember(m);
+            //----------------------------------------------------------------------------
+            JavaFXMLApplication.setRoot(root);
+        } catch (IOException ex) {
+            System.out.println("Escena no Encontrada");
+        }
+        
+        
+        
     }
 
     @FXML
@@ -87,5 +108,6 @@ public class IniciarSesionNeutroController implements Initializable {
         }
     }
 
-    
+    // Método para acceder al miembro desde otras escenas
+   // public static Member getMember(){return this.m;}
 }

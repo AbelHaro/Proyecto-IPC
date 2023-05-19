@@ -12,8 +12,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import model.Club;
+import model.Member;
 import tenisclubtest.TCDataGenerator;
-import model.Club.*;
 
 //ihbkygvb
 //grgrgr
@@ -23,21 +24,21 @@ public class JavaFXMLApplication extends Application {
     FXMLLoader loader;
     Parent root;
     private static Scene scene;
-    
+    Club club;
+    Member m;
     
     @Override
     public void start(Stage stage) throws Exception {
         //======================================================================
         // Ejecuta el programa para llenar la base de datos con ejemplos
-<<<<<<< Updated upstream
-        TCDataGenerator tcd = new TCDataGenerator();
-        tcd.main(null);
-        model.Club.getInstance();
-=======
+
+        
+        
+
        
         TCDataGenerator.main(null);
-        
->>>>>>> Stashed changes
+        club = model.Club.getInstance();
+
         
         // Carga la vista principal
         loader = new  FXMLLoader(getClass().getResource("Principal.fxml"));
@@ -61,6 +62,11 @@ public class JavaFXMLApplication extends Application {
 
     
     
+    
+    
+    
+    
+    public Club getClub(){return this.club;}
     
     /*
     Método privado auxiliar para cambiar la vista
