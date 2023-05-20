@@ -25,6 +25,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -91,6 +92,8 @@ public class RegistrarseV2Controller implements Initializable {
     private TextField campoSVC;
     @FXML
     private Text errorSVC;
+    @FXML
+    private CheckBox check;
     
  
     @Override
@@ -282,7 +285,7 @@ public class RegistrarseV2Controller implements Initializable {
         
         if(errorNombre.visibleProperty().getValue() || errorApellido.visibleProperty().getValue()
                 || errorTelefono.visibleProperty().getValue() || errorNick.visibleProperty().getValue()
-                || errorPassword.visibleProperty().getValue()){
+                || errorPassword.visibleProperty().getValue() || !check.isSelected() ){
             avisoCampos();
             return;
         }
@@ -323,11 +326,7 @@ public class RegistrarseV2Controller implements Initializable {
         try {
             Member m = club.registerMember(name, apellido, telefono, nick, password, tarjeta, svc, img);
             avisoRegistroCorrecto(name);
-            if(m.checkHasCreditInfo()){
-                System.out.println("Tiene tarjeta");
-            } else {
-                System.out.println("No tiene tarjeta");
-            }
+            
             FXMLLoader miCargador = new FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
             Parent root;
             root = miCargador.load();
@@ -407,7 +406,7 @@ public class RegistrarseV2Controller implements Initializable {
         Alert alert = new Alert(AlertType.ERROR);
         alert.setTitle("Confirmación de registro");
         alert.setHeaderText("Campos incorrectos");
-        alert.setContentText("Los campos deben ser correctos para confirmar el registro.");
+        alert.setContentText("Los campos deben ser correctos y se ha de aceptar el tratamiento de los datos para confirmar el registro.");
         
         
         alert.showAndWait();

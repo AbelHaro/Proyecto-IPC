@@ -41,7 +41,7 @@ public class JavaFXMLApplication extends Application {
 
         
         // Carga la vista principal
-        loader = new  FXMLLoader(getClass().getResource("Principal.fxml"));
+        loader = new  FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
         root = loader.load();
         
         scene = new Scene(root);

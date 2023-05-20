@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="430.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.VerPistasDisponiblesController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.VerPistasDisponiblesController">
    <top>
       <HBox alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
@@ -78,7 +78,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="272.0" prefWidth="430.0">
                      <children>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277;">
                            <children>
                               <Text fx:id="t1" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="470.0">
                                  <font>
@@ -96,7 +96,7 @@
                               <Insets />
                            </VBox.margin>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277;">
                            <children>
                               <Text fx:id="t2" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
                                  <font>
@@ -111,7 +111,7 @@
                               <Insets left="40.0" />
                            </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="440.0">
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="440.0" style="-fx-border-color: #00E277;">
                            <children>
                               <Text fx:id="t3" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="390.0">
                                  <font>
@@ -123,10 +123,13 @@
                               </Text>
                            </children>
                            <VBox.margin>
-                              <Insets left="40.0" />
+                              <Insets />
                            </VBox.margin>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277;">
                            <children>
                               <Text fx:id="t4" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
                                  <font>
@@ -138,10 +141,13 @@
                               </Text>
                            </children>
                            <VBox.margin>
-                              <Insets left="40.0" />
+                              <Insets />
                            </VBox.margin>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277;">
                            <children>
                               <Text fx:id="t5" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
                                  <font>
@@ -153,10 +159,13 @@
                               </Text>
                            </children>
                            <VBox.margin>
-                              <Insets left="40.0" />
+                              <Insets />
                            </VBox.margin>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277;">
                            <children>
                               <Text fx:id="t6" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
                                  <font>
@@ -168,8 +177,11 @@
                               </Text>
                            </children>
                            <VBox.margin>
-                              <Insets left="40.0" />
+                              <Insets />
                            </VBox.margin>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
                         </HBox>
                      </children>
                      <padding>
@@ -190,6 +202,9 @@
                      <VBox.margin>
                         <Insets bottom="15.0" right="15.0" />
                      </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                   </Button>
                </children>
             </VBox>
