@@ -47,6 +47,8 @@ public class JavaFXMLApplication extends Application {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.sizeToScene();
+        stage.setMinHeight(400);
+        stage.setMinWidth(600);
         stage.setTitle("GREENBALL");
         stage.show();
         
