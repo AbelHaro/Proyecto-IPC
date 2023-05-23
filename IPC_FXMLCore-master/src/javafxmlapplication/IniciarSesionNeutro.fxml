@@ -113,7 +113,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="84.0" prefWidth="218.0">
                      <children>
-                        <Button fx:id="bRegistrarse" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlebRegistrarseOnAction" text="Registrars" textAlignment="CENTER" wrapText="true">
+                        <Button fx:id="bRegistrarse" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlebRegistrarseOnAction" text="Registrarse" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Arial" size="16.0" />
                            </font>
