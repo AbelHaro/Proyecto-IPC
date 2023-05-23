@@ -53,13 +53,14 @@ public class VerPistasDisponiblesController implements Initializable {
     List<Booking> reservas;
     @FXML
     private MenuButton menu;
-    
+    Text[] tInfo = new Text[6];
    
     
     //public ArrayList<Booking> getForDayBookings(LocalDate forDay)
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        tInfo[0] = t1;tInfo[1] = t2;tInfo[2] = t3;tInfo[3] = t4;tInfo[4] = t5;tInfo[5] = t6;
         inicializarGeneral();
         menu.textProperty().addListener((obs, oldValue, newValue) -> {inicializarGeneral();});
     }    
@@ -108,25 +109,8 @@ public class VerPistasDisponiblesController implements Initializable {
             aux = (horaInicio + ":00 - " + (horaInicio + 1) +":00           ");
         }
         String pista = reserva.getCourt().getName();
-        if(pista.equals("Pista 1")){
-            t1.setText(aux + "PISTA 1        RESERVADO POR " + reserva.getMember().getNickName());
-        }
-        if(pista.equals("Pista 2")){
-            t2.setText(aux + "PISTA 2        RESERVADO POR " + reserva.getMember().getNickName());
-        }
-        if(pista.equals("Pista 3")){
-            t3.setText(aux + "PISTA 3        RESERVADO POR " + reserva.getMember().getNickName());
-        }
-        if(pista.equals("Pista 4")){
-            t4.setText(aux + "PISTA 4        RESERVADO POR " + reserva.getMember().getNickName());
-        }
-        if(pista.equals("Pista 5")){
-            t5.setText(aux + "PISTA 5        RESERVADO POR " + reserva.getMember().getNickName());
-        }
-        if(pista.equals("Pista 6")){
-            t5.setText(aux + "PISTA 5        RESERVADO POR " + reserva.getMember().getNickName());
-        }
-        
+        int numeroPista = Integer.parseInt(pista.substring(pista.length()-1));
+        tInfo[numeroPista-1].setText(aux + pista.toUpperCase() + "        RESERVADO POR " + reserva.getMember().getNickName());
     }
     
     public void inicializarVacio(int horaInicio){
@@ -138,12 +122,9 @@ public class VerPistasDisponiblesController implements Initializable {
             aux = (horaInicio + ":00 - " + (horaInicio + 1) +":00           ");
         }
         
-        t1.setText(aux + "PISTA 1        NO RESERVADA");
-        t2.setText(aux + "PISTA 2        NO RESERVADA");
-        t3.setText(aux + "PISTA 3        NO RESERVADA");
-        t4.setText(aux + "PISTA 4        NO RESERVADA");
-        t5.setText(aux + "PISTA 5        NO RESERVADA");
-        t6.setText(aux + "PISTA 6        NO RESERVADA");
+        for(int i = 0; i < tInfo.length; i++){
+            tInfo[i].setText(aux + "PISTA " + (i+1) + "        NO RESERVADA");
+            }
         }
     
 
@@ -157,12 +138,12 @@ public class VerPistasDisponiblesController implements Initializable {
     @FXML
     private void cancelar(ActionEvent event) {
         try {
-            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Principal.fxml"));
             Parent root;
             root = miCargador.load();
             JavaFXMLApplication.setRoot(root);
         } catch (IOException ex) {
-            System.out.println("Escena no Encontrada");
+            System.out.println("Error al cargar la escena");
         }
         
     }

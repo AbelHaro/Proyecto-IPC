@@ -25,6 +25,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -33,6 +34,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
+import javafxmlapplication.JavaFXMLApplication;
 import model.Club;
 import model.ClubDAOException;
 import model.Member;
@@ -90,8 +92,10 @@ public class RegistrarseV2Controller implements Initializable {
     private TextField campoSVC;
     @FXML
     private Text errorSVC;
+    @FXML
+    private CheckBox check;
     
-    
+ 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         inicializarImagenes();
@@ -227,22 +231,22 @@ public class RegistrarseV2Controller implements Initializable {
         
         
         campoTarjeta1.textProperty().addListener((obs, oldValue, newValue) -> {
-            if(campoTarjeta1.getText().length() > 4){campoTarjeta1.setText(campoTarjeta1.getText().substring(1));}
+            if(campoTarjeta1.getText().length() > 4){campoTarjeta1.setText(campoTarjeta1.getText().substring(0, campoTarjeta1.getText().length()-1));}
         });
         campoTarjeta2.textProperty().addListener((obs, oldValue, newValue) -> {
-            if(campoTarjeta2.getText().length() > 4){campoTarjeta2.setText(campoTarjeta2.getText().substring(1));}
+            if(campoTarjeta2.getText().length() > 4){campoTarjeta2.setText(campoTarjeta2.getText().substring(0, campoTarjeta2.getText().length()-1));}
         });
         campoTarjeta3.textProperty().addListener((obs, oldValue, newValue) -> {
-            if(campoTarjeta3.getText().length() > 4){campoTarjeta3.setText(campoTarjeta3.getText().substring(1));}
+            if(campoTarjeta3.getText().length() > 4){campoTarjeta3.setText(campoTarjeta3.getText().substring(0, campoTarjeta3.getText().length()-1));}
         });
         campoTarjeta4.textProperty().addListener((obs, oldValue, newValue) -> {
-            if(campoTarjeta4.getText().length() > 4){campoTarjeta4.setText(campoTarjeta4.getText().substring(1));}
+            if(campoTarjeta4.getText().length() > 4){campoTarjeta4.setText(campoTarjeta4.getText().substring(0,campoTarjeta4.getText().length()-1));}
         });
         campoSVC.textProperty().addListener((obs, oldValue, newValue) -> {
-            if(campoSVC.getText().length() > 3){campoSVC.setText(campoSVC.getText().substring(1));}
+            if(campoSVC.getText().length() > 3){campoSVC.setText(campoSVC.getText().substring(0, campoSVC.getText().length()-1));}
         });
         campoTelefono.textProperty().addListener((obs, oldValue, newValue) -> {
-            if(campoTelefono.getText().length() > 9){campoTelefono.setText(campoTelefono.getText().substring(1));}
+            if(campoTelefono.getText().length() > 9){campoTelefono.setText(campoTelefono.getText().substring(0, campoTelefono.getText().length()-1));}
         });
         
     
@@ -272,7 +276,7 @@ public class RegistrarseV2Controller implements Initializable {
             root = miCargador.load();
             JavaFXMLApplication.setRoot(root);
         } catch (IOException ex) {
-            System.out.println("Escena no Encontrada");
+            System.out.println("Error al cargar la escena");
         }
     }
 
@@ -281,7 +285,7 @@ public class RegistrarseV2Controller implements Initializable {
         
         if(errorNombre.visibleProperty().getValue() || errorApellido.visibleProperty().getValue()
                 || errorTelefono.visibleProperty().getValue() || errorNick.visibleProperty().getValue()
-                || errorPassword.visibleProperty().getValue()){
+                || errorPassword.visibleProperty().getValue() || !check.isSelected() ){
             avisoCampos();
             return;
         }
@@ -322,11 +326,7 @@ public class RegistrarseV2Controller implements Initializable {
         try {
             Member m = club.registerMember(name, apellido, telefono, nick, password, tarjeta, svc, img);
             avisoRegistroCorrecto(name);
-            if(m.checkHasCreditInfo()){
-                System.out.println("Tiene tarjeta");
-            } else {
-                System.out.println("No tiene tarjeta");
-            }
+            
             FXMLLoader miCargador = new FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
             Parent root;
             root = miCargador.load();
@@ -336,7 +336,7 @@ public class RegistrarseV2Controller implements Initializable {
         } catch (ClubDAOException ex) {
             System.out.println("Error al registrar el miembro");
         } catch (Exception ex) {
-            System.out.println("Error al cargar escena");
+            System.out.println("Error al cargar la escena");
         }
     }
 
@@ -347,10 +347,10 @@ public class RegistrarseV2Controller implements Initializable {
     }
 
     @FXML
-    private void izq(ActionEvent event) {image.imageProperty().setValue(avatares[Math.abs((--pos) % avatares.length)]);}
+    private void izq(ActionEvent event) {image.imageProperty().setValue(avatares[Math.abs(--pos) % avatares.length]);}
 
     @FXML
-    private void der(ActionEvent event) {image.imageProperty().setValue(avatares[Math.abs((++pos) % avatares.length)]);}
+    private void der(ActionEvent event) {image.imageProperty().setValue(avatares[Math.abs(++pos) % avatares.length]);}
     
     
     public static boolean isFullName(String str) {
@@ -406,7 +406,7 @@ public class RegistrarseV2Controller implements Initializable {
         Alert alert = new Alert(AlertType.ERROR);
         alert.setTitle("Confirmación de registro");
         alert.setHeaderText("Campos incorrectos");
-        alert.setContentText("Los campos deben ser correctos para confirmar el registro.");
+        alert.setContentText("Los campos deben ser correctos y se ha de aceptar el tratamiento de los datos para confirmar el registro.");
         
         
         alert.showAndWait();

@@ -36,7 +36,7 @@ public class PrincipalController implements Initializable {
             root = miCargador.load();
             JavaFXMLApplication.setRoot(root);
         } catch (IOException ex) {
-            System.out.println("Escena no Encontrada");
+            System.out.println("Error al cargar la escena");
         }
     }
 
@@ -47,7 +47,7 @@ public class PrincipalController implements Initializable {
             Parent root = miCargador.load();
             JavaFXMLApplication.setRoot(root);
         } catch (IOException ex) {
-            System.out.println("Escena no Encontrada");
+            System.out.println("Error al cargar la escena");
         }
 
     }
@@ -60,7 +60,21 @@ public class PrincipalController implements Initializable {
             root = miCargador.load();
             JavaFXMLApplication.setRoot(root);
         } catch (IOException ex) {
-            System.out.println("Escena no Encontrada");
+            System.out.println("Error al cargar la escena");
+        }
+    }
+
+    @FXML
+    private void reservar(ActionEvent event) {
+        try {
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Reservar.fxml"));
+            Parent root;
+            root = miCargador.load();
+            JavaFXMLApplication.setRoot(root);
+        } catch (IOException ex) {
+            System.out.println("Error al cargar la escena");
+        } catch (Exception e){
+            e.toString();
         }
     }
     

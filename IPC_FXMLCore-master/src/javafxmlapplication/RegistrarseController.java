@@ -63,52 +63,53 @@ public class RegistrarseController implements Initializable {
     int lengthTSVC = TSVC.getText().length();
     int lengthTNumTrajetaCredito = TNumTrajetaCredito.getText().length();
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    validTelefono = new SimpleBooleanProperty();
-    validNickname = new SimpleBooleanProperty();
-    validNumCredito = new SimpleBooleanProperty();
-    validSVC = new SimpleBooleanProperty();
-    validTelefono.setValue(Boolean.FALSE); 
-    validNickname.setValue(Boolean.FALSE);
-    validNumCredito.setValue(Boolean.FALSE);
-    validSVC.setValue(Boolean.FALSE);
-    //Check values when user leaves edits
-    TTelefono.focusedProperty().addListener((observable, oldValue, newValue)->{
-    if(!newValue){ //focus lost.
-        checkEditTelefono();
-    }
-        });
-    
         
-    TPassword.focusedProperty().addListener((observable, oldValue, newValue)->{
-    if(!newValue){ //focus lost.
-        checkEditPassword();
-    }
-        });
-    TNumTrajetaCredito.focusedProperty().addListener((observable, oldValue, newValue)->{
-    if(!newValue){ //focus lost.
-        checkEditTarjetCredito();
-    }
-        });
-    TSVC.focusedProperty().addListener((observable, oldValue, newValue)->{
-    if(!newValue){ //focus lost.
-        checkEditSVC();
-    }
-        });
-    
-            }    
+        // TODO
+        validTelefono = new SimpleBooleanProperty();
+        validNickname = new SimpleBooleanProperty();
+        validNumCredito = new SimpleBooleanProperty();
+        validSVC = new SimpleBooleanProperty();
+        validTelefono.setValue(Boolean.FALSE); 
+        validNickname.setValue(Boolean.FALSE);
+        validNumCredito.setValue(Boolean.FALSE);
+        validSVC.setValue(Boolean.FALSE);
+        //Check values when user leaves edits
+        TTelefono.focusedProperty().addListener((observable, oldValue, newValue)->{
+        if(!newValue){ //focus lost.
+            checkEditTelefono();
+        }
+            });
+
+
+        TPassword.focusedProperty().addListener((observable, oldValue, newValue)->{
+        if(!newValue){ //focus lost.
+            checkEditPassword();
+        }
+            });
+        TNumTrajetaCredito.focusedProperty().addListener((observable, oldValue, newValue)->{
+        if(!newValue){ //focus lost.
+            checkEditTarjetCredito();
+        }
+            });
+        TSVC.focusedProperty().addListener((observable, oldValue, newValue)->{
+        if(!newValue){ //focus lost.
+            checkEditSVC();
+        }
+            });
+        
+    }    
     private void checkEditTelefono(){
-    if(lengthTTelefono!=10){errorTelNoValido.setVisible(true);} 
+        if(lengthTTelefono!=10){errorTelNoValido.setVisible(true);} 
     }
     
     private void checkEditPassword(){
-    if(lengthTPassword>6 && TPassword.getText().contains(" ") ){errorPasswordNoValido.setVisible(true);} 
+        if(lengthTPassword>6 && TPassword.getText().contains(" ") ){errorPasswordNoValido.setVisible(true);} 
     }
     private void checkEditTarjetCredito(){
-    if(lengthTNumTrajetaCredito != 16 && !TNumTrajetaCredito.getText().matches("[0-9]+")){errorNumdeTarjetaNoValido.setVisible(true);} 
+        if(lengthTNumTrajetaCredito != 16 && !TNumTrajetaCredito.getText().matches("[0-9]+")){errorNumdeTarjetaNoValido.setVisible(true);} 
     }
     private void checkEditSVC(){
-    if(lengthTSVC!=3 && !TSVC.getText().matches("[0-9]+")){errorSVCNoValido.setVisible(true);} 
+        if(lengthTSVC!=3 && !TSVC.getText().matches("[0-9]+")){errorSVCNoValido.setVisible(true);} 
     }
 
 
@@ -122,7 +123,7 @@ public class RegistrarseController implements Initializable {
             root = miCargador.load();
             JavaFXMLApplication.setRoot(root);
         } catch (IOException ex) {
-            System.out.println("Escena no Encontrada");
+            System.out.println("Error al cargar la escena");
         }
     }
 
@@ -131,6 +132,8 @@ public class RegistrarseController implements Initializable {
     }
 
 }
+
+
 
     
 
