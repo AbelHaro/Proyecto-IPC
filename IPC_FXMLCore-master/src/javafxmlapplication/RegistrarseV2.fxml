@@ -178,7 +178,7 @@
                                     </VBox>
                                     <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="138.0">
                                        <children>
-                                          <TextField fx:id="campoNick" prefHeight="30.0" prefWidth="130.0" promptText="AleHer2023">
+                                          <TextField fx:id="campoNick" editable="false" prefHeight="30.0" prefWidth="130.0" promptText="AleHer2023">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
