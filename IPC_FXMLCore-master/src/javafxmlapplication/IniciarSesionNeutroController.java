@@ -56,7 +56,9 @@ public class IniciarSesionNeutroController implements Initializable {
     @FXML
     private void handlebAccederOnAction(ActionEvent event) throws ClubDAOException, IOException {
         
-        if (!model.Club.getInstance().existsLogin(nick.getText())) {
+        
+        
+        if (nick.getText().length() > 0 && !model.Club.getInstance().existsLogin(nick.getText())) {
             error.setText("El usuario no existe");
             error.setVisible(true);
             return;

@@ -55,7 +55,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="42.0" prefWidth="82.0">
                      <children>
-                        <Label text="Password">
+                        <Label text="Password" textFill="WHITE">
                            <font>
                               <Font name="Arial" size="14.0" />
                            </font>
@@ -90,7 +90,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                <children>
-                  <Button fx:id="bAcceder" mnemonicParsing="false" onAction="#handlebAccederOnAction" prefHeight="37.0" prefWidth="216.0" text="Acceder">
+                  <Button fx:id="bAcceder" mnemonicParsing="false" onAction="#handlebAccederOnAction" prefHeight="37.0" prefWidth="216.0" text="Acceder" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>
@@ -156,7 +156,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="42.0" prefWidth="82.0">
                      <children>
-                        <Label text="NickName">
+                        <Label text="NickName" textFill="WHITE">
                            <font>
                               <Font name="Arial" size="14.0" />
                            </font>
