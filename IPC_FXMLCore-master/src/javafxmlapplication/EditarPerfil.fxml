@@ -15,11 +15,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFFFF6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.RegistrarseV2Controller">
+<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFFFF6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.EditarPerfilController">
    <center>
-      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="720.0" style="-fx-background-color: #fffcf2; -fx-background-radius: 50px;">
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="660.0" style="-fx-background-color: #fffcf2; -fx-background-radius: 50px;">
          <center>
-            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="720.0" BorderPane.alignment="CENTER">
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="663.0" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="CENTER" prefHeight="282.0" prefWidth="720.0">
                      <children>
@@ -325,7 +325,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <Separator minHeight="-Infinity" prefHeight="10.0" prefWidth="430.0">
+                  <Separator minHeight="-Infinity" prefHeight="10.0" prefWidth="686.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -485,7 +485,7 @@
             </HBox>
          </top>
          <bottom>
-            <HBox alignment="BASELINE_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="720.0" BorderPane.alignment="CENTER">
+            <HBox alignment="BASELINE_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="660.0" BorderPane.alignment="CENTER">
                <children>
                   <VBox minHeight="-Infinity" prefHeight="30.0" prefWidth="463.0">
                      <children>
@@ -504,7 +504,7 @@
                         <Insets bottom="20.0" right="20.0" />
                      </padding>
                   </VBox>
-                  <VBox alignment="BOTTOM_RIGHT" prefHeight="46.0" prefWidth="106.0">
+                  <VBox alignment="BOTTOM_RIGHT" prefHeight="55.0" prefWidth="84.0">
                      <children>
                         <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#registrarse" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #F2F2FF;" text="Guardar">
                            <font>
@@ -548,8 +548,8 @@
                               <Insets right="30.0" />
                            </HBox.margin>
                            <children>
-                              <ImageView fx:id="ImagenAvatarReservar" fitHeight="79.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true" />
-                              <Label text="Label">
+                              <ImageView fx:id="fotoPerfil" fitHeight="79.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="idUsuario" text="Label">
                                  <font>
                                     <Font name="Arial" size="14.0" />
                                  </font>
@@ -566,7 +566,7 @@
    <left>
       <VBox prefHeight="520.0" prefWidth="130.0" style="-fx-background-color: #878E99;" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="21.0" prefWidth="112.0" text="Reservar pistas" textFill="#fffcf2">
+            <Label fx:id="reservarPista" onMouseClicked="#irAReservar" prefHeight="21.0" prefWidth="112.0" text="Reservar pistas" textFill="#fffcf2">
                <font>
                   <Font name="Arial" size="14.0" />
                </font>
@@ -574,7 +574,7 @@
                   <Insets />
                </VBox.margin>
             </Label>
-            <Label prefHeight="48.0" prefWidth="95.0" text="Datos del socio" textFill="#fffcf2" underline="true">
+            <Label prefHeight="48.0" prefWidth="95.0" styleClass="label-seleccionado" stylesheets="@../estilos/estilos-botones.css" text="Datos del socio" textFill="#fffcf2" underline="true">
                <font>
                   <Font size="14.0" />
                </font>
@@ -582,14 +582,14 @@
                   <Insets left="10.0" />
                </VBox.margin>
             </Label>
-            <Label text="Mis reservas" textFill="#fffcf2">
+            <Label onMouseClicked="#irAMisReservas" text="Mis reservas" textFill="#fffcf2">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
             <HBox alignment="BOTTOM_LEFT" prefHeight="422.0" prefWidth="120.0">
                <children>
-                  <Label text="Desconectarse" textFill="#fffcf2">
+                  <Label fx:id="desconectarse" onMouseClicked="#desconectarse" text="Desconectarse" textFill="#fffcf2">
                      <font>
                         <Font name="Arial" size="14.0" />
                      </font>

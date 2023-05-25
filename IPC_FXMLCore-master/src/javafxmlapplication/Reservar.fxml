@@ -54,8 +54,8 @@
                               <Insets right="30.0" />
                            </HBox.margin>
                            <children>
-                              <ImageView fitHeight="79.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true" />
-                              <Label alignment="CENTER" prefHeight="16.0" prefWidth="92.0" text="Label">
+                              <ImageView fx:id="fotoPerfil" fitHeight="79.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="idUsuario" alignment="CENTER" prefHeight="16.0" prefWidth="92.0" text="Label">
                                  <font>
                                     <Font name="Arial" size="14.0" />
                                  </font>
@@ -319,17 +319,17 @@
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin></Label>
-            <Label prefHeight="42.0" prefWidth="125.0" text="Datos del socio" textFill="#fffcf2">
+            <Label fx:id="datosSocio" onMouseClicked="#irAEditarPerfil" prefHeight="42.0" prefWidth="125.0" text="Datos del socio" textFill="#fffcf2">
                <font>
                   <Font name="Arial" size="14.0" />
                </font></Label>
-            <Label prefHeight="23.0" prefWidth="121.0" text="Mis reservas" textFill="#fffcf2">
+            <Label onMouseClicked="#irAMisReservas" prefHeight="23.0" prefWidth="121.0" text="Mis reservas" textFill="#fffcf2">
                <font>
                   <Font name="Arial" size="14.0" />
                </font></Label>
             <HBox alignment="BOTTOM_LEFT" prefHeight="418.0" prefWidth="96.0">
                <children>
-                  <Label text="Desconectarse" textFill="#fffcf2">
+                  <Label onMouseClicked="#desconectarse" text="Desconectarse" textFill="#fffcf2">
                      <font>
                         <Font name="Arial" size="14.0" />
                      </font>

@@ -4,37 +4,31 @@
  */
 package javafxmlapplication;
 
-import java.awt.event.KeyAdapter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.regex.Pattern;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.ButtonBar.ButtonData;
+import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
-import javafxmlapplication.JavaFXMLApplication;
+import static javafxmlapplication.RegistrarseV2Controller.isFullName;
+import static javafxmlapplication.RegistrarseV2Controller.isValidTarjeta;
+import static javafxmlapplication.RegistrarseV2Controller.isValidTelefono;
 import model.Club;
 import model.ClubDAOException;
 import model.Member;
@@ -44,20 +38,10 @@ import model.Member;
  *
  * @author Usuario
  */
-public class RegistrarseV2Controller implements Initializable {
+public class EditarPerfilController implements Initializable {
 
     @FXML
-    private ImageView image;
-
-    /**
-     * Initializes the controller class.
-     */
-    Image[] avatares = new Image[8];
-    int pos = 0;
-    Club club;
-    List <Member> miembros;
-    
-    
+    private CheckBox check;
     @FXML
     private TextField campoNombre;
     @FXML
@@ -79,6 +63,8 @@ public class RegistrarseV2Controller implements Initializable {
     @FXML
     private Text errorPassword;
     @FXML
+    private ImageView image;
+    @FXML
     private TextField campoTarjeta1;
     @FXML
     private TextField campoTarjeta2;
@@ -92,22 +78,43 @@ public class RegistrarseV2Controller implements Initializable {
     private TextField campoSVC;
     @FXML
     private Text errorSVC;
-    @FXML
-    private CheckBox check;
-   
     
- 
+    Member m;
+    
+    Image[] avatares = new Image[8];
+    int pos = 0;
+    Club club;
+    List <Member> miembros;
+    @FXML
+    private Label reservarPista;
+    @FXML
+    private ImageView fotoPerfil;
+    @FXML
+    private Label idUsuario;
+    @FXML
+    private Label desconectarse;
+
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        inicializarImagenes();
+        m = Context.getInstance().getMember();
+        fotoPerfil.setImage(m.getImage());
+        idUsuario.setText(m.getNickName());
+        reservarPista.focusedProperty().addListener((obs, oldValue, newValue) -> {
+            if(newValue){reservarPista.setUnderline(true);}
+            else {reservarPista.setUnderline(false);}
+        });
         
+        
+        
+        inicializarImagenes();
         try {
             club = Club.getInstance();
         } catch (ClubDAOException | IOException ex) {
             System.out.println("Error al instanciar el club");
         }
-        
-        
         
         campoNombre.textProperty().addListener((obs, oldValue, newValue) -> {
             if(!isFullName(campoNombre.getText())){errorNombre.setVisible(true);
@@ -253,101 +260,14 @@ public class RegistrarseV2Controller implements Initializable {
             if(campoTelefono.getText().length() > 9){campoTelefono.setText(campoTelefono.getText().substring(0, campoTelefono.getText().length()-1));}
         });
         
-    
+        
+        
+        
     }    
-
     
-    
-    public void inicializarImagenes(){
-        avatares[0] = new Image(getClass().getResourceAsStream("/images/perfil/Default.png"));
-        avatares[1] = new Image(getClass().getResourceAsStream("/images/perfil/CarlosAlcaraz.jpg"));
-        avatares[2] = new Image(getClass().getResourceAsStream("/images/perfil/RafaNadal.jpg"));
-        avatares[3] = new Image(getClass().getResourceAsStream("/images/perfil/Djokovic.jpg"));
-        avatares[4] = new Image(getClass().getResourceAsStream("/images/perfil/Federer.jpg"));
-        avatares[5] = new Image(getClass().getResourceAsStream("/images/perfil/Paula.jpg"));
-        avatares[6] = new Image(getClass().getResourceAsStream("/images/perfil/Serena.jpg"));
-        avatares[7] = new Image(getClass().getResourceAsStream("/images/perfil/Fernando.jpg"));
-        
-        
-        image.imageProperty().setValue(avatares[pos]);
-    }
-
-    @FXML
-    private void cancelar(ActionEvent event) {
-        try {
-            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
-            Parent root;
-            root = miCargador.load();
-            JavaFXMLApplication.setRoot(root);
-        } catch (IOException ex) {
-            System.out.println("Error al cargar la escena");
-        }
-    }
 
     @FXML
     private void registrarse(ActionEvent event) {
-        
-        if(errorNombre.visibleProperty().getValue() || errorApellido.visibleProperty().getValue()
-                || errorTelefono.visibleProperty().getValue() || errorNick.visibleProperty().getValue()
-                || errorPassword.visibleProperty().getValue() || !check.isSelected() ){
-            avisoCampos();
-            return;
-        }
-                
-                
-        
-        
-        
-        boolean pago = true;
-        if(campoTarjeta1.getText().length() != 4 || campoTarjeta2.getText().length() != 4
-                || campoTarjeta3.getText().length() != 4 || campoTarjeta4.getText().length() != 4
-                || errorTarjeta.visibleProperty().getValue()){
-                
-            errorTarjeta.setVisible(true);
-            pago = false;
-        }
-        if(campoSVC.getText().length() != 3 || errorSVC.visibleProperty().getValue()){
-            errorSVC.setVisible(true);
-            pago = false;
-        }
-        
-        if(!pago && !avisoPago())return;
-        
-        
-        String name = campoNombre.getText();
-        String apellido = campoApellido.getText();
-        String telefono = campoTelefono.getText();
-        String nick = campoNick.getText();
-        String password = campoPassword.getText();
-        Image img = image.getImage();
-        String tarjeta = "";
-        int svc = 0;
-        if(pago){
-            tarjeta = campoTarjeta1.getText() + campoTarjeta2.getText() + campoTarjeta3.getText() + campoTarjeta4.getText();
-            svc = Integer.parseInt(campoSVC.getText());
-        }
-        
-        try {
-            Member m = club.registerMember(name, apellido, telefono, nick, password, tarjeta, svc, img);
-            avisoRegistroCorrecto(name);
-            
-            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
-            Parent root;
-            root = miCargador.load();
-            JavaFXMLApplication.setRoot(root);
-            
-            
-        } catch (ClubDAOException ex) {
-            System.out.println("Error al registrar el miembro");
-        } catch (Exception ex) {
-            System.out.println("Error al cargar la escena");
-        }
-    }
-
-
-    @FXML
-    private void txtCelularKeyTyped(KeyEvent event) {
-        if(campoTarjeta1.getText().length() >= 4){event.consume();}
     }
 
     @FXML
@@ -355,9 +275,15 @@ public class RegistrarseV2Controller implements Initializable {
 
     @FXML
     private void der(ActionEvent event) {image.imageProperty().setValue(avatares[Math.abs(++pos) % avatares.length]);}
+
+    @FXML
+    private void txtCelularKeyTyped(KeyEvent event) {
+    }
+    
+    public void setMember(Member m){this.m = m;}
     
     
-    public static boolean isFullName(String str) {
+     public static boolean isFullName(String str) {
         String expression = "^[a-zA-Z\\s]+"; 
         return str.matches(expression);        
     }
@@ -391,12 +317,12 @@ public class RegistrarseV2Controller implements Initializable {
     }
     
     public boolean avisoPago(){
-        Alert alert = new Alert(AlertType.CONFIRMATION);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmación de registro");
         alert.setHeaderText("Datos de pago");
         alert.setContentText("Los datos de pago introducidos son incorrectos o incompletos.\nDesea confirmar el registro sin estos datos?");
-        ButtonType buttonTypeYes = new ButtonType("Aceptar", ButtonData.YES);
-        ButtonType buttonTypeCancel = new ButtonType("Cancelar", ButtonData.CANCEL_CLOSE);
+        ButtonType buttonTypeYes = new ButtonType("Aceptar", ButtonBar.ButtonData.YES);
+        ButtonType buttonTypeCancel = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
         alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeCancel);
         
         Optional<ButtonType> result = alert.showAndWait();
@@ -407,7 +333,7 @@ public class RegistrarseV2Controller implements Initializable {
     }
     
     public void avisoCampos(){
-        Alert alert = new Alert(AlertType.ERROR);
+        Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Confirmación de registro");
         alert.setHeaderText("Campos incorrectos");
         alert.setContentText("Los campos deben ser correctos y se ha de aceptar el tratamiento de los datos para confirmar el registro.");
@@ -417,7 +343,7 @@ public class RegistrarseV2Controller implements Initializable {
     }
     
     public void avisoRegistroCorrecto(String n){
-        Alert alert = new Alert(AlertType.INFORMATION);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Confirmación de registro");
         alert.setHeaderText("Registro correctamente");
         alert.setContentText("El registro se ha completado correctamente.\nBIENVENIDO/A " + n.toUpperCase() +"!");
@@ -425,20 +351,64 @@ public class RegistrarseV2Controller implements Initializable {
         
         alert.showAndWait();
     }
+    
+    public void inicializarImagenes(){
+        avatares[0] = new Image(getClass().getResourceAsStream("/images/perfil/Default.png"));
+        avatares[1] = new Image(getClass().getResourceAsStream("/images/perfil/CarlosAlcaraz.jpg"));
+        avatares[2] = new Image(getClass().getResourceAsStream("/images/perfil/RafaNadal.jpg"));
+        avatares[3] = new Image(getClass().getResourceAsStream("/images/perfil/Djokovic.jpg"));
+        avatares[4] = new Image(getClass().getResourceAsStream("/images/perfil/Federer.jpg"));
+        avatares[5] = new Image(getClass().getResourceAsStream("/images/perfil/Paula.jpg"));
+        avatares[6] = new Image(getClass().getResourceAsStream("/images/perfil/Serena.jpg"));
+        avatares[7] = new Image(getClass().getResourceAsStream("/images/perfil/Fernando.jpg"));
+        
+        
+        image.imageProperty().setValue(avatares[pos]);
+    }
 
-    
-    
+    @FXML
+    private void irAReservar(MouseEvent event) {try {
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Reservar.fxml"));
+            Parent root = miCargador.load();
+            // Pasar parámetros entres escenas--------------------------------------------
+            ReservarController controladorReservar = miCargador.getController();
+            controladorReservar.setMember(m);
+            //----------------------------------------------------------------------------
+            JavaFXMLApplication.setRoot(root);
+        } catch (IOException ex) {
+            System.out.println("Escena no Encontrada");
+        }
+    }
+
+    @FXML
+    private void irAMisReservas(MouseEvent event) {
+        try {
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("VerMisReservas.fxml"));
+            Parent root = miCargador.load();
+            // Pasar parámetros entres escenas--------------------------------------------
+            VerMisReservasController controladorVerMisReservas = miCargador.getController();
+            controladorVerMisReservas.setMember(m);
+            //----------------------------------------------------------------------------
+            JavaFXMLApplication.setRoot(root);
+        } catch (IOException ex) {
+            System.out.println("Escena no Encontrada");
+        }
+    }
+
+    @FXML
+    private void desconectarse(MouseEvent event) {
+        
+            try {
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
+            Parent root = miCargador.load();
+            // Pasar parámetros entres escenas--------------------------------------------
+            
+            //----------------------------------------------------------------------------
+            JavaFXMLApplication.setRoot(root);
+        } catch (IOException ex) {
+            System.out.println("Escena no Encontrada");
+        }
+
+        
+    }
 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-
