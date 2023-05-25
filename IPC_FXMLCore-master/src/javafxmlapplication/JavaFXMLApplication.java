@@ -36,8 +36,8 @@ public class JavaFXMLApplication extends Application {
         
 
        
-        //TCDataGenerator.main(null);
-        //club = model.Club.getInstance();
+        TCDataGenerator.main(null);
+        club = model.Club.getInstance();
 
         
         // Carga la vista principal
