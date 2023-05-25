@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.VerPistasDisponiblesController">
+   <top>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #00E277;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="512.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="293.0">
+                     <children>
+                        <ImageView fitHeight="88.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="GreenBall">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="29.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="534.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                           <children>
+                              <ImageView fitHeight="79.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="CENTER" prefHeight="16.0" prefWidth="85.0" text="Label">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="430.0" style="-fx-background-color: #fffcf2;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="402.0" prefWidth="662.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="313.0" prefWidth="552.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277;">
+                           <children>
+                              <Text fx:id="t1" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="470.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277;">
+                           <children>
+                              <Text fx:id="t2" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="440.0" style="-fx-border-color: #00E277;">
+                           <children>
+                              <Text fx:id="t3" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="390.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277;">
+                           <children>
+                              <Text fx:id="t4" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277;">
+                           <children>
+                              <Text fx:id="t5" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277;">
+                           <children>
+                              <Text fx:id="t6" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="50.0" layoutY="9.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277;">
+                           <children>
+                              <Text fx:id="t11" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="470.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="62.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277;">
+                           <children>
+                              <Text fx:id="t21" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="332.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277;">
+                           <children>
+                              <Text fx:id="t211" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="337.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277;">
+                           <children>
+                              <Text fx:id="t2111" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="500.0" prefWidth="137.0" style="-fx-background-color: #878E99;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="27.0" prefWidth="116.0" text="Reservar pistas" textFill="#fffcf2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="38.0" prefWidth="118.0" text="Datos del socio" textFill="#fffcf2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="118.0" text="Mis reservas" textFill="#fffcf2" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="399.0" prefWidth="127.0">
+               <children>
+                  <Label text="Desconectarse" textFill="#fffcf2">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </left>
+</BorderPane>
