@@ -108,6 +108,20 @@ public class EditarPerfilController implements Initializable {
         });
         
         
+        campoNombre.setText(m.getName());
+        campoApellido.setText(m.getSurname());
+        campoTelefono.setText(m.getTelephone());
+        campoNick.setText(m.getNickName());
+        campoPassword.setText(m.getPassword());
+        campoTarjeta1.setText(m.getCreditCard().substring(0,4));
+        campoTarjeta2.setText(m.getCreditCard().substring(4,8));
+        campoTarjeta3.setText(m.getCreditCard().substring(8,12));
+        campoTarjeta4.setText(m.getCreditCard().substring(12,16));
+        campoSVC.setText("" + m.getSvc());
+        image.setImage(m.getImage());
+        check.setSelected(true);
+        
+        
         
         inicializarImagenes();
         try {
@@ -268,6 +282,67 @@ public class EditarPerfilController implements Initializable {
 
     @FXML
     private void registrarse(ActionEvent event) {
+        if(errorNombre.visibleProperty().getValue() || errorApellido.visibleProperty().getValue()
+                || errorTelefono.visibleProperty().getValue() || errorNick.visibleProperty().getValue()
+                || errorPassword.visibleProperty().getValue() || !check.isSelected() ){
+            avisoCampos();
+            return;
+        }
+                
+                
+        
+        
+        
+        boolean pago = true;
+        if(campoTarjeta1.getText().length() != 4 || campoTarjeta2.getText().length() != 4
+                || campoTarjeta3.getText().length() != 4 || campoTarjeta4.getText().length() != 4
+                || errorTarjeta.visibleProperty().getValue()){
+                
+            errorTarjeta.setVisible(true);
+            pago = false;
+        }
+        if(campoSVC.getText().length() != 3 || errorSVC.visibleProperty().getValue()){
+            errorSVC.setVisible(true);
+            pago = false;
+        }
+        
+        if(!pago && !avisoPago())return;
+        
+        
+        String name = campoNombre.getText();
+        String apellido = campoApellido.getText();
+        String telefono = campoTelefono.getText();
+        String nick = campoNick.getText();
+        String password = campoPassword.getText();
+        Image img = image.getImage();
+        String tarjeta = "";
+        int svc = 0;
+        if(pago){
+            tarjeta = campoTarjeta1.getText() + campoTarjeta2.getText() + campoTarjeta3.getText() + campoTarjeta4.getText();
+            svc = Integer.parseInt(campoSVC.getText());
+        }
+        
+        try {
+            //Member m = club.registerMember(name, apellido, telefono, nick, password, tarjeta, svc, img);
+           
+            
+            Member m = club.getMemberByCredentials(nick, password);
+            m.setName(name);
+            m.setSurname(apellido);
+            m.setTelephone(telefono);
+            m.setPassword(password);
+            m.setTelephone(tarjeta);
+            m.setSvc(svc);
+            m.setImage(img);
+            
+            avisoRegistroCorrecto(name);
+            
+            
+            initialize(null, null);
+        
+        } catch (Exception ex) {
+            System.out.println("Error al cargar la escena");
+        }
     }
 
     @FXML

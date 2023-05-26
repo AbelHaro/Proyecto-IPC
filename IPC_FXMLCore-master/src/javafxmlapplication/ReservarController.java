@@ -180,10 +180,19 @@ public class ReservarController implements Initializable {
         
         for(int i = 0; i < tInfo.length; i++){
             tInfo[i].setText(aux + "PISTA " +( i + 1 )+ "        NO RESERVADA");
-            bReservar[i].setVisible(true);
+            LocalDate fechaEscena = datePicker.getValue();
+            int horaActual = LocalTime.now().getHour();
+            boolean esMismoDia = fechaEscena.isEqual(LocalDate.now());
+            if(fechaEscena.isBefore(LocalDate.now()) || (esMismoDia && horaActual > horaInicio)){
+                bReservar[i].setVisible(false);
+            } else {
+                bReservar[i].setVisible(true);
             }
-        
+            
+            
         }
+        
+    }
     
     
     
