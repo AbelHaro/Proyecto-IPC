@@ -3,19 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/HP/OneDrive/Bureau/Proyecto%20de%20IPC/Proyecto-IPC/IPC_FXMLCore-master/src/images/iconos/flecha-derecha.png</file>
-            <file>file:/C:/Users/HP/OneDrive/Bureau/Proyecto%20de%20IPC/Proyecto-IPC/IPC_FXMLCore-master/src/javafxmlapplication/registrarse.fxml</file>
-            <file>file:/C:/Users/HP/OneDrive/Bureau/Proyecto%20de%20IPC/Proyecto-IPC/IPC_FXMLCore-master/src/images/iconos/flecha-derecha-rectangular.png</file>
-            <file>file:/C:/Users/HP/OneDrive/Bureau/Proyecto%20de%20IPC/Proyecto-IPC/IPC_FXMLCore-master/src/javafxmlapplication/JavaFXMLApplication.java</file>
-            <file>file:/C:/Users/HP/OneDrive/Bureau/Proyecto%20de%20IPC/Proyecto-IPC/IPC_FXMLCore-master/src/javafxmlapplication/IniciarSesionNeutro.fxml</file>
-            <file>file:/C:/Users/HP/OneDrive/Bureau/Proyecto%20de%20IPC/Proyecto-IPC/IPC_FXMLCore-master/src/javafxmlapplication/VerPistasDisponiblesController.java</file>
-            <file>file:/C:/Users/HP/OneDrive/Bureau/Proyecto%20de%20IPC/Proyecto-IPC/IPC_FXMLCore-master/src/javafxmlapplication/IniciarSesionNeutroController.java</file>
-            <file>file:/C:/Users/HP/OneDrive/Bureau/Proyecto%20de%20IPC/Proyecto-IPC/IPC_FXMLCore-master/src/javafxmlapplication/Reservar.fxml</file>
-            <file>file:/C:/Users/HP/OneDrive/Bureau/Proyecto%20de%20IPC/Proyecto-IPC/IPC_FXMLCore-master/src/javafxmlapplication/RegistrarseController.java</file>
-            <file>file:/C:/Users/HP/OneDrive/Bureau/Proyecto%20de%20IPC/Proyecto-IPC/IPC_FXMLCore-master/src/images/iconos/circulo-de-flecha-izquierda.png</file>
-            <file>file:/C:/Users/HP/OneDrive/Bureau/Proyecto%20de%20IPC/Proyecto-IPC/IPC_FXMLCore-master/src/images/iconos/logo.png</file>
-            <file>file:/C:/Users/HP/OneDrive/Bureau/Proyecto%20de%20IPC/Proyecto-IPC/IPC_FXMLCore-master/src/images/iconos/circulo-de-flecha-derecha.png</file>
-            <file>file:/C:/Users/HP/OneDrive/Bureau/Proyecto%20de%20IPC/Proyecto-IPC/IPC_FXMLCore-master/src/images/iconos/logo2.png</file>
+            <file>file:/C:/Users/Usuario/Desktop/proyecto%20cambios/Proyecto-IPC/IPC_FXMLCore-master/src/javafxmlapplication/IniciarSesionNeutroController.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/proyecto%20cambios/Proyecto-IPC/IPC_FXMLCore-master/src/javafxmlapplication/VerMisReservasController.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/proyecto%20cambios/Proyecto-IPC/IPC_FXMLCore-master/src/javafxmlapplication/EditarPerfilController.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/proyecto%20cambios/Proyecto-IPC/IPC_FXMLCore-master/src/javafxmlapplication/ReservarController.java</file>
         </group>
     </open-files>
 </project-private>

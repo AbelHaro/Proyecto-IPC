@@ -7,17 +7,22 @@ package javafxmlapplication;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.ZoomEvent;
-import model.Club.*;
+import javafx.stage.Stage;
+import model.Club;
 import model.ClubDAOException;
 import model.Member;
 
@@ -70,18 +75,19 @@ public class IniciarSesionNeutroController implements Initializable {
             return;
         }
         
+       Context i = Context.getInstance();
+        i.setMember(m);
         
+
         try {
-            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Reservar.fxml"));
-            Parent root = miCargador.load();
-            // Pasar parámetros entres escenas--------------------------------------------
-            ReservarController controladorReservar = miCargador.getController();
-            controladorReservar.setMember(m);
-            //----------------------------------------------------------------------------
-            JavaFXMLApplication.setRoot(root);
+        FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Reservar.fxml"));
+        Parent root = miCargador.load();
+        JavaFXMLApplication.setRoot(root);
+
         } catch (IOException ex) {
-            System.out.println("Escena no Encontrada");
+        System.out.println("Escena no encontrada");
         }
+      
         
         
         
@@ -112,4 +118,27 @@ public class IniciarSesionNeutroController implements Initializable {
 
     // Método para acceder al miembro desde otras escenas
    // public static Member getMember(){return this.m;}
+
+    @FXML
+    private void iniciarSesionDirecto(ActionEvent event) {
+        try {
+            m = Club.getInstance().getMemberByCredentials("user2", "123456x");
+        } catch (Exception ex) {
+            System.out.println("Error al instanciar el club");
+        }
+        Context i = Context.getInstance();
+        i.setMember(m);
+        
+
+        try {
+        FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Reservar.fxml"));
+        Parent root = miCargador.load();
+        JavaFXMLApplication.setRoot(root);
+
+        } catch (IOException ex) {
+        System.out.println("Escena no encontrada");
+        }
+        
+        
+    }
 }

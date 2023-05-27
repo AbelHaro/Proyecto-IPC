@@ -15,11 +15,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFFFF6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.RegistrarseV2Controller">
+<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFFFF6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.EditarPerfilController">
    <center>
-      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="720.0" style="-fx-background-color: #fffcf2; -fx-background-radius: 50px;">
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="660.0" style="-fx-background-color: #fffcf2; -fx-background-radius: 50px;">
          <center>
-            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="720.0" BorderPane.alignment="CENTER">
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="663.0" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="CENTER" prefHeight="282.0" prefWidth="720.0">
                      <children>
@@ -46,7 +46,7 @@
                                                 <Insets right="10.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Trebuchet MS" size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </Text>
                                        </children>
@@ -55,12 +55,12 @@
                                        <children>
                                           <TextField fx:id="campoNombre" prefHeight="30.0" prefWidth="130.0" promptText="Alejandro">
                                              <font>
-                                                <Font size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </TextField>
                                           <Text fx:id="errorNombre" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre no válido" visible="false">
                                              <font>
-                                                <Font size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </Text>
                                        </children>
@@ -79,7 +79,7 @@
                                                 <Insets right="10.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Trebuchet MS" size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </Text>
                                        </children>
@@ -88,12 +88,12 @@
                                        <children>
                                           <TextField fx:id="campoApellido" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="130.0" promptText="Hernández">
                                              <font>
-                                                <Font size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </TextField>
                                           <Text fx:id="errorApellido" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido no válido" visible="false">
                                              <font>
-                                                <Font size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </Text>
                                        </children>
@@ -112,7 +112,7 @@
                                                 <Insets left="5.0" right="10.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Trebuchet MS" size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </Text>
                                        </children>
@@ -124,7 +124,7 @@
                                        <children>
                                           <TextField fx:id="campoTelefono" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="104.0" promptText="123456789">
                                              <font>
-                                                <Font size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                              <padding>
                                                 <Insets left="15.0" />
@@ -132,7 +132,7 @@
                                           </TextField>
                                           <Text fx:id="errorTelefono" fill="#fc0000" strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono no válido" visible="false" wrappingWidth="144.70416259765625">
                                              <font>
-                                                <Font size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </Text>
                                        </children>
@@ -172,7 +172,7 @@
                                                 <Insets right="10.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Trebuchet MS" size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </Text>
                                        </children>
@@ -181,12 +181,12 @@
                                        <children>
                                           <TextField fx:id="campoNick" editable="false" prefHeight="30.0" prefWidth="130.0" promptText="AleHer2023">
                                              <font>
-                                                <Font size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </TextField>
                                           <Text fx:id="errorNick" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="NickName en uso" visible="false">
                                              <font>
-                                                <Font size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </Text>
                                        </children>
@@ -220,7 +220,7 @@
                                        <children>
                                           <PasswordField fx:id="campoPassword" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="170.0">
                                              <font>
-                                                <Font size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </PasswordField>
                                           <Text fx:id="errorPassword" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Sólo caracteres y números" visible="false">
@@ -247,7 +247,7 @@
                                                 <Insets right="10.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Trebuchet MS" size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </Text>
                                        </children>
@@ -280,7 +280,7 @@
                                                          <graphic>
                                                             <ImageView fitHeight="24.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                                                <image>
-                                                                  <Image url="@../../../../../images/iconos/flecha-izquierda-rectangular.png" />
+                                                                  <Image url="@../images/iconos/flecha-izquierda-rectangular.png" />
                                                                </image>
                                                             </ImageView>
                                                          </graphic>
@@ -299,7 +299,7 @@
                                                          <graphic>
                                                             <ImageView fitHeight="24.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                                                <image>
-                                                                  <Image url="@../../../../../images/iconos/flecha-derecha-rectangular.png" />
+                                                                  <Image url="@../images/iconos/flecha-derecha-rectangular.png" />
                                                                </image>
                                                             </ImageView>
                                                          </graphic>
@@ -325,7 +325,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <Separator minHeight="-Infinity" prefHeight="10.0" prefWidth="430.0">
+                  <Separator minHeight="-Infinity" prefHeight="10.0" prefWidth="686.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -355,7 +355,7 @@
                                                 <Insets left="20.0" right="10.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </Text>
                                        </children>
@@ -366,7 +366,7 @@
                                              <children>
                                                 <TextField fx:id="campoTarjeta1" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="47.0" promptText="1111">
                                                    <font>
-                                                      <Font size="14.0" />
+                                                      <Font name="Arial" size="14.0" />
                                                    </font>
                                                 </TextField>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-">
@@ -376,7 +376,7 @@
                                                 </Text>
                                                 <TextField fx:id="campoTarjeta2" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="47.0" promptText="2222">
                                                    <font>
-                                                      <Font size="14.0" />
+                                                      <Font name="Arial" size="14.0" />
                                                    </font>
                                                 </TextField>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-">
@@ -386,7 +386,7 @@
                                                 </Text>
                                                 <TextField fx:id="campoTarjeta3" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="47.0" promptText="3333">
                                                    <font>
-                                                      <Font size="14.0" />
+                                                      <Font name="Arial" size="14.0" />
                                                    </font>
                                                 </TextField>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-">
@@ -396,7 +396,7 @@
                                                 </Text>
                                                 <TextField fx:id="campoTarjeta4" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="47.0" promptText="4444">
                                                    <font>
-                                                      <Font size="14.0" />
+                                                      <Font name="Arial" size="14.0" />
                                                    </font>
                                                 </TextField>
                                              </children>
@@ -430,7 +430,7 @@
                                                 <Insets />
                                              </VBox.margin>
                                              <font>
-                                                <Font size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </TextField>
                                           <Text fx:id="errorSVC" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="SVC no válido" visible="false">
@@ -485,13 +485,13 @@
             </HBox>
          </top>
          <bottom>
-            <HBox alignment="BASELINE_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="720.0" BorderPane.alignment="CENTER">
+            <HBox alignment="BASELINE_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="660.0" BorderPane.alignment="CENTER">
                <children>
                   <VBox minHeight="-Infinity" prefHeight="30.0" prefWidth="463.0">
                      <children>
                         <CheckBox fx:id="check" mnemonicParsing="false" prefHeight="35.0" prefWidth="463.0" text="Acepto el tratamiento de mis datos por la empresa GREENBALL " textOverrun="CLIP">
                            <font>
-                              <Font name="Trebuchet MS" size="14.0" />
+                              <Font name="Arial" size="14.0" />
                            </font>
                            <VBox.margin>
                               <Insets left="25.0" />
@@ -504,11 +504,11 @@
                         <Insets bottom="20.0" right="20.0" />
                      </padding>
                   </VBox>
-                  <VBox alignment="BOTTOM_RIGHT" prefHeight="46.0" prefWidth="106.0">
+                  <VBox alignment="BOTTOM_RIGHT" prefHeight="55.0" prefWidth="84.0">
                      <children>
                         <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#registrarse" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #F2F2FF;" text="Guardar">
                            <font>
-                              <Font name="Trebuchet MS" size="14.0" />
+                              <Font name="Arial" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -548,8 +548,8 @@
                               <Insets right="30.0" />
                            </HBox.margin>
                            <children>
-                              <ImageView fx:id="ImagenAvatarReservar" fitHeight="79.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true" />
-                              <Label text="Label">
+                              <ImageView fx:id="fotoPerfil" fitHeight="79.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="idUsuario" text="Label">
                                  <font>
                                     <Font name="Arial" size="14.0" />
                                  </font>
@@ -566,7 +566,7 @@
    <left>
       <VBox prefHeight="520.0" prefWidth="130.0" style="-fx-background-color: #878E99;" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="21.0" prefWidth="112.0" text="Reservar pistas" textFill="#fffcf2">
+            <Label fx:id="reservarPista" onMouseClicked="#irAReservar" prefHeight="21.0" prefWidth="112.0" text="Reservar pistas" textFill="#fffcf2">
                <font>
                   <Font name="Arial" size="14.0" />
                </font>
@@ -574,7 +574,7 @@
                   <Insets />
                </VBox.margin>
             </Label>
-            <Label prefHeight="48.0" prefWidth="95.0" text="Datos del socio" textFill="#fffcf2" underline="true">
+            <Label prefHeight="48.0" prefWidth="95.0" styleClass="label-seleccionado" stylesheets="@../estilos/estilos-botones.css" text="Datos del socio" textFill="#fffcf2" underline="true">
                <font>
                   <Font size="14.0" />
                </font>
@@ -582,14 +582,14 @@
                   <Insets left="10.0" />
                </VBox.margin>
             </Label>
-            <Label text="Mis reservas" textFill="#fffcf2">
+            <Label onMouseClicked="#irAMisReservas" text="Mis reservas" textFill="#fffcf2">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
             <HBox alignment="BOTTOM_LEFT" prefHeight="422.0" prefWidth="120.0">
                <children>
-                  <Label text="Desconectarse" textFill="#fffcf2">
+                  <Label fx:id="desconectarse" onMouseClicked="#desconectarse" text="Desconectarse" textFill="#fffcf2">
                      <font>
                         <Font name="Arial" size="14.0" />
                      </font>

@@ -22,8 +22,12 @@ import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import model.Booking;
 import model.Club;
@@ -75,12 +79,27 @@ public class ReservarController implements Initializable {
     Club club;
     List<Booking> reservas;
     Member m;
+    @FXML
+    private Label datosSocio;
+    @FXML
+    private ImageView fotoPerfil;
+    @FXML
+    private Label idUsuario;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        try{
+           
+            m = Context.getInstance().getMember();
+            fotoPerfil.setImage(m.getImage());
+            idUsuario.setText(m.getNickName());
+
+        }catch(Exception e){
+            System.out.println("Error al member");
+        }
         
         bReservar[0] = b1;bReservar[1] = b2;bReservar[2] = b3;bReservar[3] = b4;bReservar[4] = b5;bReservar[5] = b6;
         tInfo[0] = t1;tInfo[1] = t2;tInfo[2] = t3;tInfo[3] = t4;tInfo[4] = t5;tInfo[5] = t6;
@@ -89,6 +108,12 @@ public class ReservarController implements Initializable {
         inicializarGeneral();
         menu.textProperty().addListener((obs, oldValue, newValue) -> {inicializarGeneral();});
         datePicker.valueProperty().addListener((obs, oldValue, newValue) -> {inicializarGeneral();});
+        
+        datosSocio.focusedProperty().addListener((obs, oldValue, newValue) -> {
+            if(newValue){datosSocio.setUnderline(true);}
+            else {datosSocio.setUnderline(false);}
+        });
+
     }    
 
     public void inicializarGeneral(){
@@ -155,15 +180,23 @@ public class ReservarController implements Initializable {
         
         for(int i = 0; i < tInfo.length; i++){
             tInfo[i].setText(aux + "PISTA " +( i + 1 )+ "        NO RESERVADA");
-            bReservar[i].setVisible(true);
+            LocalDate fechaEscena = datePicker.getValue();
+            int horaActual = LocalTime.now().getHour();
+            boolean esMismoDia = fechaEscena.isEqual(LocalDate.now());
+            if(fechaEscena.isBefore(LocalDate.now()) || (esMismoDia && horaActual > horaInicio)){
+                bReservar[i].setVisible(false);
+            } else {
+                bReservar[i].setVisible(true);
             }
-        
+            
+            
         }
+        
+    }
     
     
     
     
-    @FXML
     private void cancelar(ActionEvent event) {
         try {
             FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Principal.fxml"));
@@ -268,6 +301,51 @@ public class ReservarController implements Initializable {
         alert.setContentText(res);
         alert.showAndWait();
     }
+
+    @FXML
+    private void irAEditarPerfil(MouseEvent event) {
+        try {
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("EditarPerfil.fxml"));
+            Parent root = miCargador.load();
+            // Pasar parámetros entres escenas--------------------------------------------
+            EditarPerfilController controladorEditarPerfil = miCargador.getController();
+            controladorEditarPerfil.setMember(m);
+            //----------------------------------------------------------------------------
+            JavaFXMLApplication.setRoot(root);
+        } catch (IOException ex) {
+            System.out.println("Escena no Encontrada");
+        }
+    }
+
+    @FXML
+    private void irAMisReservas(MouseEvent event) {
+        try {
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("VerMisReservas.fxml"));
+            Parent root = miCargador.load();
+            // Pasar parámetros entres escenas--------------------------------------------
+            VerMisReservasController controladorVerMisReservas = miCargador.getController();
+            controladorVerMisReservas.setMember(m);
+            //----------------------------------------------------------------------------
+            JavaFXMLApplication.setRoot(root);
+        } catch (IOException ex) {
+            System.out.println("Escena no Encontrada");
+        }
+    }
+
+    @FXML
+    private void desconectarse(MouseEvent event) {
+        try {
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
+            Parent root = miCargador.load();
+            // Pasar parámetros entres escenas--------------------------------------------
+            
+            //----------------------------------------------------------------------------
+            JavaFXMLApplication.setRoot(root);
+        } catch (IOException ex) {
+            System.out.println("Escena no Encontrada");
+        }
+    }
+
     
     
     

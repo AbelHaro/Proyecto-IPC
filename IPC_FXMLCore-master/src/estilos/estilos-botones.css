@@ -10,3 +10,12 @@
 .button-cambiar-color-raton-encima:hover{
     -fx-background-color:blue
 }
+
+
+.label-seleccionado{
+    
+}
+.label-seleccionado:hover{
+    -fx-text-fill:whitesmoke
+    
+}
