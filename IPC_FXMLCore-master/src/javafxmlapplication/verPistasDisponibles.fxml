@@ -12,9 +12,9 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.VerPistasDisponiblesController">
    <top>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #00E277;" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="109.0" prefWidth="802.0" style="-fx-background-color: #00E277;" BorderPane.alignment="CENTER">
          <children>
-            <Text fill="#fffcf2" strokeType="OUTSIDE" strokeWidth="0.0" text="VER PISTAS DISPONIBLES">
+            <Text fill="#fffcf2" strokeType="OUTSIDE" strokeWidth="0.0" text="Pistas disponibles">
                <font>
                   <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
@@ -78,7 +78,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="272.0" prefWidth="430.0">
                      <children>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277;">
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="512.0" style="-fx-border-color: #00E277;">
                            <children>
                               <Text fx:id="t1" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="470.0">
                                  <font>

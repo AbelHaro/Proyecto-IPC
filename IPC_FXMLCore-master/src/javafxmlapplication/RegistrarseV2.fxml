@@ -14,520 +14,517 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFFFF6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.RegistrarseV2Controller">
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.RegistrarseV2Controller">
    <center>
-      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="720.0" style="-fx-background-color: #00E277;">
-         <center>
-            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="720.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="800.0" style="-fx-background-color: #fffcf2;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="109.0" prefWidth="802.0" style="-fx-background-color: #00E277;">
                <children>
-                  <HBox alignment="CENTER" prefHeight="282.0" prefWidth="720.0">
-                     <children>
-                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="230.0">
-                           <children>
-                              <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="214.0">
-                                 <children>
-                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="DATOS PERSONALES" wrappingWidth="203.35163116455078">
-                                       <font>
-                                          <Font name="Arial Rounded MT Bold" size="18.0" />
-                                       </font>
-                                    </Text>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </HBox>
-                              <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="180.0">
-                                 <children>
-                                    <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
-                                             <VBox.margin>
-                                                <Insets right="10.0" />
-                                             </VBox.margin>
-                                             <font>
-                                                <Font name="Arial" size="14.0" />
-                                             </font>
-                                          </Text>
-                                       </children>
-                                    </VBox>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="160.0">
-                                       <children>
-                                          <TextField fx:id="campoNombre" prefHeight="30.0" prefWidth="130.0" promptText="Alejandro">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </TextField>
-                                          <Text fx:id="errorNombre" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre no válido" visible="false">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Text>
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets top="20.0" />
-                                       </HBox.margin>
-                                    </VBox>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="180.0">
-                                 <children>
-                                    <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido">
-                                             <VBox.margin>
-                                                <Insets right="10.0" />
-                                             </VBox.margin>
-                                             <font>
-                                                <Font name="Arial" size="14.0" />
-                                             </font>
-                                          </Text>
-                                       </children>
-                                    </VBox>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="161.0">
-                                       <children>
-                                          <TextField fx:id="campoApellido" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="130.0" promptText="Hernández">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </TextField>
-                                          <Text fx:id="errorApellido" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido no válido" visible="false">
-                                             <font>
-                                                <Font name="Arial" size="14.0" />
-                                             </font>
-                                          </Text>
-                                       </children>
-                                       <padding>
-                                          <Insets top="20.0" />
-                                       </padding>
-                                    </VBox>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="180.0">
-                                 <children>
-                                    <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono">
-                                             <VBox.margin>
-                                                <Insets left="5.0" right="10.0" />
-                                             </VBox.margin>
-                                             <font>
-                                                <Font name="Arial" size="14.0" />
-                                             </font>
-                                          </Text>
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets left="25.0" />
-                                       </HBox.margin>
-                                    </VBox>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="118.0">
-                                       <children>
-                                          <TextField fx:id="campoTelefono" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="104.0" promptText="123456789">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                             <padding>
-                                                <Insets left="15.0" />
-                                             </padding>
-                                          </TextField>
-                                          <Text fx:id="errorTelefono" fill="#fc0000" strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono no válido" visible="false" wrappingWidth="144.70416259765625">
-                                             <font>
-                                                <Font name="Arial Bold" size="14.0" />
-                                             </font>
-                                          </Text>
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets right="4.0" top="20.0" />
-                                       </HBox.margin>
-                                    </VBox>
-                                 </children>
-                              </HBox>
-                           </children>
-                           <HBox.margin>
-                              <Insets left="20.0" right="70.0" />
-                           </HBox.margin>
-                        </VBox>
-                        <Separator minHeight="-Infinity" orientation="VERTICAL" prefHeight="260.0" prefWidth="10.0" style="-fx-color: WHITE;">
-                           <HBox.margin>
-                              <Insets left="10.0" right="10.0" />
-                           </HBox.margin>
-                        </Separator>
-                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="230.0" style="-fx-background-radius: 50px;">
-                           <children>
-                              <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="180.0">
-                                 <children>
-                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="DATOS DE USUARIO">
-                                       <font>
-                                          <Font name="Arial Rounded MT Bold" size="18.0" />
-                                       </font>
-                                    </Text>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="180.0">
-                                 <children>
-                                    <VBox alignment="CENTER_RIGHT" minWidth="-Infinity" prefHeight="70.0" prefWidth="49.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NickName">
-                                             <VBox.margin>
-                                                <Insets right="10.0" />
-                                             </VBox.margin>
-                                             <font>
-                                                <Font name="Arial" size="14.0" />
-                                             </font>
-                                          </Text>
-                                       </children>
-                                    </VBox>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="138.0">
-                                       <children>
-                                          <TextField fx:id="campoNick" prefHeight="30.0" prefWidth="130.0" promptText="AleHer2023">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </TextField>
-                                          <Text fx:id="errorNick" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="NickName en uso" visible="false">
-                                             <font>
-                                                <Font name="Arial" size="14.0" />
-                                             </font>
-                                          </Text>
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets top="20.0" />
-                                       </HBox.margin>
-                                    </VBox>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets right="33.0" />
-                                 </VBox.margin>
-                              </HBox>
-                              <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="236.0">
-                                 <children>
-                                    <VBox alignment="CENTER_RIGHT" minWidth="-Infinity" prefHeight="70.0" prefWidth="50.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
-                                             <VBox.margin>
-                                                <Insets right="10.0" />
-                                             </VBox.margin>
-                                             <font>
-                                                <Font name="Arial" size="14.0" />
-                                             </font>
-                                          </Text>
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets left="10.0" />
-                                       </HBox.margin>
-                                    </VBox>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="195.0">
-                                       <children>
-                                          <PasswordField fx:id="campoPassword" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="170.0">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </PasswordField>
-                                          <Text fx:id="errorPassword" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Sólo caracteres y números" visible="false">
-                                             <VBox.margin>
-                                                <Insets />
-                                             </VBox.margin>
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Text>
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets top="20.0" />
-                                       </HBox.margin>
-                                    </VBox>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="106.0" prefWidth="180.0">
-                                 <children>
-                                    <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Imagen de perfil">
-                                             <VBox.margin>
-                                                <Insets right="10.0" />
-                                             </VBox.margin>
-                                             <font>
-                                                <Font name="Arial" size="14.0" />
-                                             </font>
-                                          </Text>
-                                       </children>
-                                    </VBox>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
-                                       <children>
-                                          <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="138.0" style="-fx-background-color: white;">
-                                             <children>
-                                                <ImageView fx:id="image" fitHeight="89.0" fitWidth="140.0" pickOnBounds="true">
-                                                   <HBox.margin>
-                                                      <Insets top="4.0" />
-                                                   </HBox.margin>
-                                                </ImageView>
-                                             </children>
-                                             <VBox.margin>
-                                                <Insets top="27.0" />
-                                             </VBox.margin>
-                                          </HBox>
-                                          <HBox prefHeight="50.0" prefWidth="104.0">
-                                             <children>
-                                                <VBox prefHeight="200.0" prefWidth="100.0">
-                                                   <children>
-                                                      <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#izq" prefHeight="24.0" prefWidth="40.0" style="-fx-background-color: #F2F2FF;">
-                                                         <VBox.margin>
-                                                            <Insets right="5.0" top="10.0" />
-                                                         </VBox.margin>
-                                                         <font>
-                                                            <Font size="11.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <ImageView fitHeight="24.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                                               <image>
-                                                                  <Image url="@../images/iconos/flecha-izquierda-rectangular.png" />
-                                                               </image>
-                                                            </ImageView>
-                                                         </graphic>
-                                                      </Button>
-                                                   </children>
-                                                </VBox>
-                                                <VBox prefHeight="200.0" prefWidth="100.0">
-                                                   <children>
-                                                      <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#der" prefHeight="24.0" prefWidth="40.0" style="-fx-background-color: #F2F2FF;">
-                                                         <VBox.margin>
-                                                            <Insets left="5.0" top="10.0" />
-                                                         </VBox.margin>
-                                                         <font>
-                                                            <Font size="11.0" />
-                                                         </font>
-                                                         <graphic>
-                                                            <ImageView fitHeight="24.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                                               <image>
-                                                                  <Image url="@../images/iconos/flecha-derecha-rectangular.png" />
-                                                               </image>
-                                                            </ImageView>
-                                                         </graphic>
-                                                      </Button>
-                                                   </children>
-                                                </VBox>
-                                             </children>
-                                             <VBox.margin>
-                                                <Insets bottom="20.0" left="20.0" />
-                                             </VBox.margin>
-                                          </HBox>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets right="50.0" />
-                                 </VBox.margin>
-                              </HBox>
-                           </children>
-                           <HBox.margin>
-                              <Insets left="70.0" right="20.0" />
-                           </HBox.margin>
-                        </VBox>
-                     </children>
-                  </HBox>
-                  <Separator minHeight="-Infinity" prefHeight="10.0" prefWidth="319.0">
-                     <VBox.margin>
-                        <Insets top="5.0" />
-                     </VBox.margin>
-                  </Separator>
-                  <HBox alignment="CENTER" prefHeight="80.0" prefWidth="430.0">
-                     <children>
-                        <VBox alignment="CENTER" prefHeight="82.0" prefWidth="720.0">
-                           <children>
-                              <HBox alignment="TOP_CENTER" prefHeight="35.0" prefWidth="720.0">
-                                 <children>
-                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="DATOS DE PAGO (OPCIONAL)">
-                                       <HBox.margin>
-                                          <Insets top="5.0" />
-                                       </HBox.margin>
-                                       <font>
-                                          <Font name="Arial Rounded MT Bold" size="18.0" />
-                                       </font>
-                                    </Text>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="67.0" prefWidth="720.0">
-                                 <children>
-                                    <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Número de la tarjeta">
-                                             <VBox.margin>
-                                                <Insets left="20.0" right="10.0" />
-                                             </VBox.margin>
-                                             <font>
-                                                <Font name="Arial" size="14.0" />
-                                             </font>
-                                          </Text>
-                                       </children>
-                                    </VBox>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="250.0">
-                                       <children>
-                                          <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="174.0">
-                                             <children>
-                                                <TextField fx:id="campoTarjeta1" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="47.0" promptText="1111">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                </TextField>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-">
-                                                   <HBox.margin>
-                                                      <Insets left="1.0" right="1.0" />
-                                                   </HBox.margin>
-                                                </Text>
-                                                <TextField fx:id="campoTarjeta2" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="47.0" promptText="2222">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                </TextField>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-">
-                                                   <HBox.margin>
-                                                      <Insets left="1.0" right="1.0" />
-                                                   </HBox.margin>
-                                                </Text>
-                                                <TextField fx:id="campoTarjeta3" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="47.0" promptText="3333">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                </TextField>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-">
-                                                   <HBox.margin>
-                                                      <Insets left="1.0" right="1.0" />
-                                                   </HBox.margin>
-                                                </Text>
-                                                <TextField fx:id="campoTarjeta4" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="47.0" promptText="4444">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                </TextField>
-                                             </children>
-                                          </HBox>
-                                          <Text fx:id="errorTarjeta" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de tarjeta no válido" visible="false">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Text>
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets top="20.0" />
-                                       </HBox.margin>
-                                    </VBox>
-                                    <VBox alignment="CENTER_RIGHT" prefHeight="61.0" prefWidth="41.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SVC">
-                                             <VBox.margin>
-                                                <Insets left="20.0" right="15.0" />
-                                             </VBox.margin>
-                                             <font>
-                                                <Font name="Arial" size="14.0" />
-                                             </font>
-                                          </Text>
-                                       </children>
-                                    </VBox>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="42.0">
-                                       <children>
-                                          <TextField fx:id="campoSVC" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="40.0" promptText="123">
-                                             <VBox.margin>
-                                                <Insets />
-                                             </VBox.margin>
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </TextField>
-                                          <Text fx:id="errorSVC" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="SVC no válido" visible="false">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Text>
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets right="10.0" top="20.0" />
-                                       </HBox.margin>
-                                    </VBox>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets top="5.0" />
-                                 </VBox.margin>
-                                 <padding>
-                                    <Insets bottom="15.0" />
-                                 </padding>
-                              </HBox>
-                           </children>
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </VBox>
-                     </children>
-                  </HBox>
-               </children>
-               <BorderPane.margin>
-                  <Insets top="80.0" />
-               </BorderPane.margin>
-            </VBox>
-         </center>
-         <top>
-            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="430.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRO DE USUARIO">
+                  <Text fill="#fffcf2" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de usuario">
                      <font>
-                        <Font name="Arial Rounded MT Bold" size="25.0" />
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
                      <HBox.margin>
                         <Insets bottom="20.0" />
                      </HBox.margin>
                   </Text>
                </children>
-               <BorderPane.margin>
-                  <Insets />
-               </BorderPane.margin>
                <padding>
                   <Insets top="20.0" />
                </padding>
             </HBox>
-         </top>
-         <bottom>
-            <HBox alignment="BASELINE_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="720.0" BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER" prefHeight="274.0" prefWidth="720.0">
                <children>
-                  <VBox minHeight="-Infinity" prefHeight="30.0" prefWidth="463.0">
+                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="230.0">
                      <children>
-                        <CheckBox fx:id="check" mnemonicParsing="false" prefHeight="35.0" prefWidth="463.0" text="Acepto el tratamiento de mis datos por la empresa GREENBALL " textOverrun="CLIP">
-                           <font>
-                              <Font name="Arial" size="14.0" />
-                           </font>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="214.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DATOS PERSONALES" wrappingWidth="203.35163116455078">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
                            <VBox.margin>
-                              <Insets left="25.0" />
+                              <Insets />
                            </VBox.margin>
-                        </CheckBox>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="180.0">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
+                                       <VBox.margin>
+                                          <Insets right="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="160.0">
+                                 <children>
+                                    <TextField fx:id="campoNombre" prefHeight="30.0" prefWidth="130.0" promptText="Alejandro">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text fx:id="errorNombre" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre no válido" visible="false">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="180.0">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido">
+                                       <VBox.margin>
+                                          <Insets right="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="161.0">
+                                 <children>
+                                    <TextField fx:id="campoApellido" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="130.0" promptText="Hernández">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text fx:id="errorApellido" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido no válido" visible="false">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="180.0">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono">
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="118.0">
+                                 <children>
+                                    <TextField fx:id="campoTelefono" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="104.0" promptText="123456789">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="15.0" />
+                                       </padding>
+                                    </TextField>
+                                    <Text fx:id="errorTelefono" fill="#fc0000" strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono no válido" visible="false" wrappingWidth="144.70416259765625">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="4.0" top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
                      </children>
+                     <HBox.margin>
+                        <Insets left="20.0" right="70.0" />
+                     </HBox.margin>
                   </VBox>
-                  <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="93.0">
+                  <Separator minHeight="-Infinity" orientation="VERTICAL" prefHeight="260.0" prefWidth="10.0" style="-fx-color: WHITE;">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Separator>
+                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="230.0" style="-fx-background-radius: 50px;">
                      <children>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#cancelar" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #F2F2FF;" text="Volver" textFill="#262121">
-                           <font>
-                              <Font name="Trebuchet MS" size="14.0" />
-                           </font>
-                        </Button>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="180.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DATOS DE USUARIO">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="180.0">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT" minWidth="-Infinity" prefHeight="70.0" prefWidth="49.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NickName">
+                                       <VBox.margin>
+                                          <Insets right="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="138.0">
+                                 <children>
+                                    <TextField fx:id="campoNick" prefHeight="30.0" prefWidth="130.0" promptText="AleHer2023">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text fx:id="errorNick" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="NickName en uso" visible="false">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets right="33.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="236.0">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT" minWidth="-Infinity" prefHeight="70.0" prefWidth="50.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                                       <VBox.margin>
+                                          <Insets right="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="195.0">
+                                 <children>
+                                    <PasswordField fx:id="campoPassword" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="170.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </PasswordField>
+                                    <Text fx:id="errorPassword" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Sólo caracteres y números" visible="false">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="106.0" prefWidth="180.0">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Imagen de perfil">
+                                       <VBox.margin>
+                                          <Insets right="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="138.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <ImageView fx:id="image" fitHeight="89.0" fitWidth="140.0" pickOnBounds="true">
+                                             <HBox.margin>
+                                                <Insets top="4.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="27.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="50.0" prefWidth="104.0">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#izq" prefHeight="24.0" prefWidth="40.0" style="-fx-background-color: #F2F2FF;">
+                                                   <VBox.margin>
+                                                      <Insets right="5.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <ImageView fitHeight="24.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/iconos/flecha-izquierda-rectangular.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#der" prefHeight="24.0" prefWidth="40.0" style="-fx-background-color: #F2F2FF;">
+                                                   <VBox.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <ImageView fitHeight="24.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/iconos/flecha-derecha-rectangular.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" left="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets right="50.0" />
+                           </VBox.margin>
+                        </HBox>
                      </children>
-                     <padding>
-                        <Insets bottom="20.0" right="20.0" />
-                     </padding>
-                  </VBox>
-                  <VBox alignment="BOTTOM_RIGHT" prefHeight="46.0" prefWidth="106.0">
-                     <children>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#registrarse" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #F2F2FF;" text="Registrarse">
-                           <font>
-                              <Font name="Trebuchet MS" size="14.0" />
-                           </font>
-                        </Button>
-                     </children>
-                     <padding>
-                        <Insets bottom="20.0" right="30.0" />
-                     </padding>
+                     <HBox.margin>
+                        <Insets left="70.0" right="20.0" />
+                     </HBox.margin>
                   </VBox>
                </children>
-               <BorderPane.margin>
-                  <Insets top="50.0" />
-               </BorderPane.margin>
+               <VBox.margin>
+                  <Insets top="80.0" />
+               </VBox.margin>
             </HBox>
-         </bottom>
-      </BorderPane>
+            <Separator minHeight="-Infinity" prefHeight="10.0" prefWidth="319.0">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Separator>
+            <HBox alignment="CENTER" prefHeight="119.0" prefWidth="800.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="82.0" prefWidth="720.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="35.0" prefWidth="720.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DATOS DE PAGO (OPCIONAL)">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="67.0" prefWidth="720.0">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Número de la tarjeta">
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="250.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="174.0">
+                                       <children>
+                                          <TextField fx:id="campoTarjeta1" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="47.0" promptText="1111">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                                             <HBox.margin>
+                                                <Insets left="1.0" right="1.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                          <TextField fx:id="campoTarjeta2" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="47.0" promptText="2222">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                                             <HBox.margin>
+                                                <Insets left="1.0" right="1.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                          <TextField fx:id="campoTarjeta3" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="47.0" promptText="3333">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                                             <HBox.margin>
+                                                <Insets left="1.0" right="1.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                          <TextField fx:id="campoTarjeta4" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="47.0" promptText="4444">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <Text fx:id="errorTarjeta" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de tarjeta no válido" visible="false">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="61.0" prefWidth="41.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SVC">
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="15.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="42.0">
+                                 <children>
+                                    <TextField fx:id="campoSVC" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="40.0" promptText="123">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text fx:id="errorSVC" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="SVC no válido" visible="false">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="10.0" top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="15.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="107.0" prefWidth="720.0">
+               <children>
+                  <HBox alignment="BASELINE_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="800.0">
+                     <children>
+                        <VBox minHeight="-Infinity" prefHeight="30.0" prefWidth="463.0">
+                           <children>
+                              <CheckBox fx:id="check" mnemonicParsing="false" prefHeight="35.0" prefWidth="463.0" text="Acepto el tratamiento de mis datos por la empresa GREENBALL " textOverrun="CLIP">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="25.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="60.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="93.0">
+                           <children>
+                              <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#cancelar" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #F2F2FF;" text="Volver" textFill="#262121">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" right="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="BOTTOM_RIGHT" prefHeight="46.0" prefWidth="106.0">
+                           <children>
+                              <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#registrarse" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #F2F2FF;" text="Registrarse">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" right="30.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
    </center>
 </BorderPane>

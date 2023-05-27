@@ -18,9 +18,9 @@
    <top>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #00E277;" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="426.0">
+            <VBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="426.0" HBox.hgrow="ALWAYS">
                <children>
-                  <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="449.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="449.0" VBox.vgrow="ALWAYS">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
@@ -45,9 +45,9 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox prefHeight="86.0" prefWidth="395.0">
+            <VBox prefHeight="86.0" prefWidth="395.0" HBox.hgrow="ALWAYS">
                <children>
-                  <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                      <children>
                         <VBox alignment="BOTTOM_CENTER" prefHeight="95.0" prefWidth="104.0">
                            <HBox.margin>
@@ -76,7 +76,7 @@
                <children>
                   <VBox alignment="CENTER_RIGHT" prefHeight="62.0" prefWidth="140.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccionar Fecha">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Selecciona Fecha">
                            <VBox.margin>
                               <Insets right="10.0" />
                            </VBox.margin>
@@ -142,13 +142,92 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="294.0" prefWidth="430.0">
+            <HBox alignment="CENTER" prefHeight="357.0" prefWidth="669.0">
                <children>
-                  <VBox alignment="CENTER" prefHeight="272.0" prefWidth="600.0">
+                  <VBox alignment="CENTER" prefHeight="358.0" prefWidth="158.0">
                      <children>
-                        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="600.0" style="-fx-border-width: 3; -fx-border-color: #00E277;">
+                        <HBox alignment="CENTER" prefHeight="53.0" prefWidth="105.0">
                            <children>
-                              <Text fx:id="t1" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="450.0">
+                              <Label text="Pista 1">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="53.0" prefWidth="105.0">
+                           <children>
+                              <Label text="Pista 2">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="53.0" prefWidth="105.0">
+                           <children>
+                              <Label text="Pista 3">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="53.0" prefWidth="105.0">
+                           <children>
+                              <Label text="Pista 4">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="53.0" prefWidth="105.0">
+                           <children>
+                              <Label text="Pista 5">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="53.0" prefWidth="105.0">
+                           <children>
+                              <Label text="Pista 6">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="358.0" prefWidth="608.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="544.0" style="-fx-border-width: 3; -fx-border-color: #00E277;">
+                           <children>
+                              <Text fx:id="t1" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="418.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -166,15 +245,15 @@
                               </Button>
                            </children>
                            <VBox.margin>
-                              <Insets left="20.0" />
+                              <Insets right="20.0" />
                            </VBox.margin>
                            <padding>
                               <Insets left="20.0" />
                            </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="600.0" style="-fx-border-width: 3; -fx-border-color: #00E277;">
+                        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="544.0" style="-fx-border-width: 3; -fx-border-color: #00E277;">
                            <children>
-                              <Text fx:id="t2" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="450.0">
+                              <Text fx:id="t2" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="418.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -195,12 +274,12 @@
                               <Insets left="20.0" />
                            </padding>
                            <VBox.margin>
-                              <Insets left="20.0" />
+                              <Insets right="20.0" />
                            </VBox.margin>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="600.0" style="-fx-border-width: 3; -fx-border-color: #00E277;">
+                        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="544.0" style="-fx-border-width: 3; -fx-border-color: #00E277;">
                            <children>
-                              <Text fx:id="t3" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="450.0">
+                              <Text fx:id="t3" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="418.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -218,15 +297,15 @@
                               </Button>
                            </children>
                            <VBox.margin>
-                              <Insets left="20.0" />
+                              <Insets right="20.0" />
                            </VBox.margin>
                            <padding>
                               <Insets left="20.0" />
                            </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="600.0" style="-fx-border-width: 3; -fx-border-color: #00E277;">
+                        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="544.0" style="-fx-border-width: 3; -fx-border-color: #00E277;">
                            <children>
-                              <Text fx:id="t4" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="450.0">
+                              <Text fx:id="t4" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="418.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -244,15 +323,15 @@
                               </Button>
                            </children>
                            <VBox.margin>
-                              <Insets left="20.0" />
+                              <Insets right="20.0" />
                            </VBox.margin>
                            <padding>
                               <Insets left="20.0" />
                            </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="600.0" style="-fx-border-width: 3; -fx-border-color: #00E277;">
+                        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="544.0" style="-fx-border-width: 3; -fx-border-color: #00E277;">
                            <children>
-                              <Text fx:id="t5" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="450.0">
+                              <Text fx:id="t5" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="418.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -270,15 +349,15 @@
                               </Button>
                            </children>
                            <VBox.margin>
-                              <Insets left="20.0" />
+                              <Insets right="20.0" />
                            </VBox.margin>
                            <padding>
                               <Insets left="20.0" />
                            </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="600.0" style="-fx-border-width: 3; -fx-border-color: #00E277;">
+                        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="544.0" style="-fx-border-width: 3; -fx-border-color: #00E277;">
                            <children>
-                              <Text fx:id="t6" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="450.0">
+                              <Text fx:id="t6" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="418.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -296,7 +375,7 @@
                               </Button>
                            </children>
                            <VBox.margin>
-                              <Insets left="20.0" />
+                              <Insets right="20.0" />
                            </VBox.margin>
                            <padding>
                               <Insets left="20.0" />
@@ -310,35 +389,61 @@
       </VBox>
    </center>
    <left>
-      <VBox prefHeight="507.0" prefWidth="131.0" style="-fx-background-color: #878E99;" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_RIGHT" style="-fx-background-color: #878E99;" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="18.0" prefWidth="102.0" text="Reservar pistas" textFill="#fffcf2" underline="true">
-               <font>
-                  <Font name="Arial" size="14.0" />
-               </font>
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin></Label>
-            <Label fx:id="datosSocio" onMouseClicked="#irAEditarPerfil" prefHeight="42.0" prefWidth="125.0" text="Datos del socio" textFill="#fffcf2">
-               <font>
-                  <Font name="Arial" size="14.0" />
-               </font></Label>
-            <Label onMouseClicked="#irAMisReservas" prefHeight="23.0" prefWidth="121.0" text="Mis reservas" textFill="#fffcf2">
-               <font>
-                  <Font name="Arial" size="14.0" />
-               </font></Label>
-            <HBox alignment="BOTTOM_LEFT" prefHeight="418.0" prefWidth="96.0">
+            <VBox>
                <children>
-                  <Label onMouseClicked="#desconectarse" text="Desconectarse" textFill="#fffcf2">
-                     <font>
-                        <Font name="Arial" size="14.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets bottom="10.0" />
-                     </HBox.margin>
-                  </Label>
+                  <HBox prefWidth="110.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="120.0" text="Reservar pistas" textFill="#fffcf2" underline="true">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label fx:id="datosSocio" onMouseClicked="#irAEditarPerfil" prefHeight="42.0" prefWidth="125.0" text="Datos del socio" textFill="#fffcf2">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label onMouseClicked="#irAMisReservas" prefHeight="23.0" prefWidth="121.0" text="Mis reservas" textFill="#fffcf2">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
-            </HBox>
+            </VBox>
+            <VBox alignment="BOTTOM_LEFT" minHeight="-Infinity" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="38.0" prefWidth="121.0">
+                     <children>
+                        <Label onMouseClicked="#desconectarse" prefHeight="39.0" prefWidth="122.0" text="Desconectarse" textFill="#fffcf2">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
          </children>
          <padding>
             <Insets left="10.0" top="10.0" />
