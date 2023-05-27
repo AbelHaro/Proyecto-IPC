@@ -44,7 +44,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="94.0" prefWidth="143.0">
                      <children>
-                        <MenuButton fx:id="menu" mnemonicParsing="false" prefHeight="30.0" prefWidth="132.0" text="9:00 - 10:00">
+                        <MenuButton fx:id="menu" mnemonicParsing="false" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: #F2F2FF;" text="9:00 - 10:00">
                           <items>
                             <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="9:00 - 10:00" />
                               <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="10:00 - 11:00" />
@@ -198,7 +198,7 @@
          <children>
             <VBox alignment="BOTTOM_RIGHT" prefHeight="58.0" prefWidth="162.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#cancelar" prefHeight="26.0" prefWidth="81.0" text="Cancelar">
+                  <Button mnemonicParsing="false" onAction="#cancelar" prefHeight="26.0" prefWidth="81.0" style="-fx-background-color: #F2F2FF;" text="Volver">
                      <VBox.margin>
                         <Insets bottom="15.0" right="15.0" />
                      </VBox.margin>

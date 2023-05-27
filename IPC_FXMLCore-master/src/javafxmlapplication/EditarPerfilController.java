@@ -93,6 +93,8 @@ public class EditarPerfilController implements Initializable {
     private Label idUsuario;
     @FXML
     private Label desconectarse;
+    
+    boolean algoTocado = false;
 
     /**
      * Initializes the controller class.
@@ -102,10 +104,7 @@ public class EditarPerfilController implements Initializable {
         m = Context.getInstance().getMember();
         fotoPerfil.setImage(m.getImage());
         idUsuario.setText(m.getNickName());
-        reservarPista.focusedProperty().addListener((obs, oldValue, newValue) -> {
-            if(newValue){reservarPista.setUnderline(true);}
-            else {reservarPista.setUnderline(false);}
-        });
+        
         
         
         campoNombre.setText(m.getName());
@@ -113,12 +112,15 @@ public class EditarPerfilController implements Initializable {
         campoTelefono.setText(m.getTelephone());
         campoNick.setText(m.getNickName());
         campoPassword.setText(m.getPassword());
-        campoTarjeta1.setText(m.getCreditCard().substring(0,4));
-        campoTarjeta2.setText(m.getCreditCard().substring(4,8));
-        campoTarjeta3.setText(m.getCreditCard().substring(8,12));
-        campoTarjeta4.setText(m.getCreditCard().substring(12,16));
-        campoSVC.setText("" + m.getSvc());
         image.setImage(m.getImage());
+        if(m.checkHasCreditInfo()){
+            campoTarjeta1.setText(m.getCreditCard().substring(0,4));
+            campoTarjeta2.setText(m.getCreditCard().substring(4,8));
+            campoTarjeta3.setText(m.getCreditCard().substring(8,12));
+            campoTarjeta4.setText(m.getCreditCard().substring(12,16));
+            campoSVC.setText("" + m.getSvc());
+        } 
+        
         check.setSelected(true);
         
         
@@ -133,6 +135,7 @@ public class EditarPerfilController implements Initializable {
         campoNombre.textProperty().addListener((obs, oldValue, newValue) -> {
             if(!isFullName(campoNombre.getText())){errorNombre.setVisible(true);
             }else{errorNombre.setVisible(false);}
+            algoTocado = true;
         });
         campoNombre.focusedProperty().addListener((obs, oldValue, newValue) -> {
             if(!newValue && campoNombre.getText().length() <= 0 )errorNombre.setVisible(true);});
@@ -143,6 +146,7 @@ public class EditarPerfilController implements Initializable {
         campoApellido.textProperty().addListener((obs, oldValue, newValue) -> {
             if(!isFullName(campoApellido.getText())){errorApellido.setVisible(true);
             }else{errorApellido.setVisible(false);}
+            algoTocado = true;
         });
         campoApellido.focusedProperty().addListener((obs, oldValue, newValue) -> {
             if(!newValue && campoApellido.getText().length() <= 0) errorApellido.setVisible(true);});
@@ -152,6 +156,7 @@ public class EditarPerfilController implements Initializable {
         campoTelefono.textProperty().addListener((obs, oldValue, newValue) -> {
             if(!isValidTelefono(campoTelefono.getText())){errorTelefono.setVisible(true);
             }else{errorTelefono.setVisible(false);}
+            algoTocado = true;
         });
         campoTelefono.focusedProperty().addListener((obs, oldValue, newValue) -> {
             if(!newValue && campoTelefono.getText().length() != 9 ) errorTelefono.setVisible(true);});
@@ -173,6 +178,7 @@ public class EditarPerfilController implements Initializable {
                     errorNick.setVisible(false);
                     break;
             }
+            algoTocado = true;
         });
         campoNick.focusedProperty().addListener((obs, oldValue, newValue) -> {
             if(!newValue && campoNick.getText().length() == 0 ){
@@ -196,6 +202,7 @@ public class EditarPerfilController implements Initializable {
                     errorPassword.setVisible(false);
                     break;
             }
+            algoTocado = true;
         });
         
         campoPassword.focusedProperty().addListener((obs, oldValue, newValue) -> {
@@ -211,6 +218,7 @@ public class EditarPerfilController implements Initializable {
         campoTarjeta1.textProperty().addListener((obs, oldValue, newValue) -> {
             if(!isValidTarjeta(campoTarjeta1.getText())){errorTarjeta.setVisible(true);
             }else{errorTarjeta.setVisible(false);}
+            algoTocado = true;
         });
         campoTarjeta1.focusedProperty().addListener((obs, oldValue, newValue) -> {
             if(!newValue && campoTarjeta1.getText().length() != 4 ) errorTarjeta.setVisible(true);});
@@ -220,6 +228,7 @@ public class EditarPerfilController implements Initializable {
         campoTarjeta2.textProperty().addListener((obs, oldValue, newValue) -> {
             if(!isValidTarjeta(campoTarjeta2.getText())){errorTarjeta.setVisible(true);
             }else{errorTarjeta.setVisible(false);}
+            algoTocado = true;
         });
         campoTarjeta2.focusedProperty().addListener((obs, oldValue, newValue) -> {
             if(!newValue && campoTarjeta2.getText().length() != 4 ) errorTarjeta.setVisible(true);});
@@ -229,6 +238,7 @@ public class EditarPerfilController implements Initializable {
         campoTarjeta3.textProperty().addListener((obs, oldValue, newValue) -> {
             if(!isValidTarjeta(campoTarjeta2.getText())){errorTarjeta.setVisible(true);
             }else{errorTarjeta.setVisible(false);}
+            algoTocado = true;
         });
         campoTarjeta3.focusedProperty().addListener((obs, oldValue, newValue) -> {
             if(!newValue && campoTarjeta3.getText().length() != 4 ) errorTarjeta.setVisible(true);});
@@ -239,6 +249,7 @@ public class EditarPerfilController implements Initializable {
         campoTarjeta4.textProperty().addListener((obs, oldValue, newValue) -> {
             if(!isValidTarjeta(campoTarjeta4.getText())){errorTarjeta.setVisible(true);} 
             else{errorTarjeta.setVisible(false);}
+            algoTocado = true;
         });
         campoTarjeta4.focusedProperty().addListener((obs, oldValue, newValue) -> {
             if(!newValue && campoTarjeta4.getText().length() != 4 ) errorTarjeta.setVisible(true);});
@@ -247,6 +258,7 @@ public class EditarPerfilController implements Initializable {
         campoSVC.textProperty().addListener((obs, oldValue, newValue) -> {
             if(!isValidTarjeta(campoSVC.getText())){errorSVC.setVisible(true);
             }else{errorSVC.setVisible(false);}
+            algoTocado = true;
         });
         
         campoSVC.focusedProperty().addListener((obs, oldValue, newValue) -> {
@@ -274,7 +286,9 @@ public class EditarPerfilController implements Initializable {
             if(campoTelefono.getText().length() > 9){campoTelefono.setText(campoTelefono.getText().substring(0, campoTelefono.getText().length()-1));}
         });
         
-        
+        fotoPerfil.imageProperty().addListener((obs, oldValue, newValue) -> {
+            algoTocado = true;
+        });
         
         
     }    
@@ -331,9 +345,12 @@ public class EditarPerfilController implements Initializable {
             m.setSurname(apellido);
             m.setTelephone(telefono);
             m.setPassword(password);
-            m.setTelephone(tarjeta);
-            m.setSvc(svc);
             m.setImage(img);
+            if(m.checkHasCreditInfo()){
+                m.setTelephone(tarjeta);
+                m.setSvc(svc);
+            }
+            
             
             avisoRegistroCorrecto(name);
             
@@ -393,9 +410,9 @@ public class EditarPerfilController implements Initializable {
     
     public boolean avisoPago(){
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Confirmación de registro");
+        alert.setTitle("Confirmación de actualización de datos");
         alert.setHeaderText("Datos de pago");
-        alert.setContentText("Los datos de pago introducidos son incorrectos o incompletos.\nDesea confirmar el registro sin estos datos?");
+        alert.setContentText("Los datos de pago introducidos son incorrectos o incompletos, la opción de pagar online estará deshabilitada.\nDesea confirmar la actualización de datos?");
         ButtonType buttonTypeYes = new ButtonType("Aceptar", ButtonBar.ButtonData.YES);
         ButtonType buttonTypeCancel = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
         alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeCancel);
@@ -409,9 +426,9 @@ public class EditarPerfilController implements Initializable {
     
     public void avisoCampos(){
         Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Confirmación de registro");
+        alert.setTitle("Actualización de datos");
         alert.setHeaderText("Campos incorrectos");
-        alert.setContentText("Los campos deben ser correctos y se ha de aceptar el tratamiento de los datos para confirmar el registro.");
+        alert.setContentText("Los campos deben ser correctos y se ha de aceptar el tratamiento de los datos para actualizar los datos.");
         
         
         alert.showAndWait();
@@ -419,13 +436,29 @@ public class EditarPerfilController implements Initializable {
     
     public void avisoRegistroCorrecto(String n){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Confirmación de registro");
-        alert.setHeaderText("Registro correctamente");
-        alert.setContentText("El registro se ha completado correctamente.\nBIENVENIDO/A " + n.toUpperCase() +"!");
+        alert.setTitle("Confirmación de actualización de datos");
+        alert.setHeaderText("La actualización de datos se ha completado correctamente.");
+        //alert.setContentText("El registro se ha completado correctamente.\nBIENVENIDO/A " + n.toUpperCase() +"!");
         
         
         alert.showAndWait();
     }
+    
+    
+    public boolean avisoAlgoTocado(){
+         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Cambios sin guardar");
+        alert.setHeaderText("Cambios sin guardar");
+        alert.setContentText("Se han realizado cambios que no se van a guardar.\nDesea continuar sin guardar?");
+        ButtonType buttonTypeYes = new ButtonType("Aceptar", ButtonBar.ButtonData.YES);
+        ButtonType buttonTypeCancel = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
+        alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeCancel);
+        
+        Optional<ButtonType> result = alert.showAndWait();
+        return result.get() != buttonTypeYes;
+    }
+    
+    
     
     public void inicializarImagenes(){
         avatares[0] = new Image(getClass().getResourceAsStream("/images/perfil/Default.png"));
@@ -442,7 +475,9 @@ public class EditarPerfilController implements Initializable {
     }
 
     @FXML
-    private void irAReservar(MouseEvent event) {try {
+    private void irAReservar(MouseEvent event) {
+        if(algoTocado && avisoAlgoTocado()){return;}
+        try {
             FXMLLoader miCargador = new FXMLLoader(getClass().getResource("Reservar.fxml"));
             Parent root = miCargador.load();
             // Pasar parámetros entres escenas--------------------------------------------
@@ -457,6 +492,7 @@ public class EditarPerfilController implements Initializable {
 
     @FXML
     private void irAMisReservas(MouseEvent event) {
+        if(algoTocado && avisoAlgoTocado()){return;}
         try {
             FXMLLoader miCargador = new FXMLLoader(getClass().getResource("VerMisReservas.fxml"));
             Parent root = miCargador.load();
@@ -472,8 +508,8 @@ public class EditarPerfilController implements Initializable {
 
     @FXML
     private void desconectarse(MouseEvent event) {
-        
-            try {
+        if(algoTocado && avisoAlgoTocado()){return;}
+        try {
             FXMLLoader miCargador = new FXMLLoader(getClass().getResource("IniciarSesionNeutro.fxml"));
             Parent root = miCargador.load();
             // Pasar parámetros entres escenas--------------------------------------------

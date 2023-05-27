@@ -6,16 +6,21 @@ package javafxmlapplication;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -64,6 +69,30 @@ public class VerMisReservasController implements Initializable {
     
     Text[] tInfo = new Text[10];
     Club club;
+    @FXML
+    private Button a1;
+    @FXML
+    private Button a2;
+    @FXML
+    private Button a3;
+    @FXML
+    private Button a4;
+    @FXML
+    private Button a5;
+    @FXML
+    private Button a6;
+    @FXML
+    private Button a7;
+    @FXML
+    private Button a8;
+    @FXML
+    private Button a9;
+    @FXML
+    private Button a10;
+    
+    Button[] bAnular = new Button[10];
+    
+    
     /**
      * Initializes the controller class.
      */
@@ -83,7 +112,7 @@ public class VerMisReservasController implements Initializable {
         } 
         
         tInfo[0] = t1;tInfo[1] = t2;tInfo[2] = t3;tInfo[3] = t4;tInfo[4] = t5;tInfo[5] = t6;tInfo[6] = t7;tInfo[7] = t8;tInfo[8] = t9;tInfo[9] = t10;
-        
+        bAnular[0] = a1;bAnular[1] = a2;bAnular[2] = a3;bAnular[3] = a4;bAnular[4] = a5;bAnular[5] = a6;bAnular[6] = a7;bAnular[7] = a8;bAnular[8] = a9;bAnular[9] = a10;
         
         rellenarTextos();
 
@@ -141,14 +170,13 @@ public class VerMisReservasController implements Initializable {
     
     public void rellenarTextos(){
         List<Booking> reservas = club.getUserBookings(m.getNickName());
-        int guarda = reservas.size() - 10;
-        guarda = Math.max(guarda, 0);
         
         
-        for(int i = reservas.size() - 1, pos = 0; i >= guarda; i--,pos++){
+        
+        for(int pos = 0; pos < 10 && pos < reservas.size(); pos++){
            
             
-            Booking b = reservas.get(i);
+            Booking b = reservas.get(pos);
             
             int horaPista = b.getFromTime().getHour();
             String horaFormato = "";
@@ -164,21 +192,69 @@ public class VerMisReservasController implements Initializable {
             int diaPista = b.getMadeForDay().getDayOfMonth();
             int mesPista = b.getMadeForDay().getMonthValue();
             int anoPista = b.getMadeForDay().getYear();
-            System.out.println(anoPista);
             String fechaDeLaReserva = " para la " + pista + " el " + diaPista + "-" + mesPista + "-" + anoPista 
                     +" a las " + horaFormato + "-" + (horaPista + 1) + ":00";
             
             
-            
-           
-            
-            
-        
             String res = fechaCreacion + fechaDeLaReserva;
             tInfo[pos].setText(res);
+            
+            
+            boolean sePuedeAnula = false;
+            sePuedeAnula = sePuedeAnula || LocalDate.now().plusDays(1).isBefore(b.getMadeForDay());
+            sePuedeAnula = sePuedeAnula || (LocalDate.now().plusDays(1).isEqual(b.getMadeForDay()) &&  LocalDateTime.now().getHour() < horaPista);
+            
+            
+            if(sePuedeAnula && tInfo[pos].getText().length() != 0){
+                bAnular[pos].setVisible(true);
+            } else {
+                bAnular[pos].setVisible(false);
+            }
         }
         
         
+    }
+    
+    public void rellenarVacio(){
+        for(int i = 0; i < 10; i++){
+            tInfo[i].setText("");
+            bAnular[i].setVisible(false);
+        }
+    }
+
+    @FXML
+    private void anular(ActionEvent event) {
+        int numBotonAnular = Integer.parseInt(((Button) event.getSource()).getId().substring(1)) - 1;
+        List<Booking> reservas = club.getUserBookings(m.getNickName());
+        
+        Booking reservaBorrar = reservas.get(numBotonAnular);
+        try {
+            if(Club.getInstance().removeBooking(reservaBorrar)){
+                String msg = tInfo[numBotonAnular].getText();
+                tInfo[numBotonAnular].setText("");
+                bAnular[numBotonAnular].setVisible(false);
+                rellenarVacio();
+                rellenarTextos();
+                avisoAnular(msg);
+            } else {
+                System.out.println("Reserva no borrada");
+
+            }
+        } catch (Exception ex) {
+                System.out.println("Error en el club");
+        } 
+        
+        
+    }
+    
+    public void avisoAnular(String msg){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Anulación de reserva");
+        alert.setHeaderText("Reserva anulada");
+        alert.setContentText("La reserva '" + msg + "' ha sido anulada correctamente.");
+        
+        
+        alert.showAndWait();
     }
     
 }

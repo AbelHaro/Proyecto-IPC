@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-image: #fffcf2;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.IniciarSesionNeutroController">
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.IniciarSesionNeutroController">
    <center>
       <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="802.0" style="-fx-background-color: #00E277;">
         <columnConstraints>
@@ -90,7 +90,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                <children>
-                  <Button fx:id="bAcceder" mnemonicParsing="false" onAction="#handlebAccederOnAction" prefHeight="37.0" prefWidth="216.0" text="Acceder">
+                  <Button fx:id="bAcceder" mnemonicParsing="false" onAction="#handlebAccederOnAction" prefHeight="37.0" prefWidth="216.0" style="-fx-background-color: #F2F2FF;" text="Acceder">
                      <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>
@@ -113,7 +113,8 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="84.0" prefWidth="218.0">
                      <children>
-                        <Button fx:id="bRegistrarse" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlebRegistrarseOnAction" text="Registrarse" textAlignment="CENTER" wrapText="true">
+                        <Button mnemonicParsing="false" onAction="#iniciarSesionDirecto" text="Button" />
+                        <Button fx:id="bRegistrarse" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlebRegistrarseOnAction" style="-fx-background-color: #F2F2FF;" text="Registrarse" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Arial" size="16.0" />
                            </font>
@@ -129,7 +130,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="67.0" prefWidth="436.0">
                      <children>
-                        <Button fx:id="bVerDisponibilidad" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlebVerDisponibilidadOnAction" prefHeight="37.0" prefWidth="216.0" text="Ver disponibilidad" textAlignment="CENTER" wrapText="true">
+                        <Button fx:id="bVerDisponibilidad" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlebVerDisponibilidadOnAction" prefHeight="37.0" prefWidth="216.0" style="-fx-background-color: #F2F2FF;" text="Ver disponibilidad" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Arial Bold" size="16.0" />
                            </font>

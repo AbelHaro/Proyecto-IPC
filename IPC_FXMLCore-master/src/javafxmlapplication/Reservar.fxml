@@ -27,7 +27,7 @@
                      <children>
                         <ImageView fitHeight="63.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../images/iconos/logo2.png" />
+                              <Image url="@../images/iconos/logo-sin-fondo.png" />
                            </image>
                            <HBox.margin>
                               <Insets left="30.0" />
@@ -91,7 +91,7 @@
                   </VBox>
                   <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="140.0">
                      <children>
-                        <DatePicker fx:id="datePicker" prefWidth="132.0">
+                        <DatePicker fx:id="datePicker" prefWidth="132.0" style="-fx-background-color: #F2F2FF;">
                            <padding>
                               <Insets left="20.0" />
                            </padding>
@@ -112,7 +112,7 @@
                   </VBox>
                   <VBox alignment="CENTER_LEFT" prefHeight="87.0" prefWidth="161.0">
                      <children>
-                        <MenuButton fx:id="menu" mnemonicParsing="false" prefHeight="30.0" prefWidth="132.0" text="9:00 - 10:00">
+                        <MenuButton fx:id="menu" mnemonicParsing="false" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: #F2F2FF;" text="9:00 - 10:00">
                           <items>
                             <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="9:00 - 10:00" />
                               <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="10:00 - 11:00" />
@@ -156,7 +156,7 @@
                                     <Insets />
                                  </HBox.margin>
                               </Text>
-                              <Button fx:id="b1" mnemonicParsing="false" onAction="#reservar" text="Reservar">
+                              <Button fx:id="b1" mnemonicParsing="false" onAction="#reservar" style="-fx-background-color: #F2F2FF;" text="Reservar">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -182,7 +182,7 @@
                                     <Insets />
                                  </HBox.margin>
                               </Text>
-                              <Button fx:id="b2" mnemonicParsing="false" onAction="#reservar" text="Reservar">
+                              <Button fx:id="b2" mnemonicParsing="false" onAction="#reservar" style="-fx-background-color: #F2F2FF;" text="Reservar">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -208,7 +208,7 @@
                                     <Insets />
                                  </HBox.margin>
                               </Text>
-                              <Button fx:id="b3" mnemonicParsing="false" onAction="#reservar" text="Reservar">
+                              <Button fx:id="b3" mnemonicParsing="false" onAction="#reservar" style="-fx-background-color: #F2F2FF;" text="Reservar">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -234,7 +234,7 @@
                                     <Insets />
                                  </HBox.margin>
                               </Text>
-                              <Button fx:id="b4" mnemonicParsing="false" onAction="#reservar" text="Reservar">
+                              <Button fx:id="b4" mnemonicParsing="false" onAction="#reservar" style="-fx-background-color: #F2F2FF;" text="Reservar">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -260,7 +260,7 @@
                                     <Insets />
                                  </HBox.margin>
                               </Text>
-                              <Button fx:id="b5" mnemonicParsing="false" onAction="#reservar" text="Reservar">
+                              <Button fx:id="b5" mnemonicParsing="false" onAction="#reservar" style="-fx-background-color: #F2F2FF;" text="Reservar">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -286,7 +286,7 @@
                                     <Insets />
                                  </HBox.margin>
                               </Text>
-                              <Button fx:id="b6" mnemonicParsing="false" onAction="#reservar" text="Reservar">
+                              <Button fx:id="b6" mnemonicParsing="false" onAction="#reservar" style="-fx-background-color: #F2F2FF;" text="Reservar">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
