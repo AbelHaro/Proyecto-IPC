@@ -20,6 +20,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.input.ZoomEvent;
 import javafx.stage.Stage;
 import model.Club;
@@ -45,8 +46,7 @@ public class IniciarSesionNeutroController implements Initializable {
     private PasswordField password;
     @FXML
     private TextField nick;
-    @FXML
-    private Label error;
+    
     
     public Member m;
 
@@ -55,25 +55,40 @@ public class IniciarSesionNeutroController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
     }    
 
     @FXML
     private void handlebAccederOnAction(ActionEvent event) throws ClubDAOException, IOException {
         
         
-        
-        if (nick.getText().length() > 0 && !model.Club.getInstance().existsLogin(nick.getText())) {
+        /*
+        if (!error.visibleProperty().getValue() && !model.Club.getInstance().existsLogin(nick.getText())) {
             error.setText("El usuario no existe");
             error.setVisible(true);
             return;
         }
-        m = model.Club.getInstance().getMemberByCredentials(nick.getText(),password.getText());
-        if (m ==null) {
-            error.setText("Usuario o contraseña incorrecta");
-            error.setVisible(true);
-            return;
+        */
+        if(!isValidNick(nick.getText())){
+                errorAcceder.setText("El usuario no es correcto");
+                errorAcceder.setVisible(true);
+                return;
+        }   
+        
+        try{
+             m = model.Club.getInstance().getMemberByCredentials(nick.getText(),password.getText());
+        } catch(IOException | ClubDAOException e){
+            System.out.println("Error en el inicio de sesión");
+        } finally {
+            if (m ==null) {
+            errorAcceder.setText("Usuario o contraseña incorrecta");
+            errorAcceder.setVisible(true);
+            return;         
+            }
         }
+       
+        
+        
         
        Context i = Context.getInstance();
         i.setMember(m);
@@ -116,16 +131,22 @@ public class IniciarSesionNeutroController implements Initializable {
         }
     }
 
-    // Método para acceder al miembro desde otras escenas
-   // public static Member getMember(){return this.m;}
+    
 
     @FXML
     private void iniciarSesionDirecto(ActionEvent event) {
+        
         try {
+            Image image = new Image(getClass().getResourceAsStream("/images/perfil/CarlosAlcaraz.jpg"));
+            m = Club.getInstance().registerMember("Abel", "Haro", "685018048", "Abel", "123456x", "", 0, image );
+            
+            /*
             m = Club.getInstance().getMemberByCredentials("user2", "123456x");
+            */
         } catch (Exception ex) {
-            System.out.println("Error al instanciar el club");
-        }
+            System.out.println("Error al obtener el member");
+        } 
+        
         Context i = Context.getInstance();
         i.setMember(m);
         
@@ -136,9 +157,13 @@ public class IniciarSesionNeutroController implements Initializable {
         JavaFXMLApplication.setRoot(root);
 
         } catch (IOException ex) {
-        System.out.println("Escena no encontrada");
+        
         }
         
         
+    }
+    public static boolean isValidNick(String str) {
+        String expression = "^[0-9a-zA-Z]+"; 
+        return str.matches(expression);        
     }
 }

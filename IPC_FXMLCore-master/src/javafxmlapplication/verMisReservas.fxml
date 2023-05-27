@@ -68,7 +68,11 @@
                      <children>
                         <HBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="563.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
                            <children>
+<<<<<<< HEAD
                               <Text fx:id="t1" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="461.0">
+=======
+                              <Text fx:id="t1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="480.0">
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -76,6 +80,7 @@
                                     <Insets />
                                  </HBox.margin>
                               </Text>
+<<<<<<< HEAD
                               <Button mnemonicParsing="false" text="Anular reserva">
                                  <font>
                                     <Font name="Arial" size="14.0" />
@@ -83,6 +88,15 @@
                                  <HBox.margin>
                                     <Insets left="30.0" />
                                  </HBox.margin>
+=======
+                              <Button fx:id="a1" mnemonicParsing="false" onAction="#anular" prefWidth="72.0" style="-fx-background-color: #F2F2FF;" text="Anular" visible="false">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                               </Button>
                            </children>
                            <padding>
@@ -94,7 +108,11 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="563.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
                            <children>
+<<<<<<< HEAD
                               <Text fx:id="t2" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="461.0">
+=======
+                              <Text fx:id="t2" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="480.0">
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -102,6 +120,7 @@
                                     <Insets />
                                  </HBox.margin>
                               </Text>
+<<<<<<< HEAD
                               <Button mnemonicParsing="false" text="Anular reserva">
                                  <HBox.margin>
                                     <Insets left="30.0" />
@@ -125,6 +144,7 @@
                                     <Insets />
                                  </HBox.margin>
                               </Text>
+<<<<<<< HEAD
                               <Button mnemonicParsing="false" text="Anular reserva">
                                  <HBox.margin>
                                     <Insets left="30.0" />
@@ -143,7 +163,11 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="563.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
                            <children>
+<<<<<<< HEAD
                               <Text fx:id="t4" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="461.0">
+=======
+                              <Text fx:id="t4" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="480.0">
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -151,9 +175,15 @@
                                     <Insets />
                                  </HBox.margin>
                               </Text>
+<<<<<<< HEAD
                               <Button mnemonicParsing="false" text="Anular reserva">
                                  <HBox.margin>
                                     <Insets left="30.0" />
+=======
+                              <Button fx:id="a4" mnemonicParsing="false" onAction="#anular" prefWidth="72.0" style="-fx-background-color: #F2F2FF;" text="Anular" visible="false">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                                  </HBox.margin>
                                  <font>
                                     <Font name="Arial" size="14.0" />
@@ -169,7 +199,11 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="563.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
                            <children>
+<<<<<<< HEAD
                               <Text fx:id="t5" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="461.0">
+=======
+                              <Text fx:id="t5" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="480.0">
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -177,9 +211,15 @@
                                     <Insets />
                                  </HBox.margin>
                               </Text>
+<<<<<<< HEAD
                               <Button mnemonicParsing="false" text="Anular reserva">
                                  <HBox.margin>
                                     <Insets left="30.0" />
+=======
+                              <Button fx:id="a5" mnemonicParsing="false" onAction="#anular" prefWidth="72.0" style="-fx-background-color: #F2F2FF;" text="Anular" visible="false">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                                  </HBox.margin>
                                  <font>
                                     <Font name="Arial" size="14.0" />
@@ -195,7 +235,11 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="563.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
                            <children>
+<<<<<<< HEAD
                               <Text fx:id="t6" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="461.0">
+=======
+                              <Text fx:id="t6" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="480.0">
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -203,9 +247,15 @@
                                     <Insets />
                                  </HBox.margin>
                               </Text>
+<<<<<<< HEAD
                               <Button mnemonicParsing="false" text="Anular reserva">
                                  <HBox.margin>
                                     <Insets left="30.0" />
+=======
+                              <Button fx:id="a6" mnemonicParsing="false" onAction="#anular" prefWidth="72.0" style="-fx-background-color: #F2F2FF;" text="Anular" visible="false">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                                  </HBox.margin>
                                  <font>
                                     <Font name="Arial" size="14.0" />
@@ -221,7 +271,11 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="9.0" prefHeight="110.0" prefWidth="563.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
                            <children>
+<<<<<<< HEAD
                               <Text fx:id="t7" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="461.0">
+=======
+                              <Text fx:id="t7" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="480.0">
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -229,9 +283,15 @@
                                     <Insets />
                                  </HBox.margin>
                               </Text>
+<<<<<<< HEAD
                               <Button mnemonicParsing="false" text="Anular reserva">
                                  <HBox.margin>
                                     <Insets left="30.0" />
+=======
+                              <Button fx:id="a7" mnemonicParsing="false" onAction="#anular" prefWidth="72.0" style="-fx-background-color: #F2F2FF;" text="Anular" visible="false">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                                  </HBox.margin>
                                  <font>
                                     <Font name="Arial" size="14.0" />
@@ -244,7 +304,11 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="62.0" prefHeight="110.0" prefWidth="563.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
                            <children>
+<<<<<<< HEAD
                               <Text fx:id="t8" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="461.0">
+=======
+                              <Text fx:id="t8" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="480.0">
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -252,9 +316,15 @@
                                     <Insets />
                                  </HBox.margin>
                               </Text>
+<<<<<<< HEAD
                               <Button mnemonicParsing="false" text="Anular reserva">
                                  <HBox.margin>
                                     <Insets left="30.0" />
+=======
+                              <Button fx:id="a8" mnemonicParsing="false" onAction="#anular" prefWidth="72.0" style="-fx-background-color: #F2F2FF;" text="Anular" visible="false">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                                  </HBox.margin>
                                  <font>
                                     <Font name="Arial" size="14.0" />
@@ -267,7 +337,11 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="332.0" prefHeight="110.0" prefWidth="563.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
                            <children>
+<<<<<<< HEAD
                               <Text fx:id="t9" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="461.0">
+=======
+                              <Text fx:id="t9" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="480.0">
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -275,9 +349,15 @@
                                     <Insets />
                                  </HBox.margin>
                               </Text>
+<<<<<<< HEAD
                               <Button mnemonicParsing="false" text="Anular reserva">
                                  <HBox.margin>
                                     <Insets left="30.0" />
+=======
+                              <Button fx:id="a9" mnemonicParsing="false" onAction="#anular" prefWidth="72.0" style="-fx-background-color: #F2F2FF;" text="Anular" visible="false">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                                  </HBox.margin>
                                  <font>
                                     <Font name="Arial" size="14.0" />
@@ -290,7 +370,11 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="337.0" prefHeight="110.0" prefWidth="563.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
                            <children>
+<<<<<<< HEAD
                               <Text fx:id="t10" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="461.0">
+=======
+                              <Text fx:id="t10" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="480.0">
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -298,9 +382,15 @@
                                     <Insets />
                                  </HBox.margin>
                               </Text>
+<<<<<<< HEAD
                               <Button mnemonicParsing="false" text="Anular reserva">
                                  <HBox.margin>
                                     <Insets left="30.0" />
+=======
+                              <Button fx:id="a10" mnemonicParsing="false" onAction="#anular" prefWidth="72.0" style="-fx-background-color: #F2F2FF;" text="Anular" visible="false">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+>>>>>>> 0f38a1705798d269c7bc8c5ee819526cee7b6168
                                  </HBox.margin>
                                  <font>
                                     <Font name="Arial" size="14.0" />

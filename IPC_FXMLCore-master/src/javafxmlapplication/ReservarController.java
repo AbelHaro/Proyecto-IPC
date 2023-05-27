@@ -92,7 +92,7 @@ public class ReservarController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try{
-           
+           System.out.println("initialize");
             m = Context.getInstance().getMember();
             fotoPerfil.setImage(m.getImage());
             idUsuario.setText(m.getNickName());
@@ -221,7 +221,6 @@ public class ReservarController implements Initializable {
             Button b = (Button) event.getSource();
             String pista = "Pista " + b.getId().substring(1);
             
-            System.out.println("Pista elegida" + pista);
             
             LocalDate dia = datePicker.getValue();
             List<Booking> reservasPista = club.getCourtBookings(pista, dia);
@@ -235,7 +234,6 @@ public class ReservarController implements Initializable {
             int horaInicioReserva = Integer.parseInt(horaInicio);
             
             
-            System.out.println("Hora inicio reserva" + horaInicioReserva);
             
             int[] horas = new int[22];
             horas[horaInicioReserva]= 1;
@@ -251,7 +249,6 @@ public class ReservarController implements Initializable {
             for(int i = 0; i < horas.length; i++){
                 if(horas[i]== 0){cont = 0;}
                 else {cont++;}
-                System.out.println("Valor de horas " + horas[i] + " iteración " + i + " valor de cont " + cont);
                 if(cont >= 3){errorReservar();return;}
                 
             }
@@ -263,7 +260,6 @@ public class ReservarController implements Initializable {
             boolean paid = true;
             if(m.getCreditCard().equals("")){paid = false;}
             Booking reserva = club.registerBooking(bookingDate, dia,fromTime,paid,pistaC,m );
-            System.out.println(reserva.getBookingDate().toString() + "AQUI");
             inicializarGeneral();
             completadaReserva(reserva);
         } catch (ClubDAOException ex) {

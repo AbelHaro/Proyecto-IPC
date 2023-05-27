@@ -392,9 +392,10 @@ public class RegistrarseV2Controller implements Initializable {
     
     public boolean avisoPago(){
         Alert alert = new Alert(AlertType.CONFIRMATION);
+        alert.setHeight(400);
         alert.setTitle("Confirmación de registro");
         alert.setHeaderText("Datos de pago");
-        alert.setContentText("Los datos de pago introducidos son incorrectos o incompletos.\nDesea confirmar el registro sin estos datos?");
+        alert.setContentText("Los datos de pago introducidos son incorrectos o incompletos, la opción de pagar online estará deshabilitada.\nDesea confirmar el registro sin estos datos?");
         ButtonType buttonTypeYes = new ButtonType("Aceptar", ButtonData.YES);
         ButtonType buttonTypeCancel = new ButtonType("Cancelar", ButtonData.CANCEL_CLOSE);
         alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeCancel);
@@ -419,7 +420,7 @@ public class RegistrarseV2Controller implements Initializable {
     public void avisoRegistroCorrecto(String n){
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Confirmación de registro");
-        alert.setHeaderText("Registro correctamente");
+        alert.setHeaderText("Registro correcto");
         alert.setContentText("El registro se ha completado correctamente.\nBIENVENIDO/A " + n.toUpperCase() +"!");
         
         
