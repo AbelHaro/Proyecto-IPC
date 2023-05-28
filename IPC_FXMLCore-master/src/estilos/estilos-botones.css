@@ -5,10 +5,11 @@
 */
 
 .button-cambiar-color-raton-encima{
-    
+    -fx-background-color: #F2F2FF
+
 }
 .button-cambiar-color-raton-encima:hover{
-    -fx-background-color:blue
+    -fx-background-color:#d4d2d2
 }
 
 

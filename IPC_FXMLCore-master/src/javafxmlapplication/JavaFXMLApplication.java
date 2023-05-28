@@ -36,7 +36,7 @@ public class JavaFXMLApplication extends Application {
         
 
        
-        TCDataGenerator.main(null);
+        //TCDataGenerator.main(null);
         club = model.Club.getInstance();
 
         

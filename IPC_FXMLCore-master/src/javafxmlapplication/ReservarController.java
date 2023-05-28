@@ -85,14 +85,18 @@ public class ReservarController implements Initializable {
     private ImageView fotoPerfil;
     @FXML
     private Label idUsuario;
+    @FXML
+    private Label misReservas;
+    @FXML
+    private Label desconectarse;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        try{
-           System.out.println("initialize");
+        try {
+           
             m = Context.getInstance().getMember();
             fotoPerfil.setImage(m.getImage());
             idUsuario.setText(m.getNickName());
@@ -340,6 +344,36 @@ public class ReservarController implements Initializable {
         } catch (IOException ex) {
             System.out.println("Escena no Encontrada");
         }
+    }
+
+    @FXML
+    private void datosSocioMouseEntered(MouseEvent event) {
+        datosSocio.setUnderline(true);
+    }
+
+    @FXML
+    private void datosSocioMouseExited(MouseEvent event) {
+        datosSocio.setUnderline(false);
+    }
+
+    @FXML
+    private void misReservasMouseExited(MouseEvent event) {
+        misReservas.setUnderline(false);
+    }
+
+    @FXML
+    private void misReservasMouseEntered(MouseEvent event) {
+        misReservas.setUnderline(true);
+    }
+
+    @FXML
+    private void desconectarseMouseExited(MouseEvent event) {
+        desconectarse.setUnderline(false);
+    }
+
+    @FXML
+    private void desconectarseMouseEntered(MouseEvent event) {
+        desconectarse.setUnderline(true);
     }
 
     

@@ -95,13 +95,17 @@ public class EditarPerfilController implements Initializable {
     private Label desconectarse;
     
     boolean algoTocado = false;
+    @FXML
+    private Label misReservas;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
         m = Context.getInstance().getMember();
+        
         fotoPerfil.setImage(m.getImage());
         idUsuario.setText(m.getNickName());
         
@@ -351,7 +355,7 @@ public class EditarPerfilController implements Initializable {
                 m.setSvc(svc);
             }
             
-            
+            algoTocado = false;
             avisoRegistroCorrecto(name);
             
             
@@ -410,6 +414,7 @@ public class EditarPerfilController implements Initializable {
     
     public boolean avisoPago(){
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setHeight(400);
         alert.setTitle("Confirmación de actualización de datos");
         alert.setHeaderText("Datos de pago");
         alert.setContentText("Los datos de pago introducidos son incorrectos o incompletos, la opción de pagar online estará deshabilitada.\nDesea confirmar la actualización de datos?");
@@ -521,5 +526,36 @@ public class EditarPerfilController implements Initializable {
         }
 
         
+    }
+
+    @FXML
+    private void reservarPistasMouseExited(MouseEvent event) {
+        reservarPista.setUnderline(false);
+    }
+
+    @FXML
+    private void reservarPistasMouseEntered(MouseEvent event) {
+        reservarPista.setUnderline(true);
+    }
+
+    @FXML
+    private void misReservasMouseEntered(MouseEvent event) {
+        misReservas.setUnderline(true);
+    }
+
+    @FXML
+    private void desconectarseMouseExited(MouseEvent event) {
+        desconectarse.setUnderline(false);
+    }
+
+    @FXML
+    private void desconectarseMouseEntered(MouseEvent event) {
+        desconectarse.setUnderline(true);
+    }
+
+    @FXML
+    private void misReservasMouseExited(MouseEvent event) {
+        misReservas.setUnderline(false);
+
     }
 }

@@ -18,44 +18,34 @@
    <top>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #00E277;" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="426.0" HBox.hgrow="ALWAYS">
+            <VBox alignment="CENTER" maxWidth="136.0" prefHeight="100.0" prefWidth="136.0">
                <children>
-                  <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="449.0" VBox.vgrow="ALWAYS">
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                     <children>
-                        <ImageView fitHeight="63.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/iconos/logo-sin-fondo.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets left="30.0" />
-                           </HBox.margin>
-                        </ImageView>
-                        <Label text="GreenBall">
-                           <font>
-                              <Font name="Arial Rounded MT Bold" size="29.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                  </HBox>
+                  <ImageView fitHeight="85.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/iconos/logo-sin-fondo.png" />
+                     </image>
+                  </ImageView>
                </children>
             </VBox>
-            <VBox prefHeight="86.0" prefWidth="395.0" HBox.hgrow="ALWAYS">
+            <Label text="GreenBall" textFill="#fffcf2">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="29.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="100.0" prefWidth="218.0" HBox.hgrow="ALWAYS">
                <children>
-                  <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                  <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="364.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <VBox alignment="BOTTOM_CENTER" prefHeight="95.0" prefWidth="104.0">
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="95.0" prefWidth="118.0">
                            <HBox.margin>
                               <Insets right="30.0" />
                            </HBox.margin>
                            <children>
-                              <ImageView fx:id="fotoPerfil" fitHeight="79.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true" />
-                              <Label fx:id="idUsuario" alignment="CENTER" prefHeight="16.0" prefWidth="92.0" text="Label">
+                              <ImageView fx:id="fotoPerfil" fitHeight="79.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin></ImageView>
+                              <Label fx:id="idUsuario" alignment="CENTER" prefHeight="16.0" prefWidth="110.0" text="Label" textFill="#fffcf2">
                                  <font>
                                     <Font name="Arial" size="14.0" />
                                  </font>
@@ -144,85 +134,6 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="357.0" prefWidth="669.0">
                <children>
-                  <VBox alignment="CENTER" prefHeight="358.0" prefWidth="158.0">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="53.0" prefWidth="105.0">
-                           <children>
-                              <Label text="Pista 1">
-                                 <font>
-                                    <Font name="Arial" size="14.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets left="25.0" />
-                                 </HBox.margin>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="53.0" prefWidth="105.0">
-                           <children>
-                              <Label text="Pista 2">
-                                 <font>
-                                    <Font name="Arial" size="14.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets left="25.0" />
-                                 </HBox.margin>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="53.0" prefWidth="105.0">
-                           <children>
-                              <Label text="Pista 3">
-                                 <font>
-                                    <Font name="Arial" size="14.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets left="25.0" />
-                                 </HBox.margin>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="53.0" prefWidth="105.0">
-                           <children>
-                              <Label text="Pista 4">
-                                 <font>
-                                    <Font name="Arial" size="14.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets left="25.0" />
-                                 </HBox.margin>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="53.0" prefWidth="105.0">
-                           <children>
-                              <Label text="Pista 5">
-                                 <font>
-                                    <Font name="Arial" size="14.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets left="25.0" />
-                                 </HBox.margin>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="53.0" prefWidth="105.0">
-                           <children>
-                              <Label text="Pista 6">
-                                 <font>
-                                    <Font name="Arial" size="14.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets left="25.0" />
-                                 </HBox.margin>
-                              </Label>
-                           </children>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </HBox>
-                     </children>
-                  </VBox>
                   <VBox alignment="CENTER" prefHeight="358.0" prefWidth="608.0">
                      <children>
                         <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="544.0" style="-fx-border-width: 3; -fx-border-color: #00E277;">
@@ -245,7 +156,7 @@
                               </Button>
                            </children>
                            <VBox.margin>
-                              <Insets right="20.0" />
+                              <Insets bottom="2.0" right="20.0" />
                            </VBox.margin>
                            <padding>
                               <Insets left="20.0" />
@@ -274,7 +185,7 @@
                               <Insets left="20.0" />
                            </padding>
                            <VBox.margin>
-                              <Insets right="20.0" />
+                              <Insets bottom="2.0" right="20.0" />
                            </VBox.margin>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="544.0" style="-fx-border-width: 3; -fx-border-color: #00E277;">
@@ -297,7 +208,7 @@
                               </Button>
                            </children>
                            <VBox.margin>
-                              <Insets right="20.0" />
+                              <Insets bottom="2.0" right="20.0" />
                            </VBox.margin>
                            <padding>
                               <Insets left="20.0" />
@@ -323,7 +234,7 @@
                               </Button>
                            </children>
                            <VBox.margin>
-                              <Insets right="20.0" />
+                              <Insets bottom="2.0" right="20.0" />
                            </VBox.margin>
                            <padding>
                               <Insets left="20.0" />
@@ -349,7 +260,7 @@
                               </Button>
                            </children>
                            <VBox.margin>
-                              <Insets right="20.0" />
+                              <Insets bottom="2.0" right="20.0" />
                            </VBox.margin>
                            <padding>
                               <Insets left="20.0" />
@@ -375,7 +286,7 @@
                               </Button>
                            </children>
                            <VBox.margin>
-                              <Insets right="20.0" />
+                              <Insets bottom="2.0" right="20.0" />
                            </VBox.margin>
                            <padding>
                               <Insets left="20.0" />
@@ -393,36 +304,40 @@
          <children>
             <VBox>
                <children>
-                  <HBox prefWidth="110.0">
+                  <VBox>
                      <children>
-                        <Label prefHeight="18.0" prefWidth="120.0" text="Reservar pistas" textFill="#fffcf2" underline="true">
-                           <font>
-                              <Font name="Arial" size="14.0" />
-                           </font>
-                           <padding>
-                              <Insets left="10.0" />
-                           </padding>
-                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="110.0">
+                           <children>
+                              <Label prefHeight="35.0" prefWidth="120.0" text="Reservar pistas" textFill="#fffcf2" underline="true">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0">
+                           <children>
+                              <Label fx:id="datosSocio" onMouseClicked="#irAEditarPerfil" onMouseEntered="#datosSocioMouseEntered" onMouseExited="#datosSocioMouseExited" prefHeight="35.0" prefWidth="125.0" text="Datos del socio" textFill="#fffcf2">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0">
+                           <children>
+                              <Label fx:id="misReservas" onMouseClicked="#irAMisReservas" onMouseEntered="#misReservasMouseEntered" onMouseExited="#misReservasMouseExited" prefHeight="35.0" prefWidth="121.0" text="Mis reservas" textFill="#fffcf2">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
                      </children>
-                  </HBox>
-                  <HBox>
-                     <children>
-                        <Label fx:id="datosSocio" onMouseClicked="#irAEditarPerfil" prefHeight="42.0" prefWidth="125.0" text="Datos del socio" textFill="#fffcf2">
-                           <font>
-                              <Font name="Arial" size="14.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <HBox>
-                     <children>
-                        <Label onMouseClicked="#irAMisReservas" prefHeight="23.0" prefWidth="121.0" text="Mis reservas" textFill="#fffcf2">
-                           <font>
-                              <Font name="Arial" size="14.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
+                  </VBox>
                </children>
             </VBox>
             <VBox alignment="BOTTOM_LEFT" minHeight="-Infinity" VBox.vgrow="ALWAYS">
@@ -432,7 +347,7 @@
                <children>
                   <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="38.0" prefWidth="121.0">
                      <children>
-                        <Label onMouseClicked="#desconectarse" prefHeight="39.0" prefWidth="122.0" text="Desconectarse" textFill="#fffcf2">
+                        <Label fx:id="desconectarse" onMouseClicked="#desconectarse" onMouseEntered="#desconectarseMouseEntered" onMouseExited="#desconectarseMouseExited" prefHeight="39.0" prefWidth="122.0" text="Desconectarse" textFill="#fffcf2">
                            <font>
                               <Font name="Arial" size="14.0" />
                            </font>

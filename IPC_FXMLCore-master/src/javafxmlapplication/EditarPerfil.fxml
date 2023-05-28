@@ -364,7 +364,7 @@
                                        <children>
                                           <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="174.0">
                                              <children>
-                                                <TextField fx:id="campoTarjeta1" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="47.0" promptText="1111">
+                                                <TextField fx:id="campoTarjeta1" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="50.0" promptText="1111">
                                                    <font>
                                                       <Font name="Arial" size="14.0" />
                                                    </font>
@@ -374,7 +374,7 @@
                                                       <Insets left="1.0" right="1.0" />
                                                    </HBox.margin>
                                                 </Text>
-                                                <TextField fx:id="campoTarjeta2" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="47.0" promptText="2222">
+                                                <TextField fx:id="campoTarjeta2" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="50.0" promptText="2222">
                                                    <font>
                                                       <Font name="Arial" size="14.0" />
                                                    </font>
@@ -384,7 +384,7 @@
                                                       <Insets left="1.0" right="1.0" />
                                                    </HBox.margin>
                                                 </Text>
-                                                <TextField fx:id="campoTarjeta3" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="47.0" promptText="3333">
+                                                <TextField fx:id="campoTarjeta3" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="50.0" promptText="3333">
                                                    <font>
                                                       <Font name="Arial" size="14.0" />
                                                    </font>
@@ -394,7 +394,7 @@
                                                       <Insets left="1.0" right="1.0" />
                                                    </HBox.margin>
                                                 </Text>
-                                                <TextField fx:id="campoTarjeta4" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="47.0" promptText="4444">
+                                                <TextField fx:id="campoTarjeta4" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#txtCelularKeyTyped" prefHeight="30.0" prefWidth="50.0" promptText="4444">
                                                    <font>
                                                       <Font name="Arial" size="14.0" />
                                                    </font>
@@ -425,7 +425,7 @@
                                     </VBox>
                                     <VBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="42.0">
                                        <children>
-                                          <TextField fx:id="campoSVC" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="40.0" promptText="123">
+                                          <TextField fx:id="campoSVC" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="45.0" promptText="123">
                                              <VBox.margin>
                                                 <Insets />
                                              </VBox.margin>
@@ -527,29 +527,34 @@
    <top>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #00E277;" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="490.0" HBox.hgrow="ALWAYS">
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="136.0">
                <children>
-                  <Label text="GreenBall">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="29.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="70.0" />
-                     </VBox.margin>
-                  </Label>
+                  <ImageView fitHeight="85.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/iconos/logo-sin-fondo.png" />
+                     </image>
+                  </ImageView>
                </children>
             </VBox>
+            <Label text="GreenBall" textFill="#fffcf2">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="29.0" />
+               </font>
+            </Label>
             <VBox prefHeight="100.0" prefWidth="362.0" HBox.hgrow="ALWAYS">
                <children>
-                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="220.0">
+                  <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="220.0">
                      <children>
-                        <VBox alignment="CENTER">
+                        <VBox alignment="BOTTOM_CENTER">
                            <HBox.margin>
                               <Insets right="30.0" />
                            </HBox.margin>
                            <children>
-                              <ImageView fx:id="fotoPerfil" fitHeight="79.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true" />
-                              <Label fx:id="idUsuario" text="Label">
+                              <ImageView fx:id="fotoPerfil" fitHeight="79.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin></ImageView>
+                              <Label fx:id="idUsuario" alignment="CENTER" prefHeight="16.0" prefWidth="110.0" text="Label" textFill="#fffcf2">
                                  <font>
                                     <Font name="Arial" size="14.0" />
                                  </font>
@@ -564,32 +569,33 @@
       </HBox>
    </top>
    <left>
-      <VBox prefHeight="520.0" prefWidth="130.0" style="-fx-background-color: #878E99;" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_RIGHT" prefHeight="520.0" prefWidth="136.0" style="-fx-background-color: #878E99;" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="reservarPista" onMouseClicked="#irAReservar" prefHeight="21.0" prefWidth="112.0" text="Reservar pistas" textFill="#fffcf2">
-               <font>
-                  <Font name="Arial" size="14.0" />
-               </font>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </Label>
-            <Label prefHeight="48.0" prefWidth="95.0" styleClass="label-seleccionado" stylesheets="@../estilos/estilos-botones.css" text="Datos del socio" textFill="#fffcf2" underline="true">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </Label>
-            <Label onMouseClicked="#irAMisReservas" text="Mis reservas" textFill="#fffcf2">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
+            <VBox prefHeight="300.0">
+               <children>
+                  <Label fx:id="reservarPista" onMouseClicked="#irAReservar" onMouseEntered="#reservarPistasMouseEntered" onMouseExited="#reservarPistasMouseExited" prefHeight="35.0" prefWidth="112.0" text="Reservar pistas" textFill="#fffcf2">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="35.0" prefWidth="126.0" styleClass="label-seleccionado" stylesheets="@../estilos/estilos-botones.css" text="Datos del socio" textFill="#fffcf2" underline="true">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="misReservas" onMouseClicked="#irAMisReservas" onMouseEntered="#misReservasMouseEntered" onMouseExited="#misReservasMouseExited" prefHeight="35.0" text="Mis reservas" textFill="#fffcf2">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
             <HBox alignment="BOTTOM_LEFT" prefHeight="422.0" prefWidth="120.0" VBox.vgrow="ALWAYS">
                <children>
-                  <Label fx:id="desconectarse" onMouseClicked="#desconectarse" text="Desconectarse" textFill="#fffcf2">
+                  <Label fx:id="desconectarse" onMouseClicked="#desconectarse" onMouseEntered="#desconectarseMouseEntered" onMouseExited="#desconectarseMouseExited" text="Desconectarse" textFill="#fffcf2">
                      <font>
                         <Font name="Arial" size="14.0" />
                      </font>

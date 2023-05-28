@@ -23,6 +23,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import model.Booking;
@@ -91,6 +92,12 @@ public class VerMisReservasController implements Initializable {
     private Button a10;
     
     Button[] bAnular = new Button[10];
+    @FXML
+    private Label reservarPistas;
+    @FXML
+    private Label datosSocio;
+    @FXML
+    private Label desconectarse;
     
     
     /**
@@ -186,17 +193,22 @@ public class VerMisReservasController implements Initializable {
             int diaCreada = b.getBookingDate().getDayOfMonth();
             int mesCreada = b.getBookingDate().getDayOfMonth();
             int anoCreada = b.getBookingDate().getYear();
-            String fechaCreacion = "Reserva realizada el " + diaCreada + "-" + mesCreada + "-" + anoCreada;
+            //String fechaCreacion = "Reserva realizada el " + diaCreada + "-" + mesCreada + "-" + anoCreada;
             
             String pista = b.getCourt().getName();
             int diaPista = b.getMadeForDay().getDayOfMonth();
             int mesPista = b.getMadeForDay().getMonthValue();
             int anoPista = b.getMadeForDay().getYear();
-            String fechaDeLaReserva = " para la " + pista + " el " + diaPista + "-" + mesPista + "-" + anoPista 
+            String fechaDeLaReserva = "Reserva para la " + pista + " el " + diaPista + "-" + mesPista + "-" + anoPista 
                     +" a las " + horaFormato + "-" + (horaPista + 1) + ":00";
             
             
-            String res = fechaCreacion + fechaDeLaReserva;
+            String res = fechaDeLaReserva;
+            if(m.checkHasCreditInfo()){
+                res += " (pagada)";
+            } else {
+                res += " (no pagada)";
+            }
             tInfo[pos].setText(res);
             
             
@@ -255,6 +267,44 @@ public class VerMisReservasController implements Initializable {
         
         
         alert.showAndWait();
+    }
+
+
+
+
+    @FXML
+    private void reservarPistasMouseExited(MouseEvent event) {
+         reservarPistas.setUnderline(false);
+    
+    }
+    
+
+    @FXML
+    private void reservarPistasMouseEntered(MouseEvent event) {
+                reservarPistas.setUnderline(true);
+
+    }
+
+    @FXML
+    private void datosSocioMouseExited(MouseEvent event) {
+                datosSocio.setUnderline(false);
+
+    }
+
+    @FXML
+    private void datosSocioMouseEntered(MouseEvent event) {
+        datosSocio.setUnderline(true);
+    }
+
+    @FXML
+    private void desconectarseMouseExited(MouseEvent event) {
+              desconectarse.setUnderline(false);
+    }
+
+    @FXML
+    private void desconectarseMouseEntered(MouseEvent event) {
+                desconectarse.setUnderline(true);
+
     }
     
 }

@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -12,15 +14,16 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="583.0" prefWidth="497.0" style="-fx-background-image: #ffffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.IniciarSesionNeutroController">
+<BorderPane prefHeight="583.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.IniciarSesionNeutroController">
    <center>
-      <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="802.0" style="-fx-background-color: #fffcf2;" BorderPane.alignment="CENTER">
+      <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fffcf2;" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-            <RowConstraints maxHeight="329.0" minHeight="10.0" prefHeight="110.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="329.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="329.599951171875" minHeight="0.0" prefHeight="159.5999938964844" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="263.00005187988285" minHeight="0.0" prefHeight="33.20000610351559" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="263.00005187988285" minHeight="0.0" prefHeight="43.99998779296874" vgrow="SOMETIMES" />
@@ -68,7 +71,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #fffcf2;" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                <children>
-                  <Button fx:id="bAcceder" mnemonicParsing="false" onAction="#handlebAccederOnAction" prefHeight="37.0" prefWidth="216.0" text="Acceder">
+                  <Button fx:id="bAcceder" mnemonicParsing="false" onAction="#handlebAccederOnAction" prefHeight="37.0" prefWidth="216.0" styleClass="button-cambiar-color-raton-encima" stylesheets="@../estilos/estilos-botones.css" text="Acceder">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -91,9 +94,9 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="84.0" prefWidth="218.0">
                      <children>
-                        <Button fx:id="bRegistrarse" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlebRegistrarseOnAction" text="Registrarse" textAlignment="CENTER" wrapText="true">
+                        <Button fx:id="bRegistrarse" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlebRegistrarseOnAction" styleClass="button-cambiar-color-raton-encima" stylesheets="@../estilos/estilos-botones.css" text="Registrarse" textAlignment="CENTER" wrapText="true">
                            <font>
-                              <Font name="Arial" size="16.0" />
+                              <Font name="Arial Bold" size="14.0" />
                            </font>
                            <VBox.margin>
                               <Insets left="-45.0" />
@@ -107,7 +110,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="67.0" prefWidth="436.0">
                      <children>
-                        <Button fx:id="bVerDisponibilidad" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlebVerDisponibilidadOnAction" prefHeight="37.0" prefWidth="216.0" text="Ver disponibilidad" textAlignment="CENTER" wrapText="true">
+                        <Button fx:id="bVerDisponibilidad" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlebVerDisponibilidadOnAction" prefHeight="37.0" prefWidth="216.0" styleClass="button-cambiar-color-raton-encima" stylesheets="@../estilos/estilos-botones.css" text="Ver disponibilidad" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Arial Bold" size="14.0" />
                            </font>
@@ -115,6 +118,7 @@
                               <Insets bottom="50.0" />
                            </VBox.margin>
                         </Button>
+                        <Button mnemonicParsing="false" onAction="#iniciarSesionDirecto" styleClass="button-cambiar-color-raton-encima" stylesheets="@../estilos/estilos-botones.css" text="Button" />
                      </children>
                   </VBox>
                </children>
@@ -166,7 +170,7 @@
                   <Insets right="55.0" />
                </GridPane.margin>
             </HBox>
-            <HBox prefHeight="109.0" prefWidth="802.0" style="-fx-background-color: #00E277;">
+            <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="111.0" prefWidth="802.0" style="-fx-background-color: #00E277;">
                <children>
                   <VBox alignment="CENTER_LEFT" prefHeight="106.0" prefWidth="248.0">
                      <children>
@@ -185,6 +189,43 @@
                            </font>
                         </Label>
                      </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="109.0" prefWidth="802.0" style="-fx-background-color: #00E277;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="110.0" prefWidth="106.0">
+                     <children>
+                        <ImageView fitHeight="85.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/iconos/logo-sin-fondo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="150.0">
+                     <children>
+                        <Label text="GreenBall" textFill="#fffcf2">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="29.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="380.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <children>
+                        <Text fill="#fffcf2" strokeType="OUTSIDE" strokeWidth="0.0" text="Iniciar Sesión">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
                   </VBox>
                </children>
             </HBox>
