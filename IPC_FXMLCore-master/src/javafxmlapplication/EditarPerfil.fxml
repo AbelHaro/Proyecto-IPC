@@ -228,7 +228,7 @@
                                                 <Insets />
                                              </VBox.margin>
                                              <font>
-                                                <Font size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </Text>
                                        </children>
@@ -403,7 +403,7 @@
                                           </HBox>
                                           <Text fx:id="errorTarjeta" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de tarjeta no válido" visible="false">
                                              <font>
-                                                <Font size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </Text>
                                        </children>
@@ -435,7 +435,7 @@
                                           </TextField>
                                           <Text fx:id="errorSVC" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="SVC no válido" visible="false">
                                              <font>
-                                                <Font size="14.0" />
+                                                <Font name="Arial" size="14.0" />
                                              </font>
                                           </Text>
                                        </children>
@@ -487,9 +487,9 @@
          <bottom>
             <HBox alignment="BASELINE_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="660.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox minHeight="-Infinity" prefHeight="30.0" prefWidth="463.0">
+                  <VBox minHeight="-Infinity" prefHeight="30.0" prefWidth="482.0">
                      <children>
-                        <CheckBox fx:id="check" mnemonicParsing="false" prefHeight="35.0" prefWidth="463.0" text="Acepto el tratamiento de mis datos por la empresa GREENBALL " textOverrun="CLIP">
+                        <CheckBox fx:id="check" mnemonicParsing="false" prefHeight="30.0" prefWidth="435.0" text="Acepto el tratamiento de mis datos por la empresa GREENBALL " textOverrun="CLIP">
                            <font>
                               <Font name="Arial" size="14.0" />
                            </font>
@@ -506,7 +506,7 @@
                   </VBox>
                   <VBox alignment="BOTTOM_RIGHT" prefHeight="55.0" prefWidth="84.0">
                      <children>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#registrarse" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #F2F2FF;" text="Guardar">
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#registrarse" prefHeight="35.0" prefWidth="100.0" styleClass="button-cambiar-color-raton-encima" stylesheets="@../estilos/estilos-botones.css" text="Guardar">
                            <font>
                               <Font name="Arial" size="14.0" />
                            </font>

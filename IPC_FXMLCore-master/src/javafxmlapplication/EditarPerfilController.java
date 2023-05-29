@@ -108,8 +108,8 @@ public class EditarPerfilController implements Initializable {
         
         fotoPerfil.setImage(m.getImage());
         idUsuario.setText(m.getNickName());
-        
-        
+        errorTarjeta.setVisible(false);
+        errorSVC.setVisible(false);
         
         campoNombre.setText(m.getName());
         campoApellido.setText(m.getSurname());
@@ -161,6 +161,7 @@ public class EditarPerfilController implements Initializable {
             if(!isValidTelefono(campoTelefono.getText())){errorTelefono.setVisible(true);
             }else{errorTelefono.setVisible(false);}
             algoTocado = true;
+
         });
         campoTelefono.focusedProperty().addListener((obs, oldValue, newValue) -> {
             if(!newValue && campoTelefono.getText().length() != 9 ) errorTelefono.setVisible(true);});
@@ -290,9 +291,7 @@ public class EditarPerfilController implements Initializable {
             if(campoTelefono.getText().length() > 9){campoTelefono.setText(campoTelefono.getText().substring(0, campoTelefono.getText().length()-1));}
         });
         
-        fotoPerfil.imageProperty().addListener((obs, oldValue, newValue) -> {
-            algoTocado = true;
-        });
+        
         
         
     }    
@@ -476,7 +475,6 @@ public class EditarPerfilController implements Initializable {
         avatares[7] = new Image(getClass().getResourceAsStream("/images/perfil/Fernando.jpg"));
         
         
-        image.imageProperty().setValue(avatares[pos]);
     }
 
     @FXML
