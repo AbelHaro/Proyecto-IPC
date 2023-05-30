@@ -21,7 +21,9 @@
     -fx-font-weight: bold;
 }
 .button-cambiar-color-raton-encima-sin-size:hover{
-    -fx-background-color:#d4d2d2
+    -fx-background-color:#d4d2d2;
+    -fx-border-color:black;
+
 }
 
 
