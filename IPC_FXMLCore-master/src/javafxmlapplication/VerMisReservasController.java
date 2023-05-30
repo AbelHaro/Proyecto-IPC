@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,6 +22,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseDragEvent;
@@ -199,12 +202,12 @@ public class VerMisReservasController implements Initializable {
             int diaPista = b.getMadeForDay().getDayOfMonth();
             int mesPista = b.getMadeForDay().getMonthValue();
             int anoPista = b.getMadeForDay().getYear();
-            String fechaDeLaReserva = "Reserva para la " + pista + " el " + diaPista + "-" + mesPista + "-" + anoPista 
-                    +" a las " + horaFormato + "-" + (horaPista + 1) + ":00";
+            String fechaDeLaReserva = "Reserva para la " + pista + " el " + diaPista + " - " + mesPista + " - " + anoPista 
+                    +" a las " + horaFormato + " - " + (horaPista + 1) + ":00";
             
             
             String res = fechaDeLaReserva;
-            if(m.checkHasCreditInfo()){
+            if(b.getPaid()){
                 res += " (pagada)";
             } else {
                 res += " (no pagada)";
@@ -238,11 +241,12 @@ public class VerMisReservasController implements Initializable {
     private void anular(ActionEvent event) {
         int numBotonAnular = Integer.parseInt(((Button) event.getSource()).getId().substring(1)) - 1;
         List<Booking> reservas = club.getUserBookings(m.getNickName());
-        
         Booking reservaBorrar = reservas.get(numBotonAnular);
+        String msg = tInfo[numBotonAnular].getText();
+        if(!avisoAnularReserva(msg)){return;}
         try {
             if(Club.getInstance().removeBooking(reservaBorrar)){
-                String msg = tInfo[numBotonAnular].getText();
+                
                 tInfo[numBotonAnular].setText("");
                 bAnular[numBotonAnular].setVisible(false);
                 rellenarVacio();
@@ -268,7 +272,24 @@ public class VerMisReservasController implements Initializable {
         
         alert.showAndWait();
     }
-
+    
+    
+    
+    public boolean avisoAnularReserva(String reserva){
+         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+         alert.setHeight(400);
+        alert.setTitle("Anulación de reserva");
+        alert.setHeaderText("Anulación de reserva");
+        alert.setContentText("Se va a anular la siguiente reserva '"+ reserva + "'.\nDesea anular la reserva?");
+        ButtonType buttonTypeYes = new ButtonType("Aceptar", ButtonBar.ButtonData.YES);
+        ButtonType buttonTypeCancel = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
+        alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeCancel);
+        
+        
+        
+        Optional<ButtonType> result = alert.showAndWait();
+        return result.get() == buttonTypeYes;
+    }
 
 
 

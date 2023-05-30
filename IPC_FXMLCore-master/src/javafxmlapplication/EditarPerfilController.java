@@ -18,6 +18,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.DialogPane;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -349,10 +350,9 @@ public class EditarPerfilController implements Initializable {
             m.setTelephone(telefono);
             m.setPassword(password);
             m.setImage(img);
-            if(m.checkHasCreditInfo()){
-                m.setTelephone(tarjeta);
-                m.setSvc(svc);
-            }
+            m.setCreditCard(tarjeta);
+            m.setSvc(svc);
+            
             
             algoTocado = false;
             avisoRegistroCorrecto(name);
@@ -419,6 +419,7 @@ public class EditarPerfilController implements Initializable {
         alert.setContentText("Los datos de pago introducidos son incorrectos o incompletos, la opción de pagar online estará deshabilitada.\nDesea confirmar la actualización de datos?");
         ButtonType buttonTypeYes = new ButtonType("Aceptar", ButtonBar.ButtonData.YES);
         ButtonType buttonTypeCancel = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
+        
         alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeCancel);
         
         Optional<ButtonType> result = alert.showAndWait();
@@ -445,6 +446,7 @@ public class EditarPerfilController implements Initializable {
         //alert.setContentText("El registro se ha completado correctamente.\nBIENVENIDO/A " + n.toUpperCase() +"!");
         
         
+        
         alert.showAndWait();
     }
     
@@ -457,6 +459,8 @@ public class EditarPerfilController implements Initializable {
         ButtonType buttonTypeYes = new ButtonType("Aceptar", ButtonBar.ButtonData.YES);
         ButtonType buttonTypeCancel = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
         alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeCancel);
+        
+        
         
         Optional<ButtonType> result = alert.showAndWait();
         return result.get() != buttonTypeYes;
