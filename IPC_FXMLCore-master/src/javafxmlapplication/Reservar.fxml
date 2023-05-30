@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
@@ -15,50 +16,6 @@
 <?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="570.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.ReservarController">
-   <top>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #00E277;" BorderPane.alignment="CENTER">
-         <children>
-            <VBox alignment="CENTER" maxWidth="136.0" prefHeight="100.0" prefWidth="136.0">
-               <children>
-                  <ImageView fitHeight="85.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/iconos/logo-sin-fondo.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </VBox>
-            <Label text="GreenBall" textFill="#fffcf2">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="29.0" />
-               </font>
-            </Label>
-            <VBox prefHeight="100.0" prefWidth="218.0" HBox.hgrow="ALWAYS">
-               <children>
-                  <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="364.0" VBox.vgrow="ALWAYS">
-                     <children>
-                        <VBox alignment="BOTTOM_CENTER" prefHeight="95.0" prefWidth="118.0">
-                           <HBox.margin>
-                              <Insets right="30.0" />
-                           </HBox.margin>
-                           <children>
-                              <ImageView fx:id="fotoPerfil" fitHeight="79.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" />
-                                 </VBox.margin></ImageView>
-                              <Label fx:id="idUsuario" alignment="CENTER" prefHeight="16.0" prefWidth="110.0" text="Label" textFill="#fffcf2">
-                                 <font>
-                                    <Font name="Arial" size="14.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </VBox>
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-   </top>
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="430.0" style="-fx-background-color: #fffcf2;" BorderPane.alignment="CENTER">
          <children>
@@ -365,4 +322,55 @@
          </padding>
       </VBox>
    </left>
+   <top>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #00E277;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="136.0">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/iconos/logo-sin-fondo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <Label text="GreenBall" textFill="#fffcf2">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="29.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <VBox prefHeight="100.0" prefWidth="434.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="TOP_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="422.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                           <children>
+                              <ImageView fx:id="fotoPerfil" fitHeight="79.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                              <Label fx:id="idUsuario" alignment="CENTER" prefHeight="16.0" prefWidth="110.0" text="Label" textFill="#fffcf2">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
 </BorderPane>
