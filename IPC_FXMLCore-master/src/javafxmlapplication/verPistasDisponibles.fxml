@@ -13,48 +13,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.VerPistasDisponiblesController">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.VerPistasDisponiblesController">
    <center>
-      <VBox alignment="CENTER" minHeight="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fffcf2;" BorderPane.alignment="TOP_CENTER">
+      <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="468.0" prefWidth="800.0" style="-fx-background-color: #fffcf2;" BorderPane.alignment="TOP_CENTER">
          <children>
-            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="111.0" prefWidth="800.0" style="-fx-background-color: #00E277;">
-               <children>
-                  <VBox alignment="CENTER" prefHeight="110.0" prefWidth="106.0">
-                     <children>
-                        <ImageView fitHeight="85.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/iconos/logo-sin-fondo.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </VBox>
-                  <VBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="150.0">
-                     <children>
-                        <Label text="GreenBall" textFill="#fffcf2">
-                           <font>
-                              <Font name="Arial Rounded MT Bold" size="29.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
-                  <VBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="380.0">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                     <children>
-                        <Text fill="#fffcf2" strokeType="OUTSIDE" strokeWidth="0.0" text="Pistas disponibles">
-                           <font>
-                              <Font name="Arial Rounded MT Bold" size="30.0" />
-                           </font>
-                        </Text>
-                     </children>
-                     <padding>
-                        <Insets left="50.0" />
-                     </padding>
-                  </VBox>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
@@ -100,11 +63,11 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="294.0" prefWidth="430.0">
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="294.0" prefWidth="430.0">
                <children>
-                  <VBox alignment="CENTER" prefHeight="272.0" prefWidth="430.0">
+                  <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="272.0" prefWidth="430.0">
                      <children>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="512.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="512.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
                            <children>
                               <Text fx:id="t1" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="470.0">
                                  <font>
@@ -122,7 +85,7 @@
                               <Insets bottom="2.0" />
                            </VBox.margin>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
+                        <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
                            <children>
                               <Text fx:id="t2" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
                                  <font>
@@ -140,7 +103,7 @@
                               <Insets bottom="2.0" />
                            </VBox.margin>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="440.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
+                        <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="440.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
                            <children>
                               <Text fx:id="t3" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="390.0">
                                  <font>
@@ -158,7 +121,7 @@
                               <Insets left="40.0" />
                            </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
+                        <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
                            <children>
                               <Text fx:id="t4" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
                                  <font>
@@ -176,7 +139,7 @@
                               <Insets left="40.0" />
                            </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
+                        <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
                            <children>
                               <Text fx:id="t5" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
                                  <font>
@@ -194,7 +157,7 @@
                               <Insets left="40.0" />
                            </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
+                        <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #00E277; -fx-border-width: 3;">
                            <children>
                               <Text fx:id="t6" strokeType="OUTSIDE" strokeWidth="0.0" text="vacio" wrappingWidth="430.0">
                                  <font>
@@ -219,7 +182,7 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox alignment="BOTTOM_RIGHT" prefHeight="99.0" prefWidth="800.0" style="-fx-background-color: #fffcf2;">
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="99.0" prefWidth="800.0" style="-fx-background-color: #fffcf2;">
                <children>
                   <VBox alignment="BOTTOM_RIGHT" prefHeight="58.0" prefWidth="162.0">
                      <children>
@@ -234,8 +197,50 @@
                      </children>
                   </VBox>
                </children>
+               <VBox.margin>
+                  <Insets left="580.0" />
+               </VBox.margin>
             </HBox>
          </children>
       </VBox>
    </center>
+   <top>
+      <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="111.0" prefWidth="800.0" style="-fx-background-color: #00E277;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="110.0" prefWidth="106.0">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/iconos/logo-sin-fondo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="110.0" prefWidth="150.0">
+               <children>
+                  <Label text="GreenBall" textFill="#fffcf2">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="29.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="110.0" prefWidth="380.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <children>
+                  <Text fill="#fffcf2" strokeType="OUTSIDE" strokeWidth="0.0" text="Pistas disponibles">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets left="-200.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
 </BorderPane>

@@ -328,9 +328,9 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="35.0" prefWidth="118.0" text="Mis reservas" textFill="#fffcf2" underline="true">
+                  <Label prefHeight="35.0" prefWidth="118.0" text="Mis reservas" textFill="#fffcf2">
                      <font>
-                        <Font name="Arial" size="14.0" />
+                        <Font name="Arial Bold" size="14.0" />
                      </font>
                      <padding>
                         <Insets left="10.0" />

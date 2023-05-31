@@ -268,7 +268,7 @@ public class VerMisReservasController implements Initializable {
         alert.setHeight(400);
         alert.setTitle("Anulación de reserva");
         alert.setHeaderText("Reserva anulada");
-        alert.setContentText("La reserva '" + msg + "' ha sido anulada correctamente.");
+        alert.setContentText("La reserva:\n '" + msg + "' ha sido anulada correctamente.");
         
         
         alert.showAndWait();
@@ -281,7 +281,7 @@ public class VerMisReservasController implements Initializable {
          alert.setHeight(400);
         alert.setTitle("Anulación de reserva");
         alert.setHeaderText("Anulación de reserva");
-        alert.setContentText("Se va a anular la siguiente reserva '"+ reserva + "'.\nDesea anular la reserva?");
+        alert.setContentText("Se va a anular la siguiente reserva:\n '"+ reserva + "'.\nDesea anular la reserva?");
         ButtonType buttonTypeYes = new ButtonType("Anular", ButtonBar.ButtonData.YES);
         ButtonType buttonTypeCancel = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
         alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeCancel);
