@@ -265,6 +265,7 @@ public class VerMisReservasController implements Initializable {
     
     public void avisoAnular(String msg){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeight(400);
         alert.setTitle("Anulación de reserva");
         alert.setHeaderText("Reserva anulada");
         alert.setContentText("La reserva '" + msg + "' ha sido anulada correctamente.");
