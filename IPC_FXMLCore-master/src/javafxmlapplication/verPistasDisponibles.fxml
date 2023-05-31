@@ -68,9 +68,9 @@
                         </Text>
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="94.0" prefWidth="143.0">
+                  <VBox alignment="CENTER" prefHeight="98.0" prefWidth="164.0">
                      <children>
-                        <MenuButton fx:id="menu" mnemonicParsing="false" prefHeight="30.0" prefWidth="132.0" styleClass="button-cambiar-color-raton-encima" stylesheets="@../estilos/estilos-botones.css" text="9:00 - 10:00">
+                        <MenuButton fx:id="menu" mnemonicParsing="false" prefHeight="30.0" prefWidth="144.0" styleClass="button-cambiar-color-raton-encima" stylesheets="@../estilos/estilos-botones.css" text="9:00 - 10:00">
                           <items>
                             <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="9:00 - 10:00" />
                               <MenuItem mnemonicParsing="false" onAction="#cambiarHorarioDesplegable" text="10:00 - 11:00" />

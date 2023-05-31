@@ -98,6 +98,7 @@ public class EditarPerfilController implements Initializable {
     boolean algoTocado = false;
     @FXML
     private Label misReservas;
+    private String passwordInicial;
 
     /**
      * Initializes the controller class.
@@ -117,6 +118,7 @@ public class EditarPerfilController implements Initializable {
         campoTelefono.setText(m.getTelephone());
         campoNick.setText(m.getNickName());
         campoPassword.setText(m.getPassword());
+        passwordInicial = m.getPassword();
         image.setImage(m.getImage());
         if(m.checkHasCreditInfo()){
             campoTarjeta1.setText(m.getCreditCard().substring(0,4));
@@ -344,7 +346,7 @@ public class EditarPerfilController implements Initializable {
             //Member m = club.registerMember(name, apellido, telefono, nick, password, tarjeta, svc, img);
            
             
-            Member m = club.getMemberByCredentials(nick, password);
+            Member m = club.getMemberByCredentials(nick, passwordInicial);
             m.setName(name);
             m.setSurname(apellido);
             m.setTelephone(telefono);

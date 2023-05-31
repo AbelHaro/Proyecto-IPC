@@ -110,7 +110,7 @@ public class VerPistasDisponiblesController implements Initializable {
         }
         String pista = reserva.getCourt().getName();
         int numeroPista = Integer.parseInt(pista.substring(pista.length()-1));
-        tInfo[numeroPista-1].setText(aux + pista.toUpperCase() + "        RESERVADO POR " + reserva.getMember().getNickName());
+        tInfo[numeroPista-1].setText(aux + pista.toUpperCase() + "        RESERVADA POR " + reserva.getMember().getNickName());
     }
     
     public void inicializarVacio(int horaInicio){
