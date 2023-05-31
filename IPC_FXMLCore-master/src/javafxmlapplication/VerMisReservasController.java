@@ -281,10 +281,10 @@ public class VerMisReservasController implements Initializable {
         alert.setTitle("Anulación de reserva");
         alert.setHeaderText("Anulación de reserva");
         alert.setContentText("Se va a anular la siguiente reserva '"+ reserva + "'.\nDesea anular la reserva?");
-        ButtonType buttonTypeYes = new ButtonType("Anular1", ButtonBar.ButtonData.YES);
+        ButtonType buttonTypeYes = new ButtonType("Anular", ButtonBar.ButtonData.YES);
         ButtonType buttonTypeCancel = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
         alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeCancel);
-        
+       
         
         
         Optional<ButtonType> result = alert.showAndWait();

@@ -118,10 +118,6 @@
                               <Insets bottom="50.0" />
                            </VBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#iniciarSesionDirecto" styleClass="button-cambiar-color-raton-encima" stylesheets="@../estilos/estilos-botones.css" text="Button">
-                           <font>
-                              <Font name="Arial" size="12.0" />
-                           </font></Button>
                      </children>
                   </VBox>
                </children>
